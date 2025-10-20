@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل النطق والقراءة الشامل - كورس اللغة الإنجليزية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .guide-container {
+            background: white;
+            margin: 100px auto 50px;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .guide-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .section {
+            padding: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .letter-card {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .vowel-card {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+        }
+        .consonant-card {
+            background: linear-gradient(45deg, #43e97b, #38f9d7);
+        }
+        .silent-card {
+            background: linear-gradient(45deg, #fa709a, #fee140);
+        }
+        .combination-card {
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            color: #333;
+        }
+        .rule-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .tip-box {
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 1000;
+        }
+        .audio-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .ipa-symbol {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: #667eea;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← العودة للرئيسية</a>
+    
+    <div class="guide-container">
+        <div class="guide-header">
+            <h1>🔤 دليل النطق والقراءة الشامل</h1>
+            <p>دليلك المتكامل لإتقان النطق الصحيح للغة الإنجليزية مع الرموز الصوتية الدولية والروابط التفاعلية</p>
+        </div>
+        
+        <!-- الأبجدية الإنجليزية -->
+        <div class="section">
+            <h2>🔤 الأبجدية الإنجليزية (26 حرف)</h2>
+            <div class="alphabet-grid">
+                <div class="letter-card">
+                    <h3>A a</h3>
+                    <p>النطق: إي</p>
+                    <p class="ipa-symbol">/eɪ/</p>
+                    <button class="audio-button" onclick="playAudio('A')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>B b</h3>
+                    <p>النطق: بي</p>
+                    <p class="ipa-symbol">/biː/</p>
+                    <button class="audio-button" onclick="playAudio('B')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>C c</h3>
+                    <p>النطق: سي</p>
+                    <p class="ipa-symbol">/siː/</p>
+                    <button class="audio-button" onclick="playAudio('C')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>D d</h3>
+                    <p>النطق: دي</p>
+                    <p class="ipa-symbol">/diː/</p>
+                    <button class="audio-button" onclick="playAudio('D')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>E e</h3>
+                    <p>النطق: إي</p>
+                    <p class="ipa-symbol">/iː/</p>
+                    <button class="audio-button" onclick="playAudio('E')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>F f</h3>
+                    <p>النطق: إف</p>
+                    <p class="ipa-symbol">/ef/</p>
+                    <button class="audio-button" onclick="playAudio('F')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>G g</h3>
+                    <p>النطق: جي</p>
+                    <p class="ipa-symbol">/dʒiː/</p>
+                    <button class="audio-button" onclick="playAudio('G')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>H h</h3>
+                    <p>النطق: إيتش</p>
+                    <p class="ipa-symbol">/eɪtʃ/</p>
+                    <button class="audio-button" onclick="playAudio('H')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>I i</h3>
+                    <p>النطق: آي</p>
+                    <p class="ipa-symbol">/aɪ/</p>
+                    <button class="audio-button" onclick="playAudio('I')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>J j</h3>
+                    <p>النطق: جي</p>
+                    <p class="ipa-symbol">/dʒeɪ/</p>
+                    <button class="audio-button" onclick="playAudio('J')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>K k</h3>
+                    <p>النطق: كي</p>
+                    <p class="ipa-symbol">/keɪ/</p>
+                    <button class="audio-button" onclick="playAudio('K')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>L l</h3>
+                    <p>النطق: إل</p>
+                    <p class="ipa-symbol">/el/</p>
+                    <button class="audio-button" onclick="playAudio('L')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>M m</h3>
+                    <p>النطق: إم</p>
+                    <p class="ipa-symbol">/em/</p>
+                    <button class="audio-button" onclick="playAudio('M')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>N n</h3>
+                    <p>النطق: إن</p>
+                    <p class="ipa-symbol">/en/</p>
+                    <button class="audio-button" onclick="playAudio('N')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>O o</h3>
+                    <p>النطق: أو</p>
+                    <p class="ipa-symbol">/oʊ/</p>
+                    <button class="audio-button" onclick="playAudio('O')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>P p</h3>
+                    <p>النطق: بي</p>
+                    <p class="ipa-symbol">/piː/</p>
+                    <button class="audio-button" onclick="playAudio('P')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>Q q</h3>
+                    <p>النطق: كيو</p>
+                    <p class="ipa-symbol">/kjuː/</p>
+                    <button class="audio-button" onclick="playAudio('Q')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>R r</h3>
+                    <p>النطق: آر</p>
+                    <p class="ipa-symbol">/ɑːr/</p>
+                    <button class="audio-button" onclick="playAudio('R')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>S s</h3>
+                    <p>النطق: إس</p>
+                    <p class="ipa-symbol">/es/</p>
+                    <button class="audio-button" onclick="playAudio('S')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>T t</h3>
+                    <p>النطق: تي</p>
+                    <p class="ipa-symbol">/tiː/</p>
+                    <button class="audio-button" onclick="playAudio('T')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>U u</h3>
+                    <p>النطق: يو</p>
+                    <p class="ipa-symbol">/juː/</p>
+                    <button class="audio-button" onclick="playAudio('U')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>V v</h3>
+                    <p>النطق: في</p>
+                    <p class="ipa-symbol">/viː/</p>
+                    <button class="audio-button" onclick="playAudio('V')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>W w</h3>
+                    <p>النطق: دبليو</p>
+                    <p class="ipa-symbol">/ˈdʌbəl juː/</p>
+                    <button class="audio-button" onclick="playAudio('W')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>X x</h3>
+                    <p>النطق: إكس</p>
+                    <p class="ipa-symbol">/eks/</p>
+                    <button class="audio-button" onclick="playAudio('X')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>Y y</h3>
+                    <p>النطق: واي</p>
+                    <p class="ipa-symbol">/waɪ/</p>
+                    <button class="audio-button" onclick="playAudio('Y')">🔊 استمع</button>
+                </div>
+                <div class="letter-card">
+                    <h3>Z z</h3>
+                    <p>النطق: زي</p>
+                    <p class="ipa-symbol">/ziː/</p>
+                    <button class="audio-button" onclick="playAudio('Z')">🔊 استمع</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- الحروف الصوتية -->
+        <div class="section">
+            <h2>🎵 الحروف الصوتية (Vowels)</h2>
+            <div class="alphabet-grid">
+                <div class="vowel-card">
+                    <h3>A a</h3>
+                    <p>قصير: /æ/ كما في Cat</p>
+                    <p>طويل: /eɪ/ كما في Cake</p>
+                    <button class="audio-button" onclick="playAudio('cat')">🔊 Cat</button>
+                    <button class="audio-button" onclick="playAudio('cake')">🔊 Cake</button>
+                </div>
+                <div class="vowel-card">
+                    <h3>E e</h3>
+                    <p>قصير: /e/ كما في Bed</p>
+                    <p>طويل: /iː/ كما في See</p>
+                    <button class="audio-button" onclick="playAudio('bed')">🔊 Bed</button>
+                    <button class="audio-button" onclick="playAudio('see')">🔊 See</button>
+                </div>
+                <div class="vowel-card">
+                    <h3>I i</h3>
+                    <p>قصير: /ɪ/ كما في Sit</p>
+                    <p>طويل: /aɪ/ كما في Like</p>
+                    <button class="audio-button" onclick="playAudio('sit')">🔊 Sit</button>
+                    <button class="audio-button" onclick="playAudio('like')">🔊 Like</button>
+                </div>
+                <div class="vowel-card">
+                    <h3>O o</h3>
+                    <p>قصير: /ɒ/ كما في Hot</p>
+                    <p>طويل: /oʊ/ كما في Home</p>
+                    <button class="audio-button" onclick="playAudio('hot')">🔊 Hot</button>
+                    <button class="audio-button" onclick="playAudio('home')">🔊 Home</button>
+                </div>
+                <div class="vowel-card">
+                    <h3>U u</h3>
+                    <p>قصير: /ʌ/ كما في Cup</p>
+                    <p>طويل: /juː/ كما في Cute</p>
+                    <button class="audio-button" onclick="playAudio('cup')">🔊 Cup</button>
+                    <button class="audio-button" onclick="playAudio('cute')">🔊 Cute</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- الحروف الصامتة -->
+        <div class="section">
+            <h2>🔇 الحروف الصامتة (Silent Letters)</h2>
+            <div class="alphabet-grid">
+                <div class="silent-card">
+                    <h3>Silent B</h3>
+                    <p>Lamb /læm/ - لام</p>
+                    <p>Thumb /θʌm/ - ثام</p>
+                    <button class="audio-button" onclick="playAudio('lamb')">🔊 استمع</button>
+                </div>
+                <div class="silent-card">
+                    <h3>Silent K</h3>
+                    <p>Knife /naɪf/ - نايف</p>
+                    <p>Know /noʊ/ - نو</p>
+                    <button class="audio-button" onclick="playAudio('knife')">🔊 استمع</button>
+                </div>
+                <div class="silent-card">
+                    <h3>Silent L</h3>
+                    <p>Half /hæf/ - هاف</p>
+                    <p>Walk /wɔːk/ - ووك</p>
+                    <button class="audio-button" onclick="playAudio('walk')">🔊 استمع</button>
+                </div>
+                <div class="silent-card">
+                    <h3>Silent W</h3>
+                    <p>Write /raɪt/ - رايت</p>
+                    <p>Wrong /rɒŋ/ - رونغ</p>
+                    <button class="audio-button" onclick="playAudio('write')">🔊 استمع</button>
+                </div>
+                <div class="silent-card">
+                    <h3>Silent H</h3>
+                    <p>Hour /aʊər/ - أور</p>
+                    <p>Honest /ˈɒnɪst/ - أونست</p>
+                    <button class="audio-button" onclick="playAudio('hour')">🔊 استمع</button>
+                </div>
+                <div class="silent-card">
+                    <h3>Silent T</h3>
+                    <p>Castle /ˈkæsəl/ - كاسل</p>
+                    <p>Listen /ˈlɪsən/ - لسن</p>
+                    <button class="audio-button" onclick="playAudio('castle')">🔊 استمع</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- التركيبات الصوتية -->
+        <div class="section">
+            <h2>🔤 التركيبات الصوتية (Letter Combinations)</h2>
+            <div class="alphabet-grid">
+                <div class="combination-card">
+                    <h3>CH</h3>
+                    <p>/tʃ/ كما في Chair</p>
+                    <p>النطق: تش</p>
+                    <button class="audio-button" onclick="playAudio('chair')">🔊 Chair</button>
+                </div>
+                <div class="combination-card">
+                    <h3>SH</h3>
+                    <p>/ʃ/ كما في Ship</p>
+                    <p>النطق: ش</p>
+                    <button class="audio-button" onclick="playAudio('ship')">🔊 Ship</button>
+                </div>
+                <div class="combination-card">
+                    <h3>TH</h3>
+                    <p>/θ/ كما في Think</p>
+                    <p>النطق: ث</p>
+                    <button class="audio-button" onclick="playAudio('think')">🔊 Think</button>
+                </div>
+                <div class="combination-card">
+                    <h3>PH</h3>
+                    <p>/f/ كما في Phone</p>
+                    <p>النطق: ف</p>
+                    <button class="audio-button" onclick="playAudio('phone')">🔊 Phone</button>
+                </div>
+                <div class="combination-card">
+                    <h3>GH</h3>
+                    <p>/f/ كما في Laugh</p>
+                    <p>النطق: ف</p>
+                    <button class="audio-button" onclick="playAudio('laugh')">🔊 Laugh</button>
+                </div>
+                <div class="combination-card">
+                    <h3>NG</h3>
+                    <p>/ŋ/ كما في Ring</p>
+                    <p>النطق: نغ</p>
+                    <button class="audio-button" onclick="playAudio('ring')">🔊 Ring</button>
+                </div>
+                <div class="combination-card">
+                    <h3>CK</h3>
+                    <p>/k/ كما في Back</p>
+                    <p>النطق: ك</p>
+                    <button class="audio-button" onclick="playAudio('back')">🔊 Back</button>
+                </div>
+                <div class="combination-card">
+                    <h3>QU</h3>
+                    <p>/kw/ كما في Queen</p>
+                    <p>النطق: كو</p>
+                    <button class="audio-button" onclick="playAudio('queen')">🔊 Queen</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- قواعد النطق المهمة -->
+        <div class="section">
+            <h2>📏 قواعد النطق المهمة</h2>
+            
+            <div class="rule-box">
+                <h3>🎯 قاعدة الحرف الصوتي الطويل والقصير</h3>
+                <p><strong>الحرف الصوتي القصير:</strong> عندما يأتي حرف ساكن بعد الحرف الصوتي مباشرة</p>
+                <p>مثال: Cat /kæt/, Bed /bed/, Sit /sɪt/</p>
+                <p><strong>الحرف الصوتي الطويل:</strong> عندما يأتي حرف صوتي + حرف ساكن + E صامت</p>
+                <p>مثال: Cake /keɪk/, Pete /piːt/, Bite /baɪt/</p>
+            </div>
+
+            <div class="rule-box">
+                <h3>🎯 قواعد نطق C و G</h3>
+                <p><strong>C ينطق /s/:</strong> قبل E, I, Y - مثل: City, Ice, Cycle</p>
+                <p><strong>C ينطق /k/:</strong> قبل A, O, U - مثل: Cat, Come, Cup</p>
+                <p><strong>G ينطق /dʒ/:</strong> قبل E, I, Y - مثل: Gem, Giant, Gym</p>
+                <p><strong>G ينطق /g/:</strong> قبل A, O, U - مثل: Game, Go, Gun</p>
+            </div>
+
+            <div class="rule-box">
+                <h3>🎯 النبرة والتشديد</h3>
+                <p><strong>الكلمات ذات المقطع الواحد:</strong> النبرة على المقطع الوحيد</p>
+                <p>مثال: CAT, DOG, BOOK</p>
+                <p><strong>الكلمات ذات المقطعين:</strong> النبرة عادة على المقطع الأول</p>
+                <p>مثال: TA-ble, WIN-dow, HAP-py</p>
+            </div>
+        </div>
+
+        <!-- أصوات خاصة -->
+        <div class="section">
+            <h2>🎯 أصوات خاصة للمتعلمين العرب</h2>
+            
+            <div class="warning-box">
+                <h3>⚠️ صوت P /p/</h3>
+                <p>هذا الصوت غير موجود في العربية. يختلف عن B</p>
+                <p>P: شفاه مغلقة بقوة ثم انفجار هواء بدون اهتزاز الحبال الصوتية</p>
+                <p>أمثلة: Pen, Apple, Stop</p>
+                <button class="audio-button" onclick="playAudio('pen')">🔊 Pen</button>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ صوت V /v/</h3>
+                <p>هذا الصوت غير موجود في العربية. يختلف عن F</p>
+                <p>V: الأسنان العلوية تلمس الشفة السفلى مع اهتزاز الحبال الصوتية</p>
+                <p>أمثلة: Very, Love, Give</p>
+                <button class="audio-button" onclick="playAudio('very')">🔊 Very</button>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ صوت TH /θ/ و /ð/</h3>
+                <p>هذان الصوتان غير موجودان في العربية</p>
+                <p>/θ/ (بدون اهتزاز): Think, Thank, Math</p>
+                <p>/ð/ (مع اهتزاز): This, That, Mother</p>
+                <button class="audio-button" onclick="playAudio('think')">🔊 Think</button>
+                <button class="audio-button" onclick="playAudio('this')">🔊 This</button>
+            </div>
+        </div>
+
+        <!-- نصائح للنطق الصحيح -->
+        <div class="section">
+            <h2>💡 نصائح للنطق الصحيح</h2>
+            
+            <div class="tip-box">
+                <h3>✅ نصيحة 1: الممارسة اليومية</h3>
+                <p>مارس النطق 15 دقيقة يومياً أمام المرآة لمراقبة حركة شفتيك ولسانك</p>
+            </div>
+
+            <div class="tip-box">
+                <h3>✅ نصيحة 2: التسجيل والمقارنة</h3>
+                <p>سجل صوتك وقارنه مع المتحدثين الأصليين لتحديد نقاط التحسين</p>
+            </div>
+
+            <div class="tip-box">
+                <h3>✅ نصيحة 3: التركيز على الأصوات الصعبة</h3>
+                <p>ركز على الأصوات التي لا توجد في العربية مثل P, V, TH</p>
+            </div>
+
+            <div class="tip-box">
+                <h3>✅ نصيحة 4: استخدام الرموز الصوتية</h3>
+                <p>تعلم الرموز الصوتية الدولية (IPA) لفهم النطق الصحيح</p>
+            </div>
+
+            <div class="tip-box">
+                <h3>✅ نصيحة 5: الاستماع الفعال</h3>
+                <p>استمع للمحتوى الإنجليزي يومياً (أفلام، أغاني، بودكاست)</p>
+            </div>
+        </div>
+
+        <!-- الرموز الصوتية الدولية -->
+        <div class="section">
+            <h2>🔍 دليل الرموز الصوتية الدولية (IPA)</h2>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th style="padding: 0.5rem; border: 1px solid #ddd;">الرمز</th>
+                        <th style="padding: 0.5rem; border: 1px solid #ddd;">الصوت</th>
+                        <th style="padding: 0.5rem; border: 1px solid #ddd;">مثال</th>
+                        <th style="padding: 0.5rem; border: 1px solid #ddd;">النطق العربي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;" class="ipa-symbol">/æ/</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">حرف A قصير</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">Cat</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">كات</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;" class="ipa-symbol">/eɪ/</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">حرف A طويل</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">Cake</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">كيك</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;" class="ipa-symbol">/ɪ/</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">حرف I قصير</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">Sit</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">ست</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;" class="ipa-symbol">/aɪ/</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">حرف I طويل</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">Like</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">لايك</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;" class="ipa-symbol">/θ/</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">TH بدون اهتزاز</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">Think</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">ثنك</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;" class="ipa-symbol">/ð/</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">TH مع اهتزاز</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">This</td>
+                        <td style="padding: 0.5rem; border: 1px solid #ddd;">ذس</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- المواقع والتطبيقات المفيدة -->
+        <div class="section">
+            <h2>📚 المواقع والتطبيقات المفيدة</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px;">
+                    <h4>🌐 مواقع النطق</h4>
+                    <ul>
+                        <li><a href="https://forvo.com" target="_blank">Forvo</a> - قاموس النطق</li>
+                        <li><a href="https://dictionary.cambridge.org" target="_blank">Cambridge Dictionary</a></li>
+                        <li><a href="https://translate.google.com" target="_blank">Google Translate</a></li>
+                        <li><a href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's</a></li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px;">
+                    <h4>📱 تطبيقات مفيدة</h4>
+                    <ul>
+                        <li>Sounds Pronunciation App</li>
+                        <li>ELSA Speak</li>
+                        <li>Speechling</li>
+                        <li>FluentU</li>
+                        <li>Cake English</li>
+                        <li>BBC Learning English</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px;">
+                    <h4>🎥 قنوات YouTube</h4>
+                    <ul>
+                        <li>Rachel's English</li>
+                        <li>Pronunciation Pro</li>
+                        <li>English with Lucy</li>
+                        <li>BBC Learning English</li>
+                        <li>EngVid</li>
+                        <li>English Pronunciation Roadmap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- تمارين للممارسة -->
+        <div class="section">
+            <h2>💪 تمارين للممارسة</h2>
+            
+            <div class="rule-box">
+                <h3>🏋️ تمرين 1: الحروف الصوتية</h3>
+                <p>انطق هذه الكلمات وركز على الفرق بين الأصوات القصيرة والطويلة:</p>
+                <p>Bit - Beat, Sit - Seat, Hit - Heat, Ship - Sheep</p>
+            </div>
+
+            <div class="rule-box">
+                <h3>🏋️ تمرين 2: الأصوات الصعبة</h3>
+                <p>مارس هذه الكلمات التي تحتوي على أصوات غير موجودة في العربية:</p>
+                <p>P: Pen, Paper, Apple, Stop</p>
+                <p>V: Very, Love, Give, Have</p>
+                <p>TH: Think, Thank, This, That</p>
+            </div>
+
+            <div class="rule-box">
+                <h3>🏋️ تمرين 3: التركيبات الصوتية</h3>
+                <p>انطق هذه الكلمات وركز على التركيبات:</p>
+                <p>CH: Chair, Church, Choose</p>
+                <p>SH: Ship, Shop, Shoe</p>
+                <p>NG: Ring, Sing, Thing</p>
+            </div>
+
+            <div class="rule-box">
+                <h3>🏋️ تمرين 4: الحروف الصامتة</h3>
+                <p>انطق هذه الكلمات ولا تنطق الحروف الصامتة:</p>
+                <p>Knife, Know, Write, Wrong, Lamb, Thumb</p>
+            </div>
+
+            <div class="rule-box">
+                <h3>🏋️ تمرين 5: النبرة والتشديد</h3>
+                <p>انطق هذه الكلمات مع التركيز على النبرة الصحيحة:</p>
+                <p>TA-ble, WIN-dow, com-PU-ter, in-for-MA-tion</p>
+            </div>
+        </div>
+
+        <!-- خلاصة شاملة -->
+        <div class="section" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; text-align: center;">
+            <h2>🌟 خلاصة شاملة</h2>
+            <p>تذكر أن إتقان النطق يحتاج إلى ممارسة يومية وصبر. استخدم هذا الدليل كمرجع دائم واستمع للمتحدثين الأصليين بانتظام. النطق الصحيح هو مفتاح التواصل الفعال باللغة الإنجليزية!</p>
+            
+            <div style="margin-top: 2rem;">
+                <h3>🎯 نصائح نهائية للنجاح:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+                        <h4>🕐 الممارسة اليومية</h4>
+                        <p>15 دقيقة يومياً أفضل من ساعة أسبوعياً</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+                        <h4>🎧 الاستماع الفعال</h4>
+                        <p>استمع للمحتوى الإنجليزي بانتظام</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+                        <h4>📝 التسجيل والمقارنة</h4>
+                        <p>سجل صوتك وقارنه مع الأصليين</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+                        <h4>🤝 الممارسة مع الآخرين</h4>
+                        <p>تحدث مع متعلمين آخرين أو متحدثين أصليين</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playAudio(word) {
+            // استخدام Google Translate Text-to-Speech
+            const utterance = new SpeechSynthesisUtterance(word);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.8;
+            speechSynthesis.speak(utterance);
+        }
+
+        // إضافة تأثيرات بصرية
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.letter-card, .vowel-card, .consonant-card, .silent-card, .combination-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

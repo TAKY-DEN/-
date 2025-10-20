@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الحفظ - تتبع التقدم</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .progress-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .progress-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .progress-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .level-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .level-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .level-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .progress-stats {
+            text-align: left;
+            color: #666;
+        }
+        
+        .progress-bar-container {
+            background: #f0f0f0;
+            border-radius: 10px;
+            height: 20px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            position: relative;
+        }
+        
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .section-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tab-button {
+            flex: 1;
+            padding: 15px;
+            background: #f8f9fa;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .tab-button:hover {
+            background: #e9ecef;
+        }
+        
+        .tab-button.active:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        .word-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .word-item:hover {
+            background: #e9ecef;
+            transform: translateX(-5px);
+        }
+        
+        .word-item.completed {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        
+        .word-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-right: 15px;
+        }
+        
+        .word-english {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .word-arabic {
+            color: #666;
+            font-size: 15px;
+        }
+        
+        .word-pronunciation {
+            color: #888;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        .checkbox-container {
+            position: relative;
+        }
+        
+        .custom-checkbox {
+            width: 25px;
+            height: 25px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-checkbox.checked {
+            background: #28a745;
+            border-color: #28a745;
+        }
+        
+        .custom-checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .reset-button {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .reset-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        }
+        
+        .export-button {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .export-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76,175,80,0.4);
+        }
+        
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .stats-summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .word-content {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            
+            .level-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .section-tabs {
+                flex-direction: column;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-header">
+            <h1>📚 صفحة تتبع التقدم</h1>
+            <p>تابع تقدمك في حفظ المفردات والجمل لكل مستوى</p>
+        </div>
+
+        <div class="stats-summary">
+            <h2>📊 إحصائيات التقدم العامة</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalWordsLearned">0</span>
+                    <span class="stat-label">إجمالي الكلمات المحفوظة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalSentencesLearned">0</span>
+                    <span class="stat-label">إجمالي الجمل المحفوظة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="overallProgress">0%</span>
+                    <span class="stat-label">التقدم الإجمالي</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="levelsCompleted">0</span>
+                    <span class="stat-label">المستويات المكتملة</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="export-button" onclick="exportProgress()">📥 تصدير التقدم</button>
+            <button class="reset-button" onclick="resetAllProgress()">🔄 إعادة تعيين الكل</button>
+        </div>
+
+        <!-- A1 Level -->
+        <div class="level-card">
+            <div class="level-header">
+                <div class="level-title">🌱 المستوى A1 - مبتدئ</div>
+                <div class="progress-stats">
+                    <div>المفردات: <span id="a1-vocab-progress">0/50</span></div>
+                    <div>الجمل: <span id="a1-sentences-progress">0/20</span></div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="a1-progress-bar" style="width: 0%">
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+            
+            <div class="section-tabs">
+                <button class="tab-button active" onclick="showSection('a1', 'vocab')">📚 المفردات</button>
+                <button class="tab-button" onclick="showSection('a1', 'sentences')">💬 الجمل</button>
+            </div>
+            
+            <div class="content-section active" id="a1-vocab-content">
+                <div id="a1-vocab-list"></div>
+            </div>
+            
+            <div class="content-section" id="a1-sentences-content">
+                <div id="a1-sentences-list"></div>
+            </div>
+        </div>
+
+        <!-- A2 Level -->
+        <div class="level-card">
+            <div class="level-header">
+                <div class="level-title">🚀 المستوى A2 - متقدم مبتدئ</div>
+                <div class="progress-stats">
+                    <div>المفردات: <span id="a2-vocab-progress">0/50</span></div>
+                    <div>الجمل: <span id="a2-sentences-progress">0/20</span></div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="a2-progress-bar" style="width: 0%">
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+            
+            <div class="section-tabs">
+                <button class="tab-button active" onclick="showSection('a2', 'vocab')">📚 المفردات</button>
+                <button class="tab-button" onclick="showSection('a2', 'sentences')">💬 الجمل</button>
+            </div>
+            
+            <div class="content-section active" id="a2-vocab-content">
+                <div id="a2-vocab-list"></div>
+            </div>
+            
+            <div class="content-section" id="a2-sentences-content">
+                <div id="a2-sentences-list"></div>
+            </div>
+        </div>
+
+        <!-- B1 Level -->
+        <div class="level-card">
+            <div class="level-header">
+                <div class="level-title">💼 المستوى B1 - متوسط</div>
+                <div class="progress-stats">
+                    <div>المفردات: <span id="b1-vocab-progress">0/50</span></div>
+                    <div>الجمل: <span id="b1-sentences-progress">0/20</span></div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="b1-progress-bar" style="width: 0%">
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+            
+            <div class="section-tabs">
+                <button class="tab-button active" onclick="showSection('b1', 'vocab')">📚 المفردات</button>
+                <button class="tab-button" onclick="showSection('b1', 'sentences')">💬 الجمل</button>
+            </div>
+            
+            <div class="content-section active" id="b1-vocab-content">
+                <div id="b1-vocab-list"></div>
+            </div>
+            
+            <div class="content-section" id="b1-sentences-content">
+                <div id="b1-sentences-list"></div>
+            </div>
+        </div>
+
+        <!-- B2 Level -->
+        <div class="level-card">
+            <div class="level-header">
+                <div class="level-title">🎯 المستوى B2 - متقدم متوسط</div>
+                <div class="progress-stats">
+                    <div>المفردات: <span id="b2-vocab-progress">0/50</span></div>
+                    <div>الجمل: <span id="b2-sentences-progress">0/20</span></div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="b2-progress-bar" style="width: 0%">
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+            
+            <div class="section-tabs">
+                <button class="tab-button active" onclick="showSection('b2', 'vocab')">📚 المفردات</button>
+                <button class="tab-button" onclick="showSection('b2', 'sentences')">💬 الجمل</button>
+            </div>
+            
+            <div class="content-section active" id="b2-vocab-content">
+                <div id="b2-vocab-list"></div>
+            </div>
+            
+            <div class="content-section" id="b2-sentences-content">
+                <div id="b2-sentences-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // بيانات المفردات والجمل لكل مستوى
+        const levelData = {
+            a1: {
+                vocab: [
+                    {english: "Hello", arabic: "مرحبا", pronunciation: "هيلو"},
+                    {english: "Good", arabic: "جيد", pronunciation: "غود"},
+                    {english: "Bad", arabic: "سيء", pronunciation: "باد"},
+                    {english: "Yes", arabic: "نعم", pronunciation: "يس"},
+                    {english: "No", arabic: "لا", pronunciation: "نو"},
+                    {english: "Please", arabic: "من فضلك", pronunciation: "بليز"},
+                    {english: "Thank you", arabic: "شكراً لك", pronunciation: "ثانك يو"},
+                    {english: "Sorry", arabic: "آسف", pronunciation: "سوري"},
+                    {english: "Excuse me", arabic: "اعذرني", pronunciation: "إكسكيوز مي"},
+                    {english: "Help", arabic: "مساعدة", pronunciation: "هيلب"},
+                    {english: "Water", arabic: "ماء", pronunciation: "ووتر"},
+                    {english: "Food", arabic: "طعام", pronunciation: "فود"},
+                    {english: "Money", arabic: "مال", pronunciation: "ماني"},
+                    {english: "Time", arabic: "وقت", pronunciation: "تايم"},
+                    {english: "Work", arabic: "عمل", pronunciation: "وورك"},
+                    {english: "Home", arabic: "بيت", pronunciation: "هوم"},
+                    {english: "Family", arabic: "عائلة", pronunciation: "فاميلي"},
+                    {english: "Friend", arabic: "صديق", pronunciation: "فريند"},
+                    {english: "Love", arabic: "حب", pronunciation: "لوف"},
+                    {english: "Happy", arabic: "سعيد", pronunciation: "هابي"},
+                    {english: "Sad", arabic: "حزين", pronunciation: "ساد"},
+                    {english: "Big", arabic: "كبير", pronunciation: "بيغ"},
+                    {english: "Small", arabic: "صغير", pronunciation: "سمول"},
+                    {english: "New", arabic: "جديد", pronunciation: "نيو"},
+                    {english: "Old", arabic: "قديم", pronunciation: "أولد"},
+                    {english: "Hot", arabic: "حار", pronunciation: "هوت"},
+                    {english: "Cold", arabic: "بارد", pronunciation: "كولد"},
+                    {english: "Fast", arabic: "سريع", pronunciation: "فاست"},
+                    {english: "Slow", arabic: "بطيء", pronunciation: "سلو"},
+                    {english: "Easy", arabic: "سهل", pronunciation: "إيزي"},
+                    {english: "Hard", arabic: "صعب", pronunciation: "هارد"},
+                    {english: "Beautiful", arabic: "جميل", pronunciation: "بيوتيفول"},
+                    {english: "Ugly", arabic: "قبيح", pronunciation: "أغلي"},
+                    {english: "Smart", arabic: "ذكي", pronunciation: "سمارت"},
+                    {english: "Stupid", arabic: "غبي", pronunciation: "ستيوبيد"},
+                    {english: "Rich", arabic: "غني", pronunciation: "ريتش"},
+                    {english: "Poor", arabic: "فقير", pronunciation: "بور"},
+                    {english: "Strong", arabic: "قوي", pronunciation: "سترونغ"},
+                    {english: "Weak", arabic: "ضعيف", pronunciation: "ويك"},
+                    {english: "Healthy", arabic: "صحي", pronunciation: "هيلثي"},
+                    {english: "Sick", arabic: "مريض", pronunciation: "سيك"},
+                    {english: "Tired", arabic: "متعب", pronunciation: "تايرد"},
+                    {english: "Hungry", arabic: "جائع", pronunciation: "هانغري"},
+                    {english: "Thirsty", arabic: "عطشان", pronunciation: "ثيرستي"},
+                    {english: "Busy", arabic: "مشغول", pronunciation: "بيزي"},
+                    {english: "Free", arabic: "حر", pronunciation: "فري"},
+                    {english: "Ready", arabic: "جاهز", pronunciation: "ريدي"},
+                    {english: "Careful", arabic: "حذر", pronunciation: "كيرفول"},
+                    {english: "Safe", arabic: "آمن", pronunciation: "سيف"},
+                    {english: "Dangerous", arabic: "خطير", pronunciation: "دينجيروس"}
+                ],
+                sentences: [
+                    {english: "Hello, how are you?", arabic: "مرحباً، كيف حالك؟", pronunciation: "هيلو، هاو آر يو؟"},
+                    {english: "I am fine, thank you", arabic: "أنا بخير، شكراً لك", pronunciation: "آي آم فاين، ثانك يو"},
+                    {english: "What is your name?", arabic: "ما اسمك؟", pronunciation: "وات إز يور نيم؟"},
+                    {english: "My name is Ahmed", arabic: "اسمي أحمد", pronunciation: "ماي نيم إز أحمد"},
+                    {english: "Where are you from?", arabic: "من أين أنت؟", pronunciation: "وير آر يو فروم؟"},
+                    {english: "I am from Syria", arabic: "أنا من سوريا", pronunciation: "آي آم فروم سيريا"},
+                    {english: "How old are you?", arabic: "كم عمرك؟", pronunciation: "هاو أولد آر يو؟"},
+                    {english: "I am 25 years old", arabic: "عمري 25 سنة", pronunciation: "آي آم توينتي فايف يرز أولد"},
+                    {english: "Do you speak English?", arabic: "هل تتحدث الإنجليزية؟", pronunciation: "دو يو سبيك إنغليش؟"},
+                    {english: "Yes, a little", arabic: "نعم، قليلاً", pronunciation: "يس، آ ليتل"},
+                    {english: "I love you", arabic: "أحبك", pronunciation: "آي لوف يو"},
+                    {english: "I miss you", arabic: "أشتاق إليك", pronunciation: "آي ميس يو"},
+                    {english: "See you later", arabic: "أراك لاحقاً", pronunciation: "سي يو ليتر"},
+                    {english: "Good morning", arabic: "صباح الخير", pronunciation: "غود مورنينغ"},
+                    {english: "Good night", arabic: "تصبح على خير", pronunciation: "غود نايت"},
+                    {english: "Have a nice day", arabic: "أتمنى لك يوماً سعيداً", pronunciation: "هاف آ نايس دي"},
+                    {english: "I am hungry", arabic: "أنا جائع", pronunciation: "آي آم هانغري"},
+                    {english: "I am thirsty", arabic: "أنا عطشان", pronunciation: "آي آم ثيرستي"},
+                    {english: "I am tired", arabic: "أنا متعب", pronunciation: "آي آم تايرد"},
+                    {english: "I need help", arabic: "أحتاج مساعدة", pronunciation: "آي نيد هيلب"}
+                ]
+            },
+            a2: {
+                vocab: [
+                    {english: "Business", arabic: "أعمال", pronunciation: "بيزنيس"},
+                    {english: "Company", arabic: "شركة", pronunciation: "كومباني"},
+                    {english: "Office", arabic: "مكتب", pronunciation: "أوفيس"},
+                    {english: "Manager", arabic: "مدير", pronunciation: "مانيجر"},
+                    {english: "Employee", arabic: "موظف", pronunciation: "إمبلويي"},
+                    {english: "Customer", arabic: "عميل", pronunciation: "كاستومر"},
+                    {english: "Product", arabic: "منتج", pronunciation: "برودكت"},
+                    {english: "Service", arabic: "خدمة", pronunciation: "سيرفيس"},
+                    {english: "Quality", arabic: "جودة", pronunciation: "كواليتي"},
+                    {english: "Price", arabic: "سعر", pronunciation: "برايس"},
+                    {english: "Marketing", arabic: "تسويق", pronunciation: "ماركيتينغ"},
+                    {english: "Sales", arabic: "مبيعات", pronunciation: "سيلز"},
+                    {english: "Profit", arabic: "ربح", pronunciation: "بروفيت"},
+                    {english: "Loss", arabic: "خسارة", pronunciation: "لوس"},
+                    {english: "Budget", arabic: "ميزانية", pronunciation: "بادجيت"},
+                    {english: "Investment", arabic: "استثمار", pronunciation: "إنفيستمنت"},
+                    {english: "Contract", arabic: "عقد", pronunciation: "كونتراكت"},
+                    {english: "Agreement", arabic: "اتفاقية", pronunciation: "أغريمنت"},
+                    {english: "Meeting", arabic: "اجتماع", pronunciation: "ميتينغ"},
+                    {english: "Project", arabic: "مشروع", pronunciation: "بروجيكت"},
+                    {english: "Team", arabic: "فريق", pronunciation: "تيم"},
+                    {english: "Leader", arabic: "قائد", pronunciation: "ليدر"},
+                    {english: "Success", arabic: "نجاح", pronunciation: "سكسيس"},
+                    {english: "Failure", arabic: "فشل", pronunciation: "فيليور"},
+                    {english: "Goal", arabic: "هدف", pronunciation: "غول"},
+                    {english: "Target", arabic: "هدف", pronunciation: "تارغيت"},
+                    {english: "Strategy", arabic: "استراتيجية", pronunciation: "ستراتيجي"},
+                    {english: "Plan", arabic: "خطة", pronunciation: "بلان"},
+                    {english: "Report", arabic: "تقرير", pronunciation: "ريبورت"},
+                    {english: "Analysis", arabic: "تحليل", pronunciation: "أناليسيس"},
+                    {english: "Data", arabic: "بيانات", pronunciation: "ديتا"},
+                    {english: "Information", arabic: "معلومات", pronunciation: "إنفورميشن"},
+                    {english: "Technology", arabic: "تكنولوجيا", pronunciation: "تيكنولوجي"},
+                    {english: "Computer", arabic: "حاسوب", pronunciation: "كومبيوتر"},
+                    {english: "Internet", arabic: "إنترنت", pronunciation: "إنترنت"},
+                    {english: "Website", arabic: "موقع إلكتروني", pronunciation: "ويبسايت"},
+                    {english: "Email", arabic: "بريد إلكتروني", pronunciation: "إيميل"},
+                    {english: "Phone", arabic: "هاتف", pronunciation: "فون"},
+                    {english: "Mobile", arabic: "جوال", pronunciation: "موبايل"},
+                    {english: "Application", arabic: "تطبيق", pronunciation: "أبليكيشن"},
+                    {english: "Software", arabic: "برمجيات", pronunciation: "سوفتوير"},
+                    {english: "Hardware", arabic: "أجهزة", pronunciation: "هاردوير"},
+                    {english: "Network", arabic: "شبكة", pronunciation: "نيتوورك"},
+                    {english: "Database", arabic: "قاعدة بيانات", pronunciation: "ديتابيس"},
+                    {english: "Security", arabic: "أمان", pronunciation: "سيكيوريتي"},
+                    {english: "Password", arabic: "كلمة مرور", pronunciation: "باسوورد"},
+                    {english: "Account", arabic: "حساب", pronunciation: "أكاونت"},
+                    {english: "Profile", arabic: "ملف شخصي", pronunciation: "بروفايل"},
+                    {english: "Settings", arabic: "إعدادات", pronunciation: "ستينغز"},
+                    {english: "Update", arabic: "تحديث", pronunciation: "أبديت"}
+                ],
+                sentences: [
+                    {english: "Our business is growing rapidly", arabic: "أعمالنا تنمو بسرعة", pronunciation: "آور بيزنيس إز غروينغ رابيدلي"},
+                    {english: "We achieved great success this year", arabic: "حققنا نجاحاً عظيماً هذا العام", pronunciation: "وي أتشيفد غريت سكسيس ذيس يير"},
+                    {english: "The marketing strategy is effective", arabic: "استراتيجية التسويق فعالة", pronunciation: "ذا ماركيتينغ ستراتيجي إز إفيكتيف"},
+                    {english: "Sales increased by 20%", arabic: "المبيعات زادت بنسبة 20%", pronunciation: "سيلز إنكريسد باي توينتي برسنت"},
+                    {english: "We made a good profit", arabic: "حققنا ربحاً جيداً", pronunciation: "وي ميد آ غود بروفيت"},
+                    {english: "The budget is approved", arabic: "الميزانية معتمدة", pronunciation: "ذا بادجيت إز أبروفد"},
+                    {english: "This is a smart investment", arabic: "هذا استثمار ذكي", pronunciation: "ذيس إز آ سمارت إنفيستمنت"},
+                    {english: "Please send the invoice", arabic: "يرجى إرسال الفاتورة", pronunciation: "بليز سيند ذا إنفويس"},
+                    {english: "Payment is due tomorrow", arabic: "الدفع مستحق غداً", pronunciation: "بيمنت إز دو تومورو"},
+                    {english: "We signed the contract", arabic: "وقعنا العقد", pronunciation: "وي سايند ذا كونتراكت"},
+                    {english: "The negotiation was successful", arabic: "التفاوض كان ناجحاً", pronunciation: "ذا نيغوشييشن واز سكسيسفول"},
+                    {english: "Our partnership is strong", arabic: "شراكتنا قوية", pronunciation: "آور بارتنرشيب إز سترونغ"},
+                    {english: "Competition is increasing", arabic: "المنافسة تزداد", pronunciation: "كومبيتيشن إز إنكريسينغ"},
+                    {english: "The market is expanding", arabic: "السوق يتوسع", pronunciation: "ذا ماركيت إز إكسباندينغ"},
+                    {english: "Technology is advancing", arabic: "التكنولوجيا تتقدم", pronunciation: "تيكنولوجي إز أدفانسينغ"},
+                    {english: "Our website is popular", arabic: "موقعنا الإلكتروني مشهور", pronunciation: "آور ويبسايت إز بوبيولار"},
+                    {english: "The application works perfectly", arabic: "التطبيق يعمل بشكل مثالي", pronunciation: "ذا أبليكيشن وورك برفيكتلي"},
+                    {english: "We need new software", arabic: "نحتاج برمجيات جديدة", pronunciation: "وي نيد نيو سوفتوير"},
+                    {english: "The computer is fast", arabic: "الحاسوب سريع", pronunciation: "ذا كومبيوتر إز فاست"},
+                    {english: "Internet connection is stable", arabic: "اتصال الإنترنت مستقر", pronunciation: "إنترنت كونيكشن إز ستيبل"}
+                ]
+            },
+            b1: {
+                vocab: [
+                    {english: "Administration", arabic: "إدارة", pronunciation: "أدمينيستريشن"},
+                    {english: "Leadership", arabic: "قيادة", pronunciation: "ليدرشيب"},
+                    {english: "Management", arabic: "إدارة", pronunciation: "مانجمنت"},
+                    {english: "Organization", arabic: "منظمة", pronunciation: "أورغانايزيشن"},
+                    {english: "Coordination", arabic: "تنسيق", pronunciation: "كوأوردينيشن"},
+                    {english: "Planning", arabic: "تخطيط", pronunciation: "بلانينغ"},
+                    {english: "Implementation", arabic: "تنفيذ", pronunciation: "إمبليمنتيشن"},
+                    {english: "Evaluation", arabic: "تقييم", pronunciation: "إيفاليويشن"},
+                    {english: "Performance", arabic: "أداء", pronunciation: "برفورمانس"},
+                    {english: "Productivity", arabic: "إنتاجية", pronunciation: "برودكتيفيتي"},
+                    {english: "Efficiency", arabic: "كفاءة", pronunciation: "إفيشنسي"},
+                    {english: "Effectiveness", arabic: "فعالية", pronunciation: "إفيكتيفنيس"},
+                    {english: "Quality", arabic: "جودة", pronunciation: "كواليتي"},
+                    {english: "Standard", arabic: "معيار", pronunciation: "ستاندارد"},
+                    {english: "Procedure", arabic: "إجراء", pronunciation: "بروسيجر"},
+                    {english: "Process", arabic: "عملية", pronunciation: "بروسيس"},
+                    {english: "System", arabic: "نظام", pronunciation: "سيستم"},
+                    {english: "Structure", arabic: "هيكل", pronunciation: "سترك تشر"},
+                    {english: "Framework", arabic: "إطار عمل", pronunciation: "فريموورك"},
+                    {english: "Methodology", arabic: "منهجية", pronunciation: "ميثودولوجي"},
+                    {english: "Approach", arabic: "نهج", pronunciation: "أبروتش"},
+                    {english: "Strategy", arabic: "استراتيجية", pronunciation: "ستراتيجي"},
+                    {english: "Objective", arabic: "هدف", pronunciation: "أوبجيكتيف"},
+                    {english: "Goal", arabic: "غاية", pronunciation: "غول"},
+                    {english: "Target", arabic: "هدف", pronunciation: "تارغيت"},
+                    {english: "Achievement", arabic: "إنجاز", pronunciation: "أتشيفمنت"},
+                    {english: "Accomplishment", arabic: "إنجاز", pronunciation: "أكومبليشمنت"},
+                    {english: "Result", arabic: "نتيجة", pronunciation: "ريزلت"},
+                    {english: "Outcome", arabic: "محصلة", pronunciation: "آوتكوم"},
+                    {english: "Impact", arabic: "تأثير", pronunciation: "إمباكت"},
+                    {english: "Influence", arabic: "تأثير", pronunciation: "إنفلوينس"},
+                    {english: "Consequence", arabic: "نتيجة", pronunciation: "كونسيكوينس"},
+                    {english: "Effect", arabic: "أثر", pronunciation: "إفيكت"},
+                    {english: "Cause", arabic: "سبب", pronunciation: "كوز"},
+                    {english: "Reason", arabic: "سبب", pronunciation: "ريزن"},
+                    {english: "Factor", arabic: "عامل", pronunciation: "فاكتر"},
+                    {english: "Element", arabic: "عنصر", pronunciation: "إليمنت"},
+                    {english: "Component", arabic: "مكون", pronunciation: "كومبونينت"},
+                    {english: "Aspect", arabic: "جانب", pronunciation: "أسبيكت"},
+                    {english: "Feature", arabic: "ميزة", pronunciation: "فيتشر"},
+                    {english: "Characteristic", arabic: "خاصية", pronunciation: "كاراكتريستيك"},
+                    {english: "Attribute", arabic: "صفة", pronunciation: "أتريبيوت"},
+                    {english: "Property", arabic: "خاصية", pronunciation: "بروبرتي"},
+                    {english: "Advantage", arabic: "ميزة", pronunciation: "أدفانتيج"},
+                    {english: "Benefit", arabic: "فائدة", pronunciation: "بينيفيت"},
+                    {english: "Value", arabic: "قيمة", pronunciation: "فاليو"},
+                    {english: "Worth", arabic: "قيمة", pronunciation: "وورث"},
+                    {english: "Importance", arabic: "أهمية", pronunciation: "إمبورتانس"},
+                    {english: "Significance", arabic: "أهمية", pronunciation: "سيغنيفيكانس"},
+                    {english: "Priority", arabic: "أولوية", pronunciation: "برايوريتي"}
+                ],
+                sentences: [
+                    {english: "The administration is implementing new policies", arabic: "الإدارة تطبق سياسات جديدة", pronunciation: "ذا أدمينيستريشن إز إمبليمنتينغ نيو بوليسيز"},
+                    {english: "Leadership skills are essential for success", arabic: "مهارات القيادة أساسية للنجاح", pronunciation: "ليدرشيب سكيلز آر إسينشال فور سكسيس"},
+                    {english: "Management decided to restructure the organization", arabic: "الإدارة قررت إعادة هيكلة المنظمة", pronunciation: "مانجمنت ديسايديد تو ريسترك تشر ذا أورغانايزيشن"},
+                    {english: "Coordination between departments is crucial", arabic: "التنسيق بين الأقسام أمر بالغ الأهمية", pronunciation: "كوأوردينيشن بيتوين ديبارتمنتس إز كروشال"},
+                    {english: "Strategic planning requires careful analysis", arabic: "التخطيط الاستراتيجي يتطلب تحليلاً دقيقاً", pronunciation: "ستراتيجيك بلانينغ ريكوايرز كيرفول أناليسيس"},
+                    {english: "Implementation of the project was successful", arabic: "تنفيذ المشروع كان ناجحاً", pronunciation: "إمبليمنتيشن أوف ذا بروجيكت واز سكسيسفول"},
+                    {english: "Performance evaluation is conducted annually", arabic: "تقييم الأداء يتم سنوياً", pronunciation: "برفورمانس إيفاليويشن إز كوندكتيد أنيوالي"},
+                    {english: "Productivity has increased significantly", arabic: "الإنتاجية زادت بشكل كبير", pronunciation: "برودكتيفيتي هاز إنكريسد سيغنيفيكانتلي"},
+                    {english: "Efficiency is our main priority", arabic: "الكفاءة أولويتنا الرئيسية", pronunciation: "إفيشنسي إز آور مين برايوريتي"},
+                    {english: "Quality standards must be maintained", arabic: "معايير الجودة يجب أن تُحافظ عليها", pronunciation: "كواليتي ستاندردز مست بي مينتيند"},
+                    {english: "The procedure has been updated", arabic: "الإجراء تم تحديثه", pronunciation: "ذا بروسيجر هاز بين أبديتيد"},
+                    {english: "Our system is highly effective", arabic: "نظامنا فعال للغاية", pronunciation: "آور سيستم إز هايلي إفيكتيف"},
+                    {english: "The organizational structure is clear", arabic: "الهيكل التنظيمي واضح", pronunciation: "ذا أورغانايزيشنال سترك تشر إز كلير"},
+                    {english: "We follow a proven methodology", arabic: "نتبع منهجية مثبتة", pronunciation: "وي فولو آ بروفن ميثودولوجي"},
+                    {english: "This approach has shown good results", arabic: "هذا النهج أظهر نتائج جيدة", pronunciation: "ذيس أبروتش هاز شون غود ريزلتس"},
+                    {english: "Our objectives are clearly defined", arabic: "أهدافنا محددة بوضوح", pronunciation: "آور أوبجيكتيفز آر كليرلي ديفايند"},
+                    {english: "The team achieved all targets", arabic: "الفريق حقق جميع الأهداف", pronunciation: "ذا تيم أتشيفد أول تارغيتس"},
+                    {english: "This accomplishment is remarkable", arabic: "هذا الإنجاز رائع", pronunciation: "ذيس أكومبليشمنت إز ريماركابل"},
+                    {english: "The outcome exceeded expectations", arabic: "المحصلة فاقت التوقعات", pronunciation: "ذا آوتكوم إكسيديد إكسبيكتيشنز"},
+                    {english: "The impact was significant", arabic: "التأثير كان كبيراً", pronunciation: "ذا إمباكت واز سيغنيفيكانت"}
+                ]
+            },
+            b2: {
+                vocab: [
+                    {english: "Sophisticated", arabic: "متطور", pronunciation: "سوفيستيكيتيد"},
+                    {english: "Comprehensive", arabic: "شامل", pronunciation: "كومبريهينسيف"},
+                    {english: "Substantial", arabic: "كبير", pronunciation: "سبستانشال"},
+                    {english: "Significant", arabic: "مهم", pronunciation: "سيغنيفيكانت"},
+                    {english: "Considerable", arabic: "كبير", pronunciation: "كونسيديرابل"},
+                    {english: "Remarkable", arabic: "ملحوظ", pronunciation: "ريماركابل"},
+                    {english: "Outstanding", arabic: "متميز", pronunciation: "آوتستاندينغ"},
+                    {english: "Exceptional", arabic: "استثنائي", pronunciation: "إكسيبشنال"},
+                    {english: "Extraordinary", arabic: "غير عادي", pronunciation: "إكسترأورديني ري"},
+                    {english: "Unprecedented", arabic: "غير مسبوق", pronunciation: "أنبريسيدينتيد"},
+                    {english: "Revolutionary", arabic: "ثوري", pronunciation: "ريفولوشنيري"},
+                    {english: "Innovative", arabic: "مبتكر", pronunciation: "إنوفيتيف"},
+                    {english: "Progressive", arabic: "تقدمي", pronunciation: "بروغريسيف"},
+                    {english: "Advanced", arabic: "متقدم", pronunciation: "أدفانسد"},
+                    {english: "Contemporary", arabic: "معاصر", pronunciation: "كونتيمبوريري"},
+                    {english: "Modern", arabic: "حديث", pronunciation: "مودرن"},
+                    {english: "Traditional", arabic: "تقليدي", pronunciation: "تراديشنال"},
+                    {english: "Conventional", arabic: "تقليدي", pronunciation: "كونفينشنال"},
+                    {english: "Classical", arabic: "كلاسيكي", pronunciation: "كلاسيكال"},
+                    {english: "Fundamental", arabic: "أساسي", pronunciation: "فاندامينتال"},
+                    {english: "Essential", arabic: "ضروري", pronunciation: "إسينشال"},
+                    {english: "Crucial", arabic: "حاسم", pronunciation: "كروشال"},
+                    {english: "Critical", arabic: "حرج", pronunciation: "كريتيكال"},
+                    {english: "Vital", arabic: "حيوي", pronunciation: "فايتال"},
+                    {english: "Important", arabic: "مهم", pronunciation: "إمبورتانت"},
+                    {english: "Relevant", arabic: "ذو صلة", pronunciation: "ريليفانت"},
+                    {english: "Appropriate", arabic: "مناسب", pronunciation: "أبروبرييت"},
+                    {english: "Suitable", arabic: "مناسب", pronunciation: "سوتابل"},
+                    {english: "Adequate", arabic: "كافي", pronunciation: "أديكويت"},
+                    {english: "Sufficient", arabic: "كافي", pronunciation: "سفيشنت"},
+                    {english: "Necessary", arabic: "ضروري", pronunciation: "نيسيساري"},
+                    {english: "Required", arabic: "مطلوب", pronunciation: "ريكوايرد"},
+                    {english: "Mandatory", arabic: "إلزامي", pronunciation: "ماندا توري"},
+                    {english: "Optional", arabic: "اختياري", pronunciation: "أوبشنال"},
+                    {english: "Available", arabic: "متاح", pronunciation: "أفيلابل"},
+                    {english: "Accessible", arabic: "قابل للوصول", pronunciation: "أكسيسابل"},
+                    {english: "Feasible", arabic: "قابل للتنفيذ", pronunciation: "فيزابل"},
+                    {english: "Practical", arabic: "عملي", pronunciation: "براكتيكال"},
+                    {english: "Realistic", arabic: "واقعي", pronunciation: "رياليستيك"},
+                    {english: "Theoretical", arabic: "نظري", pronunciation: "ثيوريتيكال"},
+                    {english: "Conceptual", arabic: "مفاهيمي", pronunciation: "كونسيبتوال"},
+                    {english: "Abstract", arabic: "مجرد", pronunciation: "أبستراكت"},
+                    {english: "Concrete", arabic: "ملموس", pronunciation: "كونكريت"},
+                    {english: "Specific", arabic: "محدد", pronunciation: "سبيسيفيك"},
+                    {english: "General", arabic: "عام", pronunciation: "جينيرال"},
+                    {english: "Particular", arabic: "خاص", pronunciation: "بارتيكيولار"},
+                    {english: "Individual", arabic: "فردي", pronunciation: "إنديفيجوال"},
+                    {english: "Personal", arabic: "شخصي", pronunciation: "برسونال"},
+                    {english: "Professional", arabic: "مهني", pronunciation: "بروفيشنال"},
+                    {english: "Academic", arabic: "أكاديمي", pronunciation: "أكاديميك"}
+                ],
+                sentences: [
+                    {english: "The sophisticated approach yielded remarkable results", arabic: "النهج المتطور حقق نتائج ملحوظة", pronunciation: "ذا سوفيستيكيتيد أبروتش يلديد ريماركابل ريزلتس"},
+                    {english: "Our comprehensive analysis revealed significant insights", arabic: "تحليلنا الشامل كشف رؤى مهمة", pronunciation: "آور كومبريهينسيف أناليسيس ريفيلد سيغنيفيكانت إنسايتس"},
+                    {english: "The substantial investment has proven worthwhile", arabic: "الاستثمار الكبير أثبت أنه يستحق العناء", pronunciation: "ذا سبستانشال إنفيستمنت هاز بروفن وورثوايل"},
+                    {english: "This exceptional performance exceeded all expectations", arabic: "هذا الأداء الاستثنائي فاق كل التوقعات", pronunciation: "ذيس إكسيبشنال برفورمانس إكسيديد أول إكسبيكتيشنز"},
+                    {english: "The revolutionary technology transformed our industry", arabic: "التكنولوجيا الثورية غيرت صناعتنا", pronunciation: "ذا ريفولوشنيري تيكنولوجي ترانسفورمد آور إندستري"},
+                    {english: "Progressive policies have enhanced organizational culture", arabic: "السياسات التقدمية عززت الثقافة التنظيمية", pronunciation: "بروغريسيف بوليسيز هاف إنهانسد أورغانايزيشنال كولتشر"},
+                    {english: "Contemporary management practices require constant adaptation", arabic: "ممارسات الإدارة المعاصرة تتطلب تكيفاً مستمراً", pronunciation: "كونتيمبوريري مانجمنت براكتيسيز ريكوايرز كونستانت أدابتيشن"},
+                    {english: "Traditional methods are being replaced by innovative solutions", arabic: "الطرق التقليدية يتم استبدالها بحلول مبتكرة", pronunciation: "تراديشنال ميثودز آر بيينغ ريبليسد باي إنوفيتيف سولوشنز"},
+                    {english: "Fundamental principles guide our strategic decisions", arabic: "المبادئ الأساسية توجه قراراتنا الاستراتيجية", pronunciation: "فاندامينتال برينسيبلز غايد آور ستراتيجيك ديسيشنز"},
+                    {english: "Critical thinking is essential for problem-solving", arabic: "التفكير النقدي ضروري لحل المشاكل", pronunciation: "كريتيكال ثينكينغ إز إسينشال فور بروبلم سولفينغ"},
+                    {english: "The feasible solution addresses all stakeholder concerns", arabic: "الحل القابل للتنفيذ يعالج جميع اهتمامات أصحاب المصلحة", pronunciation: "ذا فيزابل سولوشن أدريسيز أول ستيكهولدر كونسيرنز"},
+                    {english: "Theoretical frameworks provide practical guidance", arabic: "الأطر النظرية توفر توجيهاً عملياً", pronunciation: "ثيوريتيكال فريموركز بروفايد براكتيكال غايدانس"},
+                    {english: "Abstract concepts require concrete implementation strategies", arabic: "المفاهيم المجردة تتطلب استراتيجيات تنفيذ ملموسة", pronunciation: "أبستراكت كونسيبتس ريكوايرز كونكريت إمبليمنتيشن ستراتيجيز"},
+                    {english: "Professional development enhances individual capabilities", arabic: "التطوير المهني يعزز القدرات الفردية", pronunciation: "بروفيشنال ديفيلوبمنت إنهانسيز إنديفيجوال كيبابيليتيز"},
+                    {english: "Academic research contributes to scientific advancement", arabic: "البحث الأكاديمي يساهم في التقدم العلمي", pronunciation: "أكاديميك ريسيرتش كونتريبيوتس تو ساينتيفيك أدفانسمنت"},
+                    {english: "Comprehensive evaluation ensures quality standards", arabic: "التقييم الشامل يضمن معايير الجودة", pronunciation: "كومبريهينسيف إيفاليويشن إنشورز كواليتي ستاندردز"},
+                    {english: "Sophisticated algorithms optimize operational efficiency", arabic: "الخوارزميات المتطورة تحسن الكفاءة التشغيلية", pronunciation: "سوفيستيكيتيد ألغوريذمز أوبتيمايز أوبيريشنال إفيشنسي"},
+                    {english: "Outstanding achievements deserve appropriate recognition", arabic: "الإنجازات المتميزة تستحق الاعتراف المناسب", pronunciation: "آوتستاندينغ أتشيفمنتس ديزيرف أبروبرييت ريكوغنيشن"},
+                    {english: "Unprecedented challenges require innovative approaches", arabic: "التحديات غير المسبوقة تتطلب مناهج مبتكرة", pronunciation: "أنبريسيدينتيد تشالينجيز ريكوايرز إنوفيتيف أبروتشيز"},
+                    {english: "Substantial evidence supports our strategic recommendations", arabic: "أدلة كبيرة تدعم توصياتنا الاستراتيجية", pronunciation: "سبستانشال إفيدينس سبورتس آور ستراتيجيك ريكومينديشنز"}
+                ]
+            }
+        };
+
+        // تحميل البيانات المحفوظة
+        function loadProgress() {
+            const saved = localStorage.getItem('englishCourseProgress');
+            return saved ? JSON.parse(saved) : {};
+        }
+
+        // حفظ البيانات
+        function saveProgress(progress) {
+            localStorage.setItem('englishCourseProgress', JSON.stringify(progress));
+        }
+
+        // تهيئة البيانات عند تحميل الصفحة
+        let progress = loadProgress();
+
+        // إنشاء قوائم المفردات والجمل
+        function createWordList(level, type) {
+            const container = document.getElementById(`${level}-${type}-list`);
+            const data = levelData[level][type];
+            
+            container.innerHTML = '';
+            
+            data.forEach((item, index) => {
+                const wordItem = document.createElement('div');
+                wordItem.className = 'word-item';
+                wordItem.id = `${level}-${type}-${index}`;
+                
+                const isCompleted = progress[level] && progress[level][type] && progress[level][type][index];
+                if (isCompleted) {
+                    wordItem.classList.add('completed');
+                }
+                
+                wordItem.innerHTML = `
+                    <div class="word-content">
+                        <div class="word-english">${item.english}</div>
+                        <div class="word-arabic">${item.arabic}</div>
+                        <div class="word-pronunciation">${item.pronunciation}</div>
+                    </div>
+                    <div class="checkbox-container">
+                        <div class="custom-checkbox ${isCompleted ? 'checked' : ''}" 
+                             onclick="toggleProgress('${level}', '${type}', ${index})">
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(wordItem);
+            });
+        }
+
+        // تبديل حالة التقدم
+        function toggleProgress(level, type, index) {
+            if (!progress[level]) progress[level] = {};
+            if (!progress[level][type]) progress[level][type] = {};
+            
+            progress[level][type][index] = !progress[level][type][index];
+            
+            const wordItem = document.getElementById(`${level}-${type}-${index}`);
+            const checkbox = wordItem.querySelector('.custom-checkbox');
+            
+            if (progress[level][type][index]) {
+                wordItem.classList.add('completed');
+                checkbox.classList.add('checked');
+            } else {
+                wordItem.classList.remove('completed');
+                checkbox.classList.remove('checked');
+            }
+            
+            saveProgress(progress);
+            updateProgressBars();
+            updateOverallStats();
+        }
+
+        // تحديث أشرطة التقدم
+        function updateProgressBars() {
+            ['a1', 'a2', 'b1', 'b2'].forEach(level => {
+                const vocabTotal = levelData[level].vocab.length;
+                const sentencesTotal = levelData[level].sentences.length;
+                
+                const vocabCompleted = progress[level] && progress[level].vocab ? 
+                    Object.values(progress[level].vocab).filter(Boolean).length : 0;
+                const sentencesCompleted = progress[level] && progress[level].sentences ? 
+                    Object.values(progress[level].sentences).filter(Boolean).length : 0;
+                
+                const totalItems = vocabTotal + sentencesTotal;
+                const completedItems = vocabCompleted + sentencesCompleted;
+                const percentage = Math.round((completedItems / totalItems) * 100);
+                
+                document.getElementById(`${level}-vocab-progress`).textContent = `${vocabCompleted}/${vocabTotal}`;
+                document.getElementById(`${level}-sentences-progress`).textContent = `${sentencesCompleted}/${sentencesTotal}`;
+                
+                const progressBar = document.getElementById(`${level}-progress-bar`);
+                progressBar.style.width = `${percentage}%`;
+                progressBar.querySelector('.progress-text').textContent = `${percentage}%`;
+            });
+        }
+
+        // تحديث الإحصائيات العامة
+        function updateOverallStats() {
+            let totalWords = 0;
+            let totalSentences = 0;
+            let completedWords = 0;
+            let completedSentences = 0;
+            let levelsCompleted = 0;
+            
+            ['a1', 'a2', 'b1', 'b2'].forEach(level => {
+                const vocabTotal = levelData[level].vocab.length;
+                const sentencesTotal = levelData[level].sentences.length;
+                
+                const vocabCompleted = progress[level] && progress[level].vocab ? 
+                    Object.values(progress[level].vocab).filter(Boolean).length : 0;
+                const sentencesCompleted = progress[level] && progress[level].sentences ? 
+                    Object.values(progress[level].sentences).filter(Boolean).length : 0;
+                
+                totalWords += vocabTotal;
+                totalSentences += sentencesTotal;
+                completedWords += vocabCompleted;
+                completedSentences += sentencesCompleted;
+                
+                if (vocabCompleted === vocabTotal && sentencesCompleted === sentencesTotal) {
+                    levelsCompleted++;
+                }
+            });
+            
+            const overallPercentage = Math.round(((completedWords + completedSentences) / (totalWords + totalSentences)) * 100);
+            
+            document.getElementById('totalWordsLearned').textContent = completedWords;
+            document.getElementById('totalSentencesLearned').textContent = completedSentences;
+            document.getElementById('overallProgress').textContent = `${overallPercentage}%`;
+            document.getElementById('levelsCompleted').textContent = levelsCompleted;
+        }
+
+        // إظهار قسم معين
+        function showSection(level, section) {
+            // إخفاء جميع الأقسام
+            document.querySelectorAll(`#${level}-vocab-content, #${level}-sentences-content`).forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // إزالة الفئة النشطة من جميع الأزرار
+            document.querySelectorAll(`.level-card .tab-button`).forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // إظهار القسم المحدد
+            document.getElementById(`${level}-${section}-content`).classList.add('active');
+            
+            // تفعيل الزر المحدد
+            event.target.classList.add('active');
+        }
+
+        // إعادة تعيين التقدم
+        function resetAllProgress() {
+            if (confirm('هل أنت متأكد من إعادة تعيين جميع البيانات؟ سيتم فقدان جميع التقدم المحفوظ.')) {
+                progress = {};
+                saveProgress(progress);
+                initializeAll();
+            }
+        }
+
+        // تصدير التقدم
+        function exportProgress() {
+            const dataStr = JSON.stringify(progress, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'english_course_progress.json';
+            link.click();
+        }
+
+        // تهيئة كل شيء
+        function initializeAll() {
+            ['a1', 'a2', 'b1', 'b2'].forEach(level => {
+                createWordList(level, 'vocab');
+                createWordList(level, 'sentences');
+            });
+            updateProgressBars();
+            updateOverallStats();
+        }
+
+        // تشغيل التهيئة عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', initializeAll);
+    </script>
+</body>
+</html>
+
