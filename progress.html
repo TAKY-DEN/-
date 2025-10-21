@@ -235,6 +235,30 @@
             font-size: 4rem;
             margin-bottom: 20px;
         }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .user-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
         
         @media (max-width: 768px) {
             .stats-grid {
@@ -264,6 +288,10 @@
         <div class="stats-header">
             <h1>📊 صفحة الحفظ والإحصائيات</h1>
             <p>تتبع تقدمك في تعلم اللغة الإنجليزية</p>
+            <div class="user-info" id="userInfo">
+                <div class="loading-spinner"></div>
+                <p>جاري التحميل...</p>
+            </div>
         </div>
         
         <div class="stats-grid">
@@ -296,12 +324,14 @@
         </div>
         
         <!-- إحصائيات المستويات -->
-        <div class="level-stats" id="levelStats">
-            <!-- سيتم ملؤها بواسطة JavaScript -->
+        <div class="stats-grid">
+            <div class="level-stats" id="levelStats">
+                <!-- سيتم ملؤها بواسطة JavaScript -->
+            </div>
         </div>
         
         <!-- النشاط الأخير -->
-        <div class="recent-activity">
+        <div class="recent-activity" style="display: none;" id="recentActivitySection">
             <h3>🕒 آخر العناصر المحفوظة</h3>
             <div id="recentItems">
                 <!-- سيتم ملؤها بواسطة JavaScript -->
@@ -316,41 +346,196 @@
             <a href="a1-vocabulary.html" class="action-button">
                 📚 متابعة التعلم
             </a>
-            <button class="action-button danger" onclick="resetUserProgress()">
+            <button class="action-button danger" onclick="confirmResetProgress()">
                 🗑️ مسح جميع البيانات
             </button>
         </div>
     </div>
     
-    
-    
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
     
     <script>
-        // تحديث الإحصائيات عند تحميل الصفحة
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(updateStats, 1000); // انتظار تحميل النظام
-        });
-        
-        function updateStats() {
-            const stats = getProgressStats();
-            if (!stats) {
-                setTimeout(updateStats, 500);
-                return;
+        let currentUser = null;
+        let db = null;
+        let auth = null;
+
+        // Initialize Firebase
+        (async function initializeApp() {
+            try {
+                // Wait for DOM to be ready
+                if (document.readyState === 'loading') {
+                    await new Promise(resolve => {
+                        document.addEventListener('DOMContentLoaded', resolve);
+                    });
+                }
+                
+                console.log('Initializing app...');
+                
+                // Check if Firebase is initialized
+                if (typeof firebase !== 'undefined') {
+                    auth = firebase.auth();
+                    db = firebase.firestore();
+                    
+                    console.log('Firebase initialized, waiting for auth...');
+                    
+                    // Set up auth state listener
+                    let authResolved = false;
+                    
+                    auth.onAuthStateChanged(async (user) => {
+                        if (!authResolved) {
+                            authResolved = true;
+                            currentUser = user;
+                            console.log('Auth state changed:', user ? user.email : 'Not logged in');
+                            updateUserInfo();
+                            await loadAndDisplayStats();
+                        }
+                    });
+                    
+                    // Fallback: Load after 1 second if auth state hasn't changed
+                    setTimeout(async () => {
+                        if (!authResolved) {
+                            console.log('Fallback: Loading stats without waiting for auth');
+                            authResolved = true;
+                            currentUser = auth.currentUser;
+                            updateUserInfo();
+                            await loadAndDisplayStats();
+                        }
+                    }, 1000);
+                } else {
+                    console.error('Firebase not loaded');
+                    currentUser = null;
+                    updateUserInfo();
+                    await loadAndDisplayStats();
+                }
+            } catch (error) {
+                console.error('Error initializing:', error);
+                currentUser = null;
+                updateUserInfo();
+                await loadAndDisplayStats();
             }
+        })();
+
+        function updateUserInfo() {
+            const userInfoElement = document.getElementById('userInfo');
+            if (currentUser) {
+                userInfoElement.innerHTML = `
+                    <p>👤 مرحباً، ${currentUser.email}</p>
+                    <p style="font-size: 0.8rem; margin-top: 5px;">البيانات محفوظة في السحابة ☁️</p>
+                `;
+            } else {
+                userInfoElement.innerHTML = `
+                    <p>⚠️ غير مسجل الدخول</p>
+                    <p style="font-size: 0.8rem; margin-top: 5px;">البيانات محفوظة محلياً فقط 💾</p>
+                `;
+            }
+        }
+
+        async function loadAndDisplayStats() {
+            try {
+                const stats = await getProgressStats();
+                displayStats(stats);
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                displayEmptyState();
+            }
+        }
+
+        async function getProgressStats() {
+            const stats = {
+                total: 0,
+                vocabulary: { a1: 0, a2: 0, b1: 0, b2: 0, c1: 0, c2: 0 },
+                sentences: { a1: 0, a2: 0, b1: 0, b2: 0, c1: 0, c2: 0 },
+                lastActivity: null,
+                items: []
+            };
+
+            if (currentUser && db) {
+                // Load from Firebase
+                try {
+                    const doc = await db.collection('userProgress').doc(currentUser.uid).get();
+                    if (doc.exists) {
+                        const data = doc.data();
+                        Object.keys(data).forEach(key => {
+                            if (key.startsWith('a1_') || key.startsWith('a2_') || 
+                                key.startsWith('b1_') || key.startsWith('b2_') || 
+                                key.startsWith('c1_') || key.startsWith('c2_')) {
+                                
+                                const parts = key.split('_');
+                                const level = parts[0];
+                                const type = parts[1];
+                                
+                                if (type === 'vocabulary' || type === 'sentences') {
+                                    stats[type][level]++;
+                                    stats.total++;
+                                    
+                                    // Store item for recent activity
+                                    if (data[key] && typeof data[key] === 'object') {
+                                        stats.items.push({
+                                            level: level,
+                                            type: type,
+                                            savedAt: data[key].savedAt || Date.now(),
+                                            english: data[key].english || '',
+                                            arabic: data[key].arabic || ''
+                                        });
+                                    }
+                                }
+                            }
+                        });
+                    }
+                } catch (error) {
+                    console.error('Error loading from Firebase:', error);
+                }
+            } else {
+                // Load from localStorage
+                const progress = JSON.parse(localStorage.getItem('englishCourseProgress') || '{}');
+                Object.keys(progress).forEach(level => {
+                    if (progress[level].vocabulary) {
+                        stats.vocabulary[level] = Object.keys(progress[level].vocabulary).length;
+                        stats.total += stats.vocabulary[level];
+                    }
+                    if (progress[level].sentences) {
+                        stats.sentences[level] = Object.keys(progress[level].sentences).length;
+                        stats.total += stats.sentences[level];
+                    }
+                });
+
+                // Get last activity from localStorage
+                const lastSave = localStorage.getItem('lastSaveTime');
+                if (lastSave) {
+                    stats.lastActivity = parseInt(lastSave);
+                }
+            }
+
+            // Sort items by date
+            stats.items.sort((a, b) => b.savedAt - a.savedAt);
             
-            // تحديث الإحصائيات العامة
+            // Get last activity time
+            if (stats.items.length > 0) {
+                stats.lastActivity = stats.items[0].savedAt;
+            }
+
+            return stats;
+        }
+
+        function displayStats(stats) {
+            // Update total saved
             document.getElementById('totalSaved').textContent = stats.total;
             
-            // تحديث آخر نشاط
+            // Update last activity
             const lastActivityElement = document.getElementById('lastActivity');
             if (stats.lastActivity) {
                 const date = new Date(stats.lastActivity);
-                lastActivityElement.textContent = date.toLocaleDateString('ar-SA') + ' ' + date.toLocaleTimeString('ar-SA');
+                lastActivityElement.textContent = date.toLocaleDateString('ar-SA') + ' ' + 
+                    date.toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit' });
             } else {
                 lastActivityElement.textContent = 'لم يتم الحفظ بعد';
             }
             
-            // تحديث المستوى الأكثر تقدماً
+            // Update top level
             const topLevelElement = document.getElementById('topLevel');
             let maxCount = 0;
             let topLevel = '';
@@ -369,21 +554,21 @@
                 topLevelElement.textContent = 'ابدأ الحفظ لرؤية التقدم';
             }
             
-            // تحديث دائرة التقدم الإجمالية
-            const totalPossible = 5800 + 400; // تقدير إجمالي الكلمات والجمل
-            const percentage = Math.round((stats.total / totalPossible) * 100);
+            // Update progress circle
+            const totalPossible = 6200; // Total items across all levels
+            const percentage = Math.min(100, Math.round((stats.total / totalPossible) * 100));
             const progressDegrees = (percentage / 100) * 360;
             
             document.getElementById('totalProgress').style.setProperty('--progress', `${progressDegrees}deg`);
             document.getElementById('totalPercentage').textContent = `${percentage}%`;
             
-            // تحديث إحصائيات المستويات
+            // Update level stats
             updateLevelStats(stats);
             
-            // تحديث النشاط الأخير
-            updateRecentActivity();
+            // Update recent activity
+            updateRecentActivity(stats.items);
         }
-        
+
         function updateLevelStats(stats) {
             const levelStatsContainer = document.getElementById('levelStats');
             const levels = [
@@ -427,28 +612,21 @@
                 levelStatsContainer.appendChild(levelCard);
             });
         }
-        
-        function updateRecentActivity() {
-            const recentItems = getLastSavedItems(10);
+
+        function updateRecentActivity(items) {
             const recentContainer = document.getElementById('recentItems');
+            const recentSection = document.getElementById('recentActivitySection');
             
-            if (recentItems.length === 0) {
-                recentContainer.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">📝</div>
-                        <h3>لم تحفظ أي عناصر بعد</h3>
-                        <p>ابدأ بحفظ الكلمات والجمل لرؤية نشاطك هنا</p>
-                        <a href="a1-vocabulary.html" class="action-button" style="margin-top: 20px;">
-                            🚀 ابدأ التعلم الآن
-                        </a>
-                    </div>
-                `;
+            if (items.length === 0) {
+                recentSection.style.display = 'none';
                 return;
             }
             
+            recentSection.style.display = 'block';
             recentContainer.innerHTML = '';
             
-            recentItems.forEach(item => {
+            // Show last 10 items
+            items.slice(0, 10).forEach(item => {
                 const typeText = item.type === 'vocabulary' ? 'مفردات' : 'جمل';
                 const levelText = item.level.toUpperCase();
                 const savedDate = new Date(item.savedAt);
@@ -458,7 +636,7 @@
                 activityItem.innerHTML = `
                     <div class="activity-content">
                         <div class="activity-type">${typeText} - ${levelText}</div>
-                        <div class="activity-text">${item.english} - ${item.arabic}</div>
+                        <div class="activity-text">${item.english || 'عنصر محفوظ'} ${item.arabic ? '- ' + item.arabic : ''}</div>
                     </div>
                     <div class="activity-time">
                         ${savedDate.toLocaleDateString('ar-SA')}
@@ -470,9 +648,85 @@
                 recentContainer.appendChild(activityItem);
             });
         }
-        
-        // تحديث الإحصائيات كل 30 ثانية
-        setInterval(updateStats, 30000);
+
+        function displayEmptyState() {
+            document.getElementById('totalSaved').textContent = '0';
+            document.getElementById('lastActivity').textContent = 'لم يتم الحفظ بعد';
+            document.getElementById('topLevel').textContent = 'ابدأ الحفظ لرؤية التقدم';
+            document.getElementById('totalPercentage').textContent = '0%';
+            
+            const levelStatsContainer = document.getElementById('levelStats');
+            levelStatsContainer.innerHTML = `
+                <div class="empty-state" style="grid-column: 1 / -1;">
+                    <div class="empty-state-icon">📝</div>
+                    <h3>لم تحفظ أي عناصر بعد</h3>
+                    <p>ابدأ بحفظ الكلمات والجمل لرؤية تقدمك هنا</p>
+                    <a href="a1-vocabulary.html" class="action-button" style="margin-top: 20px;">
+                        🚀 ابدأ التعلم الآن
+                    </a>
+                </div>
+            `;
+        }
+
+        async function exportUserProgress() {
+            try {
+                const stats = await getProgressStats();
+                const exportData = {
+                    exportDate: new Date().toISOString(),
+                    user: currentUser ? currentUser.email : 'غير مسجل',
+                    totalSaved: stats.total,
+                    vocabulary: stats.vocabulary,
+                    sentences: stats.sentences,
+                    items: stats.items
+                };
+                
+                const dataStr = JSON.stringify(exportData, null, 2);
+                const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(dataBlob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `english-course-progress-${new Date().toISOString().split('T')[0]}.json`;
+                link.click();
+                URL.revokeObjectURL(url);
+                
+                alert('✅ تم تصدير البيانات بنجاح!');
+            } catch (error) {
+                console.error('Error exporting:', error);
+                alert('❌ حدث خطأ أثناء التصدير');
+            }
+        }
+
+        function confirmResetProgress() {
+            if (confirm('⚠️ هل أنت متأكد من مسح جميع البيانات؟ لا يمكن التراجع عن هذا الإجراء!')) {
+                if (confirm('⚠️ تأكيد نهائي: سيتم حذف جميع تقدمك. هل تريد المتابعة؟')) {
+                    resetUserProgress();
+                }
+            }
+        }
+
+        async function resetUserProgress() {
+            try {
+                if (currentUser && db) {
+                    // Delete from Firebase
+                    await db.collection('userProgress').doc(currentUser.uid).delete();
+                    alert('✅ تم مسح جميع البيانات من السحابة');
+                } else {
+                    // Delete from localStorage
+                    localStorage.removeItem('englishCourseProgress');
+                    localStorage.removeItem('lastSaveTime');
+                    alert('✅ تم مسح جميع البيانات المحلية');
+                }
+                
+                // Reload stats
+                await loadAndDisplayStats();
+            } catch (error) {
+                console.error('Error resetting progress:', error);
+                alert('❌ حدث خطأ أثناء مسح البيانات');
+            }
+        }
+
+        // Auto-refresh stats every 30 seconds
+        setInterval(loadAndDisplayStats, 30000);
     </script>
 </body>
 </html>
