@@ -1,4 +1,5 @@
 // نظام تتبع التقدم المشترك بين جميع صفحات الموقع
+// Compatible with window.progressSystem.toggleSave() calls
 class ProgressSystem {
     constructor() {
         this.storageKey = 'englishCourseProgress';
@@ -71,7 +72,13 @@ class ProgressSystem {
         });
     }
 
-    // تبديل حالة الحفظ
+    // تبديل حالة الحفظ (الدالة الجديدة)
+    toggleSave(type, level, itemId, itemText) {
+        // Convert to old format for compatibility
+        this.toggleProgress(level, type, itemId);
+    }
+    
+    // تبديل حالة الحفظ (الدالة القديمة)
     toggleProgress(level, type, index) {
         if (!this.progress[level]) this.progress[level] = {};
         if (!this.progress[level][type]) this.progress[level][type] = {};
