@@ -376,41 +376,58 @@
                 console.log('Initializing app...');
                 
                 // Check if Firebase is initialized
-                if (typeof firebase !== 'undefined') {
-                    auth = firebase.auth();
-                    db = firebase.firestore();
-                    
-                    console.log('Firebase initialized, waiting for auth...');
-                    
-                    // Set up auth state listener
-                    let authResolved = false;
-                    
-                    auth.onAuthStateChanged(async (user) => {
-                        if (!authResolved) {
-                            authResolved = true;
-                            currentUser = user;
-                            console.log('Auth state changed:', user ? user.email : 'Not logged in');
-                            updateUserInfo();
-                            await loadAndDisplayStats();
-                        }
-                    });
-                    
-                    // Fallback: Load after 1 second if auth state hasn't changed
-                    setTimeout(async () => {
-                        if (!authResolved) {
-                            console.log('Fallback: Loading stats without waiting for auth');
-                            authResolved = true;
-                            currentUser = auth.currentUser;
-                            updateUserInfo();
-                            await loadAndDisplayStats();
-                        }
-                    }, 1000);
+                if (typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length > 0) {
+                    try {
+                        auth = firebase.auth();
+                        db = firebase.firestore();
+                        
+                        console.log('Firebase initialized, waiting for auth...');
+                        
+                        // Set up auth state listener
+                        let authResolved = false;
+                        
+                        auth.onAuthStateChanged(async (user) => {
+                            if (!authResolved) {
+                                authResolved = true;
+                                currentUser = user;
+                                console.log('Auth state changed:', user ? user.email : 'Not logged in');
+                                updateUserInfo();
+                                await loadAndDisplayStats();
+                            }
+                        });
+                        
+                        // Fallback: Load after 2 seconds if auth state hasn't changed
+                        setTimeout(async () => {
+                            if (!authResolved) {
+                                console.log('Fallback: Loading stats without waiting for auth');
+                                authResolved = true;
+                                currentUser = auth.currentUser;
+                                updateUserInfo();
+                                await loadAndDisplayStats();
+                            }
+                        }, 2000);
+                    } catch (error) {
+                        console.error('Firebase initialization error:', error);
+                        // Load with localStorage only
+                        currentUser = null;
+                        updateUserInfo();
+                        await loadAndDisplayStats();
+                    }
                 } else {
-                    console.error('Firebase not loaded');
+                    console.warn('Firebase not loaded or blocked by ad blocker - using localStorage only');
                     currentUser = null;
                     updateUserInfo();
                     await loadAndDisplayStats();
                 }
+                
+                // Additional fallback: Load after 3 seconds regardless
+                setTimeout(async () => {
+                    const loadingDiv = document.getElementById('loading-indicator');
+                    if (loadingDiv && loadingDiv.style.display !== 'none') {
+                        console.log('Final fallback: Force loading stats');
+                        await loadAndDisplayStats();
+                    }
+                }, 3000);
             } catch (error) {
                 console.error('Error initializing:', error);
                 currentUser = null;
@@ -731,4 +748,3 @@
 </body>
 </html>
 
-< Updated build image -->
