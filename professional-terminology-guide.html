@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>بسم الله الرحمن الرحيم - دليل المصطلحات المهنية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+	            background-color: white; /* Changed to white background */
+	            color: #333;
+	            line-height: 1.6;
+	        }
+.container {
+	            max-width: 900px;
+	            margin: 20px auto;
+	            padding: 20px;
+	            background-color: #fff;
+	            border-radius: 8px;
+	            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	            overflow-x: auto; /* Allow horizontal scroll for tables on small screens */
+	        }
+h1, h2, h3 {
+	            color: #0056b3;
+	            border-bottom: 2px solid #007bff;
+	            padding-bottom: 10px;
+	            margin-bottom: 20px;
+	            text-align: center; /* Center align headings */
+	        }
+        .professional-terms-table {
+	            width: 100%;
+	            border-collapse: collapse;
+	            margin-bottom: 20px;
+	            table-layout: fixed; /* Ensures columns have equal width or specified width */
+	            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better appearance */
+	            border-radius: 8px;
+	            overflow: hidden;
+	        }
+        .professional-terms-table th, .professional-terms-table td {
+	            border: 1px solid #ddd;
+	            padding: 12px 15px; /* Increased padding */
+	            text-align: right;
+	            word-break: break-word; /* Ensure long words break */
+	        }
+        .professional-terms-table th {
+	            background-color: #007bff; /* Changed header background color */
+	            color: white; /* Changed header text color */
+	            font-weight: bold;
+	            text-align: center; /* Center align headers */
+	        }
+.bismillah {
+	            background-color: #007bff;
+	            color: white;
+	            text-align: center;
+	            padding: 10px 0;
+	            font-size: 1.2em;
+	            font-weight: bold;
+	            margin-bottom: 20px;
+	            position: sticky; /* Make Bismillah sticky */
+	            top: 0;
+	            z-index: 1000;
+	        }
+        .phrase {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="bismillah">بسم الله الرحمن الرحيم</div>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🌟 كورس اللغة الإنجليزية الشامل</h1>
+            <nav class="nav">
+                <a href="index.html#home" class="nav-link">الرئيسية</a>
+                <a href="index.html#levels" class="nav-link">المستويات</a>
+                <a href="index.html#guides" class="nav-link">الأدلة</a>
+                <a href="downloads.html" class="nav-link">تحميل PDF</a>
+                <a href="progress-tracker.html" class="nav-link">📊 صفحة الحفظ</a>
+                <a href="index.html#about" class="nav-link">حول الكورس</a>
+                <a href="index.html#contact" class="nav-link">📞 تواصل معنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <p class="phrase">وماتوفيقي إلى بالله ...... أستعن بالله ولا تعجز</p>
+            <div id="terminology-content">
+                <!-- Content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 كورس اللغة الإنجليزية الشامل. جميع الحقوق محفوظة.</p>
+            <p>إعداد وبرمجة: تقي الدين طالب</p>
+            <p>للتواصل: 01158846771 | البريد الإلكتروني: take-den88@hotmail.com</p>
+            <p>بريد الدعم الفني: takeden888@gmail.com</p>
+            <p>لا تنسانا من الدعاء 🤲</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="user-system-fixed.js"></script>
+    <script src="progress-system-updated.js"></script>
+    <script>
+        fetch("professional-terminology-guide-content.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("terminology-content").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading terminology content:", error));
+    </script>
+</body>
+</html>
