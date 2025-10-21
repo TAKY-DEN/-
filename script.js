@@ -195,3 +195,10 @@ loadingStyle.textContent = `
 `;
 document.head.appendChild(loadingStyle);
 
+
+
+// Initialize Progress System
+if (typeof ProgressSystem !== 'undefined') {
+    window.progressSystem = new ProgressSystem();
+}
+

@@ -19,16 +19,16 @@ class ProgressSystem {
             const userKey = `englishCourseProgress_${this.currentUser}`;
             const saved = localStorage.getItem(userKey);
             return saved ? JSON.parse(saved) : {
-                vocabulary: { a1: {}, a2: {}, b1: {}, b2: {} },
-                sentences: { a1: {}, a2: {}, b1: {}, b2: {} },
+                vocabulary: { a1: {}, a2: {}, b1: {}, b2: {}, c1: {}, c2: {} },
+                sentences: { a1: {}, a2: {}, b1: {}, b2: {}, c1: {}, c2: {} },
                 lastActivity: null,
                 totalSaved: 0
             };
         } catch (error) {
             console.error('خطأ في تحميل التقدم:', error);
             return {
-                vocabulary: { a1: {}, a2: {}, b1: {}, b2: {} },
-                sentences: { a1: {}, a2: {}, b1: {}, b2: {} },
+                vocabulary: { a1: {}, a2: {}, b1: {}, b2: {}, c1: {}, c2: {} },
+                sentences: { a1: {}, a2: {}, b1: {}, b2: {}, c1: {}, c2: {} },
                 lastActivity: null,
                 totalSaved: 0
             };
@@ -192,11 +192,14 @@ class ProgressSystem {
         if (filename.includes('a1')) {
             this.currentLevel = 'a1';
         } else if (filename.includes('a2')) {
-            this.currentLevel = 'a2';
-        } else if (filename.includes('b1')) {
+            this.currentLevel = 'a2';        } else if (filename.includes('b1')) {
             this.currentLevel = 'b1';
         } else if (filename.includes('b2')) {
             this.currentLevel = 'b2';
+        } else if (filename.includes('c1')) {
+            this.currentLevel = 'c1';
+        } else if (filename.includes('c2')) {
+            this.currentLevel = 'c2';
         }
         
         if (this.currentPageType && this.currentLevel) {
@@ -231,7 +234,7 @@ class ProgressSystem {
     }
 
     getTotalItemsOnPage() {
-        const table = document.querySelector('.vocabulary-table, table');
+        const table = document.querySelector(".vocabulary-table, .sentences-table, table");
         if (!table) return 0;
         
         const rows = table.querySelectorAll('tbody tr, tr');
@@ -239,7 +242,7 @@ class ProgressSystem {
     }
 
     addSaveButtons() {
-        const table = document.querySelector('.vocabulary-table, table');
+        const table = document.querySelector(".vocabulary-table, .sentences-table, table");
         if (!table) return;
         
         // إضافة عمود الحفظ للعناوين
@@ -315,7 +318,11 @@ class ProgressSystem {
         if (cells.length >= 3) {
             data.english = cells[0]?.textContent?.trim() || '';
             data.arabic = cells[1]?.textContent?.trim() || '';
-            data.pronunciation = cells[2]?.textContent?.trim() || '';
+            if (this.currentPageType === 'vocabulary') {
+                data.pronunciation = cells[2]?.textContent?.trim() || '';
+            } else if (this.currentPageType === 'sentences') {
+                data.explanation = cells[2]?.textContent?.trim() || '';
+            }
         }
         
         return data;
@@ -432,8 +439,8 @@ class ProgressSystem {
     resetProgress() {
         if (confirm('هل أنت متأكد من حذف جميع بيانات التقدم؟ هذا الإجراء لا يمكن التراجع عنه.')) {
             this.progress = {
-                vocabulary: { a1: {}, a2: {}, b1: {}, b2: {} },
-                sentences: { a1: {}, a2: {}, b1: {}, b2: {} },
+                vocabulary: { a1: {}, a2: {}, b1: {}, b2: {}, c1: {}, c2: {} },
+                sentences: { a1: {}, a2: {}, b1: {}, b2: {}, c1: {}, c2: {} },
                 lastActivity: null,
                 totalSaved: 0
             };

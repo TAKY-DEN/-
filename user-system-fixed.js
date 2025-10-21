@@ -222,7 +222,8 @@ class UserSystem {
 
     skipLogin() {
         // استخدام مؤقت بدون تسجيل
-        this.currentUser = 'guest_' + Date.now();
+        // استخدام معرف ثابت للمستخدمين المؤقتين
+        this.currentUser = 'guest_temporary_user';
         localStorage.setItem('currentEnglishUser', this.currentUser);
         this.removeLoginModal();
         this.showUserInterface();

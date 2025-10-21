@@ -5,12 +5,16 @@
     box-sizing: border-box;
 }
 
+
+
+
 body {
     font-family: 'Cairo', sans-serif;
     line-height: 1.6;
     color: #333;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    padding-top: 80px;
 }
 
 .container {
@@ -378,6 +382,53 @@ section {
     margin-left: 10px;
 }
 
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info, .credits-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-info h3, .credits-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p, .credits-info p {
+    margin-bottom: 1rem;
+    opacity: 0.95;
+}
+
+.contact-info a, .credits-info a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover, .credits-info a:hover {
+    text-decoration: underline;
+}
+
 /* Footer */
 .footer {
     background: rgba(0, 0, 0, 0.8);
@@ -405,6 +456,7 @@ section {
     .nav {
         flex-direction: column;
         gap: 1rem;
+        font-size: 0.9rem;
     }
     
     .header .container {
@@ -419,17 +471,21 @@ section {
     .section-title {
         font-size: 2rem;
     }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .bismillah {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
 }
 
-/* Color System for Grammar */
-.subject { color: #e74c3c; font-weight: bold; }
-.verb { color: #27ae60; font-weight: bold; }
-.object { color: #3498db; font-weight: bold; }
-.adjective { color: #9b59b6; font-weight: bold; }
-.adverb { color: #f39c12; font-weight: bold; }
-.preposition { color: #8b4513; font-weight: bold; }
-.article { color: #7f8c8d; font-weight: bold; }
-.auxiliary { color: #1abc9c; font-weight: bold; }
+
+
+
 
 /* Animations */
 @keyframes fadeInUp {
@@ -450,5 +506,107 @@ section {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+
+/* Islamic Phrase Styling */
+.islamic-phrase {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.islamic-phrase p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .islamic-phrase {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Mobile Responsive for Tables - Save Column */
+@media (max-width: 768px) {
+    .vocabulary-table {
+        font-size: 0.85rem;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.6rem 0.4rem;
+    }
+    
+    .save-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+    
+    /* Ensure table doesn't overflow */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 480px) {
+    .vocabulary-table {
+        font-size: 0.75rem;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.3rem;
+    }
+    
+    .save-btn {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+    
+    /* Make table scrollable on very small screens */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+    
+    /* Ensure columns are visible */
+    .vocabulary-table {
+        min-width: 600px;
+    }
+}
+
+
+
+
+/* Table Fixes */
+.vocabulary-table, .sentences-table {
+    table-layout: auto;
+}
+
+.vocabulary-table th, .vocabulary-table td, .sentences-table th, .sentences-table td {
+    word-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+    .table-wrapper {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
