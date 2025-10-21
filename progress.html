@@ -510,13 +510,19 @@
                 // Load from localStorage
                 const progress = JSON.parse(localStorage.getItem('englishCourseProgress') || '{}');
                 Object.keys(progress).forEach(level => {
-                    if (progress[level].vocabulary) {
-                        stats.vocabulary[level] = Object.keys(progress[level].vocabulary).length;
-                        stats.total += stats.vocabulary[level];
-                    }
-                    if (progress[level].sentences) {
-                        stats.sentences[level] = Object.keys(progress[level].sentences).length;
-                        stats.total += stats.sentences[level];
+                    if (progress[level] && typeof progress[level] === 'object') {
+                        // Count vocabulary items
+                        if (progress[level].vocab) {
+                            const vocabCount = Object.values(progress[level].vocab).filter(Boolean).length;
+                            stats.vocabulary[level] = vocabCount;
+                            stats.total += vocabCount;
+                        }
+                        // Count sentences items
+                        if (progress[level].sentences) {
+                            const sentencesCount = Object.values(progress[level].sentences).filter(Boolean).length;
+                            stats.sentences[level] = sentencesCount;
+                            stats.total += sentencesCount;
+                        }
                     }
                 });
 
