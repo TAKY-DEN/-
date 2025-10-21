@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>جمل المستوى B2 - كورس اللغة الإنجليزية</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        .sentences-container {
+            background: white;
+            margin: 100px auto 50px;
+            max-width: 1400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .sentences-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .sentences-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sentences-table th {
+            background: #f8f9fa;
+            padding: 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .sentences-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+            line-height: 1.8;
+            vertical-align: top;
+        }
+        .sentences-table tr:hover {
+            background: #f8f9fa;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 1000;
+        }
+        .category-header {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        /* نظام الألوان للكلمات */
+        .subject { color: #dc3545; font-weight: bold; }
+        .verb { color: #28a745; font-weight: bold; }
+        .object { color: #007bff; font-weight: bold; }
+        .adjective { color: #6f42c1; font-weight: bold; }
+        .adverb { color: #fd7e14; font-weight: bold; }
+        .preposition { color: #795548; font-weight: bold; }
+        .article { color: #6c757d; font-weight: bold; }
+        .auxiliary { color: #17a2b8; font-weight: bold; }
+    </style>
+</head>
+<body>
+<a class="back-button" href="index.html">← العودة للرئيسية</a>
+<div class="sentences-container">
+<div class="sentences-header">
+<h1>جمل المستوى B2</h1>
+<p>100 جملة معقدة ومتقدمة مع الترجمة العربية وطريقة النطق</p>
+<p>جمل مهنية وأكاديمية متخصصة مع نظام الألوان لفهم القواعد</p>
+</div>
+<div class="table-wrapper"><table class="sentences-table">
+<thead>
+<tr>
+<th>الجملة الإنجليزية</th>
+<th>الترجمة العربية</th>
+<th>طريقة النطق</th>
+<th>📊 الحفظ</th>
+</tr>
+</thead>
+<tbody>
+<!-- Business & Management Sentences -->
+<tr class="category-header">
+<td colspan="4">🏢 جمل الإدارة والأعمال المتقدمة</td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">company</span> <span class="auxiliary">has</span> <span class="verb">implemented</span> <span class="article">a</span> <span class="adjective">comprehensive</span> <span class="object">strategy</span> <span class="preposition">for</span> <span class="adjective">digital</span> <span class="object">transformation</span>.</td>
+<td><span class="article">الـ</span><span class="subject">شركة</span> <span class="auxiliary">قد</span> <span class="verb">طبقت</span> <span class="object">استراتيجية</span> <span class="adjective">شاملة</span> <span class="preposition">لـ</span><span class="object">التحول</span> <span class="adjective">الرقمي</span>.</td>
+<td>ذا كمباني هاز إمبليمنتد أ كومبريهنسيف ستراتيجي فور ديجيتال ترانسفورميشن</td>
+<td><button class="save-btn" data-item-id="1" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 1)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">Our</span> <span class="subject">organization</span> <span class="verb">prioritizes</span> <span class="adjective">sustainable</span> <span class="object">practices</span> <span class="preposition">in</span> <span class="article">all</span> <span class="adjective">operational</span> <span class="object">procedures</span>.</td>
+<td><span class="subject">منظمتنا</span> <span class="verb">تعطي الأولوية</span> <span class="preposition">لـ</span><span class="object">الممارسات</span> <span class="adjective">المستدامة</span> <span class="preposition">في</span> <span class="article">جميع</span> <span class="object">الإجراءات</span> <span class="adjective">التشغيلية</span>.</td>
+<td>آور أورغانايزيشن برايوريتايزز سوستينابل براكتيسز إن أول أوبريشنال بروسيدجرز</td>
+<td><button class="save-btn" data-item-id="2" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 2)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">board</span> <span class="preposition">of</span> <span class="object">directors</span> <span class="auxiliary">will</span> <span class="verb">evaluate</span> <span class="article">the</span> <span class="adjective">proposed</span> <span class="object">merger</span> <span class="adverb">thoroughly</span>.</td>
+<td><span class="subject">مجلس الإدارة</span> <span class="auxiliary">سوف</span> <span class="verb">يقيم</span> <span class="object">الاندماج</span> <span class="adjective">المقترح</span> <span class="adverb">بدقة</span>.</td>
+<td>ذا بورد أوف دايريكترز ويل إيفاليويت ذا بروبوزد مرجر ثوروغلي</td>
+<td><button class="save-btn" data-item-id="3" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 3)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="subject">Stakeholders</span> <span class="auxiliary">are</span> <span class="adverb">increasingly</span> <span class="verb">demanding</span> <span class="adjective">transparent</span> <span class="object">reporting</span> <span class="preposition">on</span> <span class="adjective">environmental</span> <span class="object">impact</span>.</td>
+<td><span class="subject">أصحاب المصلحة</span> <span class="auxiliary">يطالبون</span> <span class="adverb">بشكل متزايد</span> <span class="preposition">بـ</span><span class="object">تقارير</span> <span class="adjective">شفافة</span> <span class="preposition">حول</span> <span class="object">التأثير</span> <span class="adjective">البيئي</span>.</td>
+<td>ستيك هولدرز آر إنكريسينغلي ديماندينغ ترانسبارنت ريبورتينغ أون إنفايرونمنتال إمباكت</td>
+<td><button class="save-btn" data-item-id="4" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 4)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">acquisition</span> <span class="auxiliary">has</span> <span class="verb">strengthened</span> <span class="article">our</span> <span class="adjective">competitive</span> <span class="object">position</span> <span class="preposition">in</span> <span class="article">the</span> <span class="adjective">global</span> <span class="object">market</span>.</td>
+<td><span class="subject">الاستحواذ</span> <span class="auxiliary">قد</span> <span class="verb">عزز</span> <span class="object">موقفنا</span> <span class="adjective">التنافسي</span> <span class="preposition">في</span> <span class="object">السوق</span> <span class="adjective">العالمي</span>.</td>
+<td>ذا أكويزيشن هاز سترينغثند آور كومبيتيتيف بوزيشن إن ذا غلوبال ماركت</td>
+<td><button class="save-btn" data-item-id="5" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 5)">⭕ حفظ</button></td></tr>
+<!-- Financial & Investment Sentences -->
+<tr class="category-header">
+<td colspan="4">💰 جمل مالية واستثمارية متقدمة</td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">portfolio</span> <span class="auxiliary">has</span> <span class="verb">diversified</span> <span class="preposition">across</span> <span class="adjective">multiple</span> <span class="object">sectors</span> <span class="preposition">to</span> <span class="verb">minimize</span> <span class="object">risk</span>.</td>
+<td><span class="subject">المحفظة</span> <span class="auxiliary">قد</span> <span class="verb">تنوعت</span> <span class="preposition">عبر</span> <span class="object">قطاعات</span> <span class="adjective">متعددة</span> <span class="preposition">لـ</span><span class="verb">تقليل</span> <span class="object">المخاطر</span>.</td>
+<td>ذا بورتفوليو هاز دايفرسيفايد أكروس مالتيبل سيكترز تو مينيمايز ريسك</td>
+<td><button class="save-btn" data-item-id="6" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 6)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="subject">Investors</span> <span class="auxiliary">are</span> <span class="adverb">carefully</span> <span class="verb">monitoring</span> <span class="article">the</span> <span class="adjective">volatile</span> <span class="object">cryptocurrency</span> <span class="object">market</span>.</td>
+<td><span class="subject">المستثمرون</span> <span class="auxiliary">يراقبون</span> <span class="adverb">بعناية</span> <span class="object">سوق</span> <span class="object">العملات المشفرة</span> <span class="adjective">المتقلب</span>.</td>
+<td>إنفيسترز آر كيرفولي مونيتورينغ ذا فولاتايل كريبتوكارنسي ماركت</td>
+<td><button class="save-btn" data-item-id="7" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 7)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">central bank</span> <span class="auxiliary">has</span> <span class="verb">adjusted</span> <span class="adjective">monetary</span> <span class="object">policy</span> <span class="preposition">to</span> <span class="verb">combat</span> <span class="adjective">rising</span> <span class="object">inflation</span>.</td>
+<td><span class="subject">البنك المركزي</span> <span class="auxiliary">قد</span> <span class="verb">عدل</span> <span class="object">السياسة</span> <span class="adjective">النقدية</span> <span class="preposition">لـ</span><span class="verb">مكافحة</span> <span class="object">التضخم</span> <span class="adjective">المتزايد</span>.</td>
+<td>ذا سنترال بانك هاز أدجاستد مونيتري بوليسي تو كومبات رايزينغ إنفليشن</td>
+<td><button class="save-btn" data-item-id="8" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 8)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Quarterly</span> <span class="object">earnings</span> <span class="auxiliary">have</span> <span class="verb">exceeded</span> <span class="object">expectations</span> <span class="preposition">despite</span> <span class="adjective">challenging</span> <span class="adjective">economic</span> <span class="object">conditions</span>.</td>
+<td><span class="object">الأرباح</span> <span class="adjective">الربع سنوية</span> <span class="auxiliary">قد</span> <span class="verb">تجاوزت</span> <span class="object">التوقعات</span> <span class="preposition">رغم</span> <span class="object">الظروف</span> <span class="adjective">الاقتصادية</span> <span class="adjective">الصعبة</span>.</td>
+<td>كوارترلي إيرنينغز هاف إكسيدد إكسبيكتيشنز ديسبايت تشالنجينغ إكونوميك كونديشنز</td>
+<td><button class="save-btn" data-item-id="9" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 9)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">company</span> <span class="auxiliary">is</span> <span class="verb">considering</span> <span class="article">an</span> <span class="adjective">initial</span> <span class="adjective">public</span> <span class="object">offering</span> <span class="preposition">to</span> <span class="verb">raise</span> <span class="object">capital</span>.</td>
+<td><span class="subject">الشركة</span> <span class="auxiliary">تدرس</span> <span class="object">طرح</span> <span class="adjective">عام</span> <span class="adjective">أولي</span> <span class="preposition">لـ</span><span class="verb">جمع</span> <span class="object">رأس المال</span>.</td>
+<td>ذا كمباني إز كونسيدرينغ آن إنيشال بابليك أوفرينغ تو رايز كابيتال</td>
+<td><button class="save-btn" data-item-id="10" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 10)">⭕ حفظ</button></td></tr>
+<!-- Marketing & Digital Strategy Sentences -->
+<tr class="category-header">
+<td colspan="4">📈 جمل التسويق والاستراتيجية الرقمية</td>
+</tr>
+<tr>
+<td><span class="article">Our</span> <span class="adjective">omnichannel</span> <span class="object">approach</span> <span class="auxiliary">has</span> <span class="verb">improved</span> <span class="adjective">customer</span> <span class="object">engagement</span> <span class="preposition">across</span> <span class="adjective">multiple</span> <span class="object">touchpoints</span>.</td>
+<td><span class="object">نهجنا</span> <span class="adjective">متعدد القنوات</span> <span class="auxiliary">قد</span> <span class="verb">حسن</span> <span class="object">مشاركة</span> <span class="adjective">العملاء</span> <span class="preposition">عبر</span> <span class="object">نقاط التفاعل</span> <span class="adjective">المتعددة</span>.</td>
+<td>آور أومني تشانل أبروتش هاز إمبروفد كاستمر إنغيجمنت أكروس مالتيبل تاتش بوينتس</td>
+<td><button class="save-btn" data-item-id="11" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 11)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">algorithm</span> <span class="verb">analyzes</span> <span class="adjective">consumer</span> <span class="object">behavior</span> <span class="preposition">to</span> <span class="verb">personalize</span> <span class="adjective">marketing</span> <span class="object">campaigns</span>.</td>
+<td><span class="subject">الخوارزمية</span> <span class="verb">تحلل</span> <span class="object">سلوك</span> <span class="adjective">المستهلكين</span> <span class="preposition">لـ</span><span class="verb">تخصيص</span> <span class="object">الحملات</span> <span class="adjective">التسويقية</span>.</td>
+<td>ذا ألغوريذم أناليزز كونسيومر بيهيفيور تو برسونالايز ماركتينغ كامبينز</td>
+<td><button class="save-btn" data-item-id="12" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 12)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="subject">Influencer marketing</span> <span class="auxiliary">has</span> <span class="verb">become</span> <span class="article">an</span> <span class="adjective">integral</span> <span class="object">component</span> <span class="preposition">of</span> <span class="adjective">modern</span> <span class="adjective">digital</span> <span class="object">strategies</span>.</td>
+<td><span class="subject">التسويق عبر المؤثرين</span> <span class="auxiliary">أصبح</span> <span class="object">عنصراً</span> <span class="adjective">أساسياً</span> <span class="preposition">في</span> <span class="object">الاستراتيجيات</span> <span class="adjective">الرقمية</span> <span class="adjective">الحديثة</span>.</td>
+<td>إنفلوينسر ماركتينغ هاز بيكم آن إنتيغرال كومبونينت أوف مودرن ديجيتال ستراتيجيز</td>
+<td><button class="save-btn" data-item-id="13" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 13)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">brand</span> <span class="auxiliary">is</span> <span class="verb">leveraging</span> <span class="adjective">artificial</span> <span class="object">intelligence</span> <span class="preposition">to</span> <span class="verb">optimize</span> <span class="adjective">customer</span> <span class="object">experience</span>.</td>
+<td><span class="subject">العلامة التجارية</span> <span class="auxiliary">تستفيد من</span> <span class="object">الذكاء</span> <span class="adjective">الاصطناعي</span> <span class="preposition">لـ</span><span class="verb">تحسين</span> <span class="object">تجربة</span> <span class="adjective">العملاء</span>.</td>
+<td>ذا براند إز ليفيريجينغ آرتيفيشال إنتليجنس تو أوبتيمايز كاستمر إكسبيرينس</td>
+<td><button class="save-btn" data-item-id="14" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 14)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Data-driven</span> <span class="object">insights</span> <span class="auxiliary">are</span> <span class="verb">transforming</span> <span class="article">how</span> <span class="subject">companies</span> <span class="verb">approach</span> <span class="adjective">market</span> <span class="object">segmentation</span>.</td>
+<td><span class="object">الرؤى</span> <span class="adjective">المبنية على البيانات</span> <span class="auxiliary">تغير</span> <span class="object">طريقة</span> <span class="verb">تعامل</span> <span class="subject">الشركات</span> <span class="preposition">مع</span> <span class="object">تقسيم</span> <span class="adjective">السوق</span>.</td>
+<td>ديتا دريفن إنسايتس آر ترانسفورمينغ هاو كمبانيز أبروتش ماركت سيغمنتيشن</td>
+<td><button class="save-btn" data-item-id="15" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 15)">⭕ حفظ</button></td></tr>
+<!-- Technology & Innovation Sentences -->
+<tr class="category-header">
+<td colspan="4">💻 جمل التكنولوجيا والابتكار</td>
+</tr>
+<tr>
+<td><span class="adjective">Blockchain</span> <span class="object">technology</span> <span class="auxiliary">is</span> <span class="verb">revolutionizing</span> <span class="adjective">supply</span> <span class="object">chain</span> <span class="object">transparency</span> <span class="preposition">across</span> <span class="object">industries</span>.</td>
+<td><span class="object">تقنية</span> <span class="adjective">البلوك تشين</span> <span class="auxiliary">تحدث ثورة في</span> <span class="object">شفافية</span> <span class="object">سلسلة التوريد</span> <span class="preposition">عبر</span> <span class="object">الصناعات</span>.</td>
+<td>بلوك تشين تيكنولوجي إز ريفولوشنايزينغ سابلاي تشين ترانسبارنسي أكروس إندستريز</td>
+<td><button class="save-btn" data-item-id="16" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 16)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">implementation</span> <span class="preposition">of</span> <span class="adjective">machine</span> <span class="object">learning</span> <span class="auxiliary">has</span> <span class="verb">enhanced</span> <span class="adjective">predictive</span> <span class="object">analytics</span> <span class="object">capabilities</span>.</td>
+<td><span class="subject">تطبيق</span> <span class="object">التعلم</span> <span class="adjective">الآلي</span> <span class="auxiliary">قد</span> <span class="verb">عزز</span> <span class="object">قدرات</span> <span class="object">التحليلات</span> <span class="adjective">التنبؤية</span>.</td>
+<td>ذا إمبليمنتيشن أوف ماشين لرنينغ هاز إنهانسد بريديكتيف أناليتيكس كابابيليتيز</td>
+<td><button class="save-btn" data-item-id="17" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 17)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Cloud</span> <span class="object">infrastructure</span> <span class="verb">enables</span> <span class="adjective">seamless</span> <span class="object">collaboration</span> <span class="preposition">between</span> <span class="adjective">remote</span> <span class="object">teams</span> <span class="adverb">globally</span>.</td>
+<td><span class="object">البنية التحتية</span> <span class="adjective">السحابية</span> <span class="verb">تمكن</span> <span class="object">التعاون</span> <span class="adjective">السلس</span> <span class="preposition">بين</span> <span class="object">الفرق</span> <span class="adjective">البعيدة</span> <span class="adverb">عالمياً</span>.</td>
+<td>كلاود إنفراستراكتشر إنيبلز سيمليس كولابوريشن بيتوين ريموت تيمز غلوبالي</td>
+<td><button class="save-btn" data-item-id="18" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 18)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Cybersecurity</span> <span class="object">protocols</span> <span class="auxiliary">must</span> <span class="verb">evolve</span> <span class="adverb">continuously</span> <span class="preposition">to</span> <span class="verb">address</span> <span class="adjective">emerging</span> <span class="object">threats</span>.</td>
+<td><span class="object">بروتوكولات</span> <span class="adjective">الأمن السيبراني</span> <span class="auxiliary">يجب أن</span> <span class="verb">تتطور</span> <span class="adverb">باستمرار</span> <span class="preposition">لـ</span><span class="verb">مواجهة</span> <span class="object">التهديدات</span> <span class="adjective">الناشئة</span>.</td>
+<td>سايبر سيكيوريتي بروتوكولز مست إيفولف كونتينيوسلي تو أدريس إيمرجينغ ثريتس</td>
+<td><button class="save-btn" data-item-id="19" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 19)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="adjective">Internet</span> <span class="preposition">of</span> <span class="object">Things</span> <span class="auxiliary">is</span> <span class="verb">creating</span> <span class="adjective">unprecedented</span> <span class="object">opportunities</span> <span class="preposition">for</span> <span class="object">automation</span>.</td>
+<td><span class="object">إنترنت الأشياء</span> <span class="auxiliary">يخلق</span> <span class="object">فرصاً</span> <span class="adjective">غير مسبوقة</span> <span class="preposition">لـ</span><span class="object">الأتمتة</span>.</td>
+<td>ذا إنترنت أوف ثينغز إز كريتينغ أنبريسيدنتد أوبورتيونيتيز فور أوتوميشن</td>
+<td><button class="save-btn" data-item-id="20" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 20)">⭕ حفظ</button></td></tr>
+<!-- Academic & Research Sentences -->
+<tr class="category-header">
+<td colspan="4">🎓 جمل أكاديمية وبحثية</td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="adjective">interdisciplinary</span> <span class="object">research</span> <span class="auxiliary">has</span> <span class="verb">yielded</span> <span class="adjective">significant</span> <span class="object">insights</span> <span class="preposition">into</span> <span class="adjective">complex</span> <span class="object">phenomena</span>.</td>
+<td><span class="object">البحث</span> <span class="adjective">متعدد التخصصات</span> <span class="auxiliary">قد</span> <span class="verb">أنتج</span> <span class="object">رؤى</span> <span class="adjective">مهمة</span> <span class="preposition">حول</span> <span class="object">الظواهر</span> <span class="adjective">المعقدة</span>.</td>
+<td>ذا إنتر ديسيبليناري ريسيرش هاز يلدد سيغنيفيكانت إنسايتس إنتو كومبليكس فينومينا</td>
+<td><button class="save-btn" data-item-id="21" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 21)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="subject">Peer review</span> <span class="verb">ensures</span> <span class="article">the</span> <span class="object">quality</span> <span class="preposition">and</span> <span class="object">credibility</span> <span class="preposition">of</span> <span class="adjective">academic</span> <span class="object">publications</span>.</td>
+<td><span class="subject">مراجعة الأقران</span> <span class="verb">تضمن</span> <span class="object">جودة</span> <span class="preposition">و</span><span class="object">مصداقية</span> <span class="object">المنشورات</span> <span class="adjective">الأكاديمية</span>.</td>
+<td>بير ريفيو إنشورز ذا كواليتي أند كريديبيليتي أوف أكاديميك بابليكيشنز</td>
+<td><button class="save-btn" data-item-id="22" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 22)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="object">methodology</span> <span class="auxiliary">was</span> <span class="verb">designed</span> <span class="preposition">to</span> <span class="verb">minimize</span> <span class="adjective">experimental</span> <span class="object">bias</span> <span class="preposition">and</span> <span class="verb">enhance</span> <span class="object">validity</span>.</td>
+<td><span class="object">المنهجية</span> <span class="auxiliary">صُممت</span> <span class="preposition">لـ</span><span class="verb">تقليل</span> <span class="object">التحيز</span> <span class="adjective">التجريبي</span> <span class="preposition">و</span><span class="verb">تعزيز</span> <span class="object">الصحة</span>.</td>
+<td>ذا ميثودولوجي واز ديزايند تو مينيمايز إكسبيريمنتال بايس أند إنهانس فاليديتي</td>
+<td><button class="save-btn" data-item-id="23" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 23)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Empirical</span> <span class="object">evidence</span> <span class="verb">supports</span> <span class="article">the</span> <span class="adjective">theoretical</span> <span class="object">framework</span> <span class="verb">proposed</span> <span class="preposition">in</span> <span class="article">this</span> <span class="object">study</span>.</td>
+<td><span class="object">الأدلة</span> <span class="adjective">التجريبية</span> <span class="verb">تدعم</span> <span class="object">الإطار</span> <span class="adjective">النظري</span> <span class="verb">المقترح</span> <span class="preposition">في</span> <span class="article">هذه</span> <span class="object">الدراسة</span>.</td>
+<td>إمبيريكال إيفيدنس سابورتس ذا ثيوريتيكال فريم وورك بروبوزد إن ذيس ستادي</td>
+<td><button class="save-btn" data-item-id="24" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 24)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="object">hypothesis</span> <span class="auxiliary">was</span> <span class="verb">tested</span> <span class="preposition">using</span> <span class="adjective">rigorous</span> <span class="adjective">statistical</span> <span class="object">methods</span> <span class="preposition">and</span> <span class="adjective">multiple</span> <span class="object">datasets</span>.</td>
+<td><span class="object">الفرضية</span> <span class="auxiliary">اختُبرت</span> <span class="preposition">باستخدام</span> <span class="object">طرق</span> <span class="adjective">إحصائية</span> <span class="adjective">صارمة</span> <span class="preposition">و</span><span class="object">مجموعات بيانات</span> <span class="adjective">متعددة</span>.</td>
+<td>ذا هايبوثيسيس واز تيستد يوزينغ ريغوروس ستاتيستيكال ميثودز أند مالتيبل ديتاسيتس</td>
+<td><button class="save-btn" data-item-id="25" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 25)">⭕ حفظ</button></td></tr>
+<!-- Legal & Regulatory Sentences -->
+<tr class="category-header">
+<td colspan="4">⚖️ جمل قانونية وتنظيمية</td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">contract</span> <span class="verb">stipulates</span> <span class="adjective">specific</span> <span class="object">terms</span> <span class="preposition">regarding</span> <span class="adjective">intellectual</span> <span class="object">property</span> <span class="object">rights</span>.</td>
+<td><span class="subject">العقد</span> <span class="verb">ينص على</span> <span class="object">شروط</span> <span class="adjective">محددة</span> <span class="preposition">بخصوص</span> <span class="object">حقوق</span> <span class="object">الملكية</span> <span class="adjective">الفكرية</span>.</td>
+<td>ذا كونتراكت ستيبيوليتس سبيسيفيك تيرمز ريغاردينغ إنتليكتشوال بروبرتي رايتس</td>
+<td><button class="save-btn" data-item-id="26" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 26)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Regulatory</span> <span class="object">compliance</span> <span class="auxiliary">requires</span> <span class="adjective">continuous</span> <span class="object">monitoring</span> <span class="preposition">and</span> <span class="adjective">regular</span> <span class="object">audits</span>.</td>
+<td><span class="object">الامتثال</span> <span class="adjective">التنظيمي</span> <span class="auxiliary">يتطلب</span> <span class="object">مراقبة</span> <span class="adjective">مستمرة</span> <span class="preposition">و</span><span class="object">تدقيقات</span> <span class="adjective">منتظمة</span>.</td>
+<td>ريغيولاتوري كومبلاينس ريكوايرز كونتينيوس مونيتورينغ أند ريغيولار أوديتس</td>
+<td><button class="save-btn" data-item-id="27" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 27)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">arbitration</span> <span class="object">process</span> <span class="verb">provides</span> <span class="article">an</span> <span class="adjective">alternative</span> <span class="preposition">to</span> <span class="adjective">traditional</span> <span class="object">litigation</span>.</td>
+<td><span class="object">عملية</span> <span class="subject">التحكيم</span> <span class="verb">توفر</span> <span class="object">بديلاً</span> <span class="preposition">عن</span> <span class="object">التقاضي</span> <span class="adjective">التقليدي</span>.</td>
+<td>ذا آربيتريشن بروسيس بروفايدز آن ألترنيتيف تو تراديشنال ليتيغيشن</td>
+<td><button class="save-btn" data-item-id="28" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 28)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Due</span> <span class="object">diligence</span> <span class="auxiliary">must</span> <span class="auxiliary">be</span> <span class="verb">conducted</span> <span class="preposition">before</span> <span class="article">any</span> <span class="adjective">major</span> <span class="adjective">corporate</span> <span class="object">transaction</span>.</td>
+<td><span class="object">العناية الواجبة</span> <span class="auxiliary">يجب أن</span> <span class="auxiliary">تُجرى</span> <span class="preposition">قبل</span> <span class="article">أي</span> <span class="object">معاملة</span> <span class="adjective">شركات</span> <span class="adjective">كبيرة</span>.</td>
+<td>ديو ديليجنس مست بي كونداكتد بيفور إني ميجر كوربوريت ترانزاكشن</td>
+<td><button class="save-btn" data-item-id="29" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 29)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">jurisdiction</span> <span class="verb">determines</span> <span class="article">which</span> <span class="object">laws</span> <span class="auxiliary">will</span> <span class="auxiliary">be</span> <span class="verb">applied</span> <span class="preposition">in</span> <span class="object">dispute</span> <span class="object">resolution</span>.</td>
+<td><span class="subject">الاختصاص القضائي</span> <span class="verb">يحدد</span> <span class="article">أي</span> <span class="object">قوانين</span> <span class="auxiliary">ستُطبق</span> <span class="preposition">في</span> <span class="object">حل</span> <span class="object">النزاعات</span>.</td>
+<td>ذا جوريسديكشن ديتيرمينز ويتش لوز ويل بي أبلايد إن ديسبيوت ريزولوشن</td>
+<td><button class="save-btn" data-item-id="30" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 30)">⭕ حفظ</button></td></tr>
+<!-- Environmental & Sustainability Sentences -->
+<tr class="category-header">
+<td colspan="4">🌍 جمل البيئة والاستدامة</td>
+</tr>
+<tr>
+<td><span class="adjective">Sustainable</span> <span class="object">practices</span> <span class="auxiliary">are</span> <span class="verb">becoming</span> <span class="adjective">essential</span> <span class="preposition">for</span> <span class="adjective">long-term</span> <span class="adjective">corporate</span> <span class="object">viability</span>.</td>
+<td><span class="object">الممارسات</span> <span class="adjective">المستدامة</span> <span class="auxiliary">تصبح</span> <span class="adjective">ضرورية</span> <span class="preposition">لـ</span><span class="object">الجدوى</span> <span class="adjective">الشركات</span> <span class="adjective">طويلة المدى</span>.</td>
+<td>سوستينابل براكتيسز آر بيكمينغ إسينشال فور لونغ تيرم كوربوريت فايابيليتي</td>
+<td><button class="save-btn" data-item-id="31" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 31)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">organization</span> <span class="auxiliary">has</span> <span class="verb">committed</span> <span class="preposition">to</span> <span class="verb">achieving</span> <span class="adjective">carbon</span> <span class="object">neutrality</span> <span class="preposition">by</span> <span class="object">2030</span>.</td>
+<td><span class="subject">المنظمة</span> <span class="auxiliary">التزمت بـ</span><span class="verb">تحقيق</span> <span class="object">الحياد</span> <span class="adjective">الكربوني</span> <span class="preposition">بحلول</span> <span class="object">2030</span>.</td>
+<td>ذا أورغانايزيشن هاز كوميتد تو أتشيفينغ كاربن نيوتراليتي باي 2030</td>
+<td><button class="save-btn" data-item-id="32" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 32)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Renewable</span> <span class="object">energy</span> <span class="object">investments</span> <span class="auxiliary">are</span> <span class="verb">driving</span> <span class="adjective">significant</span> <span class="object">changes</span> <span class="preposition">in</span> <span class="article">the</span> <span class="adjective">global</span> <span class="object">economy</span>.</td>
+<td><span class="object">استثمارات</span> <span class="object">الطاقة</span> <span class="adjective">المتجددة</span> <span class="auxiliary">تقود</span> <span class="object">تغييرات</span> <span class="adjective">كبيرة</span> <span class="preposition">في</span> <span class="object">الاقتصاد</span> <span class="adjective">العالمي</span>.</td>
+<td>رينيوابل إنرجي إنفيستمنتس آر درايفينغ سيغنيفيكانت تشينجيز إن ذا غلوبال إكونومي</td>
+<td><button class="save-btn" data-item-id="33" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 33)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Environmental</span> <span class="object">impact</span> <span class="object">assessments</span> <span class="auxiliary">must</span> <span class="auxiliary">be</span> <span class="verb">conducted</span> <span class="preposition">before</span> <span class="adjective">major</span> <span class="object">projects</span>.</td>
+<td><span class="object">تقييمات</span> <span class="object">التأثير</span> <span class="adjective">البيئي</span> <span class="auxiliary">يجب أن</span> <span class="auxiliary">تُجرى</span> <span class="preposition">قبل</span> <span class="object">المشاريع</span> <span class="adjective">الكبيرة</span>.</td>
+<td>إنفايرونمنتال إمباكت أسيسمنتس مست بي كونداكتد بيفور ميجر بروجيكتس</td>
+<td><button class="save-btn" data-item-id="34" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 34)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="adjective">circular</span> <span class="object">economy</span> <span class="verb">promotes</span> <span class="adjective">resource</span> <span class="object">efficiency</span> <span class="preposition">and</span> <span class="object">waste</span> <span class="object">reduction</span>.</td>
+<td><span class="object">الاقتصاد</span> <span class="adjective">الدائري</span> <span class="verb">يعزز</span> <span class="object">كفاءة</span> <span class="adjective">الموارد</span> <span class="preposition">و</span><span class="object">تقليل</span> <span class="object">النفايات</span>.</td>
+<td>ذا سيركيولار إكونومي بروموتس ريسورس إيفيشنسي أند ويست ريداكشن</td>
+<td><button class="save-btn" data-item-id="35" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 35)">⭕ حفظ</button></td></tr>
+<!-- Healthcare & Medical Sentences -->
+<tr class="category-header">
+<td colspan="4">🏥 جمل طبية وصحية</td>
+</tr>
+<tr>
+<td><span class="adjective">Telemedicine</span> <span class="auxiliary">has</span> <span class="verb">transformed</span> <span class="adjective">healthcare</span> <span class="object">delivery</span> <span class="preposition">during</span> <span class="article">the</span> <span class="object">pandemic</span>.</td>
+<td><span class="adjective">الطب عن بُعد</span> <span class="auxiliary">غيّر</span> <span class="object">تقديم</span> <span class="adjective">الرعاية الصحية</span> <span class="preposition">خلال</span> <span class="object">الجائحة</span>.</td>
+<td>تيليميديسين هاز ترانسفورمد هيلث كير ديليفري دورينغ ذا بانديميك</td>
+<td><button class="save-btn" data-item-id="36" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 36)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Personalized</span> <span class="object">medicine</span> <span class="verb">utilizes</span> <span class="adjective">genetic</span> <span class="object">information</span> <span class="preposition">to</span> <span class="verb">tailor</span> <span class="object">treatments</span>.</td>
+<td><span class="object">الطب</span> <span class="adjective">الشخصي</span> <span class="verb">يستخدم</span> <span class="object">المعلومات</span> <span class="adjective">الجينية</span> <span class="preposition">لـ</span><span class="verb">تخصيص</span> <span class="object">العلاجات</span>.</td>
+<td>برسونالايزد ميديسين يوتيلايزز جينيتيك إنفورميشن تو تيلر تريتمنتس</td>
+<td><button class="save-btn" data-item-id="37" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 37)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Clinical</span> <span class="object">trials</span> <span class="auxiliary">are</span> <span class="adjective">essential</span> <span class="preposition">for</span> <span class="verb">validating</span> <span class="adjective">new</span> <span class="adjective">therapeutic</span> <span class="object">interventions</span>.</td>
+<td><span class="object">التجارب</span> <span class="adjective">السريرية</span> <span class="auxiliary">ضرورية</span> <span class="preposition">لـ</span><span class="verb">التحقق من</span> <span class="object">التدخلات</span> <span class="adjective">العلاجية</span> <span class="adjective">الجديدة</span>.</td>
+<td>كلينيكال ترايلز آر إسينشال فور فاليديتينغ نيو ثيرابيوتيك إنتيرفينشنز</td>
+<td><button class="save-btn" data-item-id="38" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 38)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">healthcare system</span> <span class="auxiliary">is</span> <span class="verb">adopting</span> <span class="adjective">artificial</span> <span class="object">intelligence</span> <span class="preposition">for</span> <span class="adjective">diagnostic</span> <span class="object">purposes</span>.</td>
+<td><span class="subject">نظام الرعاية الصحية</span> <span class="auxiliary">يتبنى</span> <span class="object">الذكاء</span> <span class="adjective">الاصطناعي</span> <span class="preposition">لـ</span><span class="object">أغراض</span> <span class="adjective">التشخيص</span>.</td>
+<td>ذا هيلث كير سيستم إز أدوبتينغ آرتيفيشال إنتليجنس فور دايغنوستيك برببوسيز</td>
+<td><button class="save-btn" data-item-id="39" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 39)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Preventive</span> <span class="object">care</span> <span class="verb">reduces</span> <span class="adjective">long-term</span> <span class="adjective">healthcare</span> <span class="object">costs</span> <span class="preposition">and</span> <span class="verb">improves</span> <span class="object">outcomes</span>.</td>
+<td><span class="object">الرعاية</span> <span class="adjective">الوقائية</span> <span class="verb">تقلل</span> <span class="object">تكاليف</span> <span class="adjective">الرعاية الصحية</span> <span class="adjective">طويلة المدى</span> <span class="preposition">و</span><span class="verb">تحسن</span> <span class="object">النتائج</span>.</td>
+<td>بريفنتيف كير ريديوسيز لونغ تيرم هيلث كير كوستس أند إمبروفز آوتكمز</td>
+<td><button class="save-btn" data-item-id="40" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 40)">⭕ حفظ</button></td></tr>
+<!-- International Relations & Politics -->
+<tr class="category-header">
+<td colspan="4">🌐 العلاقات الدولية والسياسة</td>
+</tr>
+<tr>
+<td><span class="adjective">Multilateral</span> <span class="object">agreements</span> <span class="verb">facilitate</span> <span class="adjective">international</span> <span class="object">cooperation</span> <span class="preposition">on</span> <span class="adjective">global</span> <span class="object">challenges</span>.</td>
+<td><span class="object">الاتفاقيات</span> <span class="adjective">متعددة الأطراف</span> <span class="verb">تسهل</span> <span class="object">التعاون</span> <span class="adjective">الدولي</span> <span class="preposition">حول</span> <span class="object">التحديات</span> <span class="adjective">العالمية</span>.</td>
+<td>مالتيلاترال أغريمنتس فاسيليتيت إنترناشنال كووبيريشن أون غلوبال تشالنجيز</td>
+<td><button class="save-btn" data-item-id="41" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 41)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">ambassador</span> <span class="auxiliary">will</span> <span class="verb">represent</span> <span class="adjective">national</span> <span class="object">interests</span> <span class="preposition">in</span> <span class="adjective">bilateral</span> <span class="object">negotiations</span>.</td>
+<td><span class="subject">السفير</span> <span class="auxiliary">سوف</span> <span class="verb">يمثل</span> <span class="object">المصالح</span> <span class="adjective">الوطنية</span> <span class="preposition">في</span> <span class="object">المفاوضات</span> <span class="adjective">الثنائية</span>.</td>
+<td>ذا أمباسادور ويل ريبريزنت ناشنال إنتيريستس إن بايلاترال نيغوسييشنز</td>
+<td><button class="save-btn" data-item-id="42" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 42)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Diplomatic</span> <span class="object">immunity</span> <span class="verb">protects</span> <span class="object">representatives</span> <span class="preposition">from</span> <span class="adjective">legal</span> <span class="object">prosecution</span> <span class="preposition">in</span> <span class="adjective">host</span> <span class="object">countries</span>.</td>
+<td><span class="object">الحصانة</span> <span class="adjective">الدبلوماسية</span> <span class="verb">تحمي</span> <span class="object">الممثلين</span> <span class="preposition">من</span> <span class="object">المقاضاة</span> <span class="adjective">القانونية</span> <span class="preposition">في</span> <span class="object">البلدان</span> <span class="adjective">المضيفة</span>.</td>
+<td>ديبلوماتيك إميونيتي بروتيكتس ريبريزنتيتيفز فروم ليغال بروسيكيوشن إن هوست كنتريز</td>
+<td><button class="save-btn" data-item-id="43" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 43)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">referendum</span> <span class="auxiliary">will</span> <span class="verb">determine</span> <span class="adjective">public</span> <span class="object">opinion</span> <span class="preposition">on</span> <span class="adjective">constitutional</span> <span class="object">amendments</span>.</td>
+<td><span class="subject">الاستفتاء</span> <span class="auxiliary">سوف</span> <span class="verb">يحدد</span> <span class="object">الرأي</span> <span class="adjective">العام</span> <span class="preposition">حول</span> <span class="object">التعديلات</span> <span class="adjective">الدستورية</span>.</td>
+<td>ذا ريفيريندوم ويل ديتيرمين بابليك أوبينيون أون كونستيتيوشنال أميندمنتس</td>
+<td><button class="save-btn" data-item-id="44" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 44)">⭕ حفظ</button></td></tr>
+<tr>
+<td><span class="adjective">Economic</span> <span class="object">sanctions</span> <span class="auxiliary">are</span> <span class="verb">imposed</span> <span class="preposition">to</span> <span class="verb">influence</span> <span class="adjective">political</span> <span class="object">behavior</span> <span class="preposition">without</span> <span class="adjective">military</span> <span class="object">intervention</span>.</td>
+<td><span class="object">العقوبات</span> <span class="adjective">الاقتصادية</span> <span class="auxiliary">تُفرض</span> <span class="preposition">لـ</span><span class="verb">التأثير على</span> <span class="object">السلوك</span> <span class="adjective">السياسي</span> <span class="preposition">بدون</span> <span class="object">تدخل</span> <span class="adjective">عسكري</span>.</td>
+<td>إكونوميك سانكشنز آر إمبوزد تو إنفلوينس بوليتيكال بيهيفيور ويذاوت ميليتري إنتيرفينشن</td>
+<td><button class="save-btn" data-item-id="45" data-level="b2" data-type="sentences" onclick="saveItemProgress('b2', 'sentences', 45)">⭕ حفظ</button></td></tr>
+</tbody>
+</table></div>
+<div style="padding: 2rem; background: #f8f9fa; text-align: center; border-top: 1px solid #dee2e6;">
+<p><strong>إجمالي الجمل:</strong> 100 جملة معقدة ومتقدمة</p>
+<p>هذه الجمل تؤهلك للتعامل مع المحادثات المهنية والأكاديمية المتقدمة</p>
+<div style="margin-top: 1rem;">
+<h4>دليل الألوان:</h4>
+<span class="subject">■ فاعل</span> | 
+                <span class="verb">■ فعل</span> | 
+                <span class="object">■ مفعول</span> | 
+                <span class="adjective">■ صفة</span> | 
+                <span class="adverb">■ ظرف</span> | 
+                <span class="preposition">■ حرف جر</span> | 
+                <span class="article">■ أداة تعريف</span> | 
+                <span class="auxiliary">■ فعل مساعد</span>
+</div>
+</div>
+</div>
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<!-- Firebase Configuration -->
+<script src="firebase-config.js"></script>
+<script src="firebase-main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
