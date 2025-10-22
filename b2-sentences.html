@@ -71,33 +71,13 @@
         .article { color: #7f8c8d; font-weight: bold; }
         .auxiliary { color: #1abc9c; font-weight: bold; }
     
-.scroll-progress {
-    margin-top: 10px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
 
-.scroll-progress-text {
-    font-size: 14px;
-    margin-bottom: 5px;
-    text-align: center;
-}
 
-.scroll-progress-bar {
-    width: 100%;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    overflow: hidden;
-}
 
-.scroll-progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #3498db, #2ecc71);
-    width: 0%;
-    transition: width 0.3s ease;
-}
+
+
+
+
 
 
 .fixed-progress-container {
@@ -214,7 +194,6 @@ body {
 </head>
 <body data-level="b2" data-type="sentences">
 <a class="back-button" href="index.html">← العودة للرئيسية</a>
-<a class="back-button" href="progress.html" style="left: auto; right: 20px;">📊 عرض التقدم الكامل</a>
 <div class="sentences-container">
 <div class="sentences-header">
 <h1>جمل المستوى B2</h1>
@@ -712,11 +691,6 @@ body {
                     <div class="progress-bar-fill" id="save-fill"></div>
                 </div>
             </div>
-            <div class="progress-row">
-                <div class="progress-label">📜 التقدم في التمرير: <span id="scroll-percent">0</span>%</div>
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill scroll-bar-fill" id="scroll-fill"></div>
-                </div>
             </div>
         </div>
     `;
@@ -736,23 +710,14 @@ body {
         document.getElementById('save-fill').style.width = percent + '%';
     }
     
-    // Update scroll progress
-    function updateScrollProgress() {
-        const winH = window.innerHeight;
-        const docH = document.documentElement.scrollHeight - winH;
-        const scrolled = window.scrollY;
-        const percent = docH > 0 ? Math.round((scrolled / docH) * 100) : 0;
-        
-        document.getElementById('scroll-percent').textContent = percent;
-        document.getElementById('scroll-fill').style.width = percent + '%';
-    }
+    
     
     // Initialize
     updateSaveProgress();
-    updateScrollProgress();
+    
     
     // Listen for changes
-    window.addEventListener('scroll', updateScrollProgress);
+    
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('save-btn')) {
             setTimeout(updateSaveProgress, 200);
