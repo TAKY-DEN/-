@@ -135,9 +135,65 @@ body {
     padding-top: 120px !important;
 }
 
+
+/* Fixed Progress Container */
+.fixed-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    color: white;
+}
+
+.progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.progress-row {
+    margin-bottom: 8px;
+}
+
+.progress-row:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.scroll-bar-fill {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+body {
+    padding-top: 100px !important;
+}
+
 </style>
 </head>
-<body>
+<body data-level="c1" data-type="vocab">
     <a href="index.html" class="back-button">← العودة للرئيسية</a>
     <!-- شريط التقدم -->
     <div style="position: fixed; top: 70px; left: 0; right: 0; background: white; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 999;">
@@ -1682,6 +1738,77 @@ body {
 
 
 </script>
+
+<script>
+(function() {
+    const level = document.body.getAttribute('data-level');
+    const type = document.body.getAttribute('data-type');
+    
+    if (!level || !type) return;
+    
+    // Create fixed progress bar
+    const bar = document.createElement('div');
+    bar.className = 'fixed-progress-bar';
+    bar.innerHTML = `
+        <div class="progress-content">
+            <div class="progress-row">
+                <div class="progress-label">📊 التقدم في الحفظ: <span id="save-count">0</span>/<span id="total-count">0</span> (<span id="save-percent">0</span>%)</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="save-fill"></div>
+                </div>
+            </div>
+            <div class="progress-row">
+                <div class="progress-label">📜 التقدم في التمرير: <span id="scroll-percent">0</span>%</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill scroll-bar-fill" id="scroll-fill"></div>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.insertBefore(bar, document.body.firstChild);
+    
+    // Update save progress
+    function updateSaveProgress() {
+        const total = document.querySelectorAll('tbody tr').length;
+        const data = JSON.parse(localStorage.getItem('englishCourseProgress') || '{}');
+        const saved = (data[level] && data[level][type]) ? 
+            Object.values(data[level][type]).filter(Boolean).length : 0;
+        const percent = total > 0 ? Math.round((saved / total) * 100) : 0;
+        
+        document.getElementById('save-count').textContent = saved;
+        document.getElementById('total-count').textContent = total;
+        document.getElementById('save-percent').textContent = percent;
+        document.getElementById('save-fill').style.width = percent + '%';
+    }
+    
+    // Update scroll progress
+    function updateScrollProgress() {
+        const winH = window.innerHeight;
+        const docH = document.documentElement.scrollHeight - winH;
+        const scrolled = window.scrollY;
+        const percent = docH > 0 ? Math.round((scrolled / docH) * 100) : 0;
+        
+        document.getElementById('scroll-percent').textContent = percent;
+        document.getElementById('scroll-fill').style.width = percent + '%';
+    }
+    
+    // Initialize
+    updateSaveProgress();
+    updateScrollProgress();
+    
+    // Listen for changes
+    window.addEventListener('scroll', updateScrollProgress);
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('save-btn')) {
+            setTimeout(updateSaveProgress, 200);
+        }
+    });
+    
+    // Update periodically
+    setInterval(updateSaveProgress, 1000);
+})();
+</script>
+
 </body>
 </html>
 

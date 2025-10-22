@@ -125,6 +125,8 @@ class ProgressSystem {
         if (url.includes('a2')) return 'a2';
         if (url.includes('b1')) return 'b1';
         if (url.includes('b2')) return 'b2';
+        if (url.includes('c1')) return 'c1';
+        if (url.includes('c2')) return 'c2';
         return 'unknown';
     }
 
@@ -181,7 +183,7 @@ class ProgressSystem {
 
     // حساب الإحصائيات
     calculateStats() {
-        const levels = ['a1', 'a2', 'b1', 'b2'];
+        const levels = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
         const types = ['vocab', 'sentences'];
         
         let totalItems = 0;
@@ -194,10 +196,12 @@ class ProgressSystem {
             types.forEach(type => {
                 // هذه الأرقام يجب أن تتطابق مع البيانات الفعلية
                 const levelTotals = {
-                    a1: { vocab: 50, sentences: 20 },
-                    a2: { vocab: 50, sentences: 20 },
-                    b1: { vocab: 50, sentences: 20 },
-                    b2: { vocab: 50, sentences: 20 }
+                    a1: { vocab: 737, sentences: 93 },
+                    a2: { vocab: 903, sentences: 61 },
+                    b1: { vocab: 611, sentences: 42 },
+                    b2: { vocab: 180, sentences: 45 },
+                    c1: { vocab: 219, sentences: 41 },
+                    c2: { vocab: 188, sentences: 41 }
                 };
                 
                 const total = levelTotals[level][type];
