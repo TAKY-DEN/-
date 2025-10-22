@@ -431,3 +431,35 @@ function exportProgressData() {
     }
 }
 
+
+
+// Add scroll progress bar
+function addScrollProgressBar() {
+    const container = document.querySelector('.progress-container');
+    if (!container) return;
+    
+    // Create scroll progress element
+    const scrollProgress = document.createElement('div');
+    scrollProgress.className = 'scroll-progress';
+    scrollProgress.innerHTML = `
+        <div class="scroll-progress-text">📜 التقدم في القراءة: <span id="scroll-percent">0</span>%</div>
+        <div class="scroll-progress-bar">
+            <div class="scroll-progress-fill" id="scroll-fill"></div>
+        </div>
+    `;
+    container.appendChild(scrollProgress);
+    
+    // Update scroll progress on scroll
+    window.addEventListener('scroll', () => {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrolled = window.scrollY;
+        const progress = (scrolled / documentHeight) * 100;
+        
+        document.getElementById('scroll-percent').textContent = Math.round(progress);
+        document.getElementById('scroll-fill').style.width = progress + '%';
+    });
+}
+
+// Call on page load
+window.addEventListener('DOMContentLoaded', addScrollProgressBar);
