@@ -463,3 +463,88 @@ function addScrollProgressBar() {
 
 // Call on page load
 window.addEventListener('DOMContentLoaded', addScrollProgressBar);
+
+
+// Create fixed progress container
+function createFixedProgressContainer() {
+    if (document.querySelector('.fixed-progress-container')) return;
+    
+    const level = document.body.getAttribute('data-level') || 'unknown';
+    const type = document.body.getAttribute('data-type') || 'unknown';
+    
+    if (level === 'unknown' || type === 'unknown') return;
+    
+    const container = document.createElement('div');
+    container.className = 'fixed-progress-container';
+    container.innerHTML = `
+        <div class="fixed-progress-content">
+            <div class="progress-section">
+                <div class="progress-label">📊 التقدم في هذه الصفحة: <span id="saved-count">0</span>/<span id="total-count">0</span> <span id="saved-percent">0</span>%</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <div class="progress-section">
+                <div class="progress-label">📜 التقدم في القراءة: <span id="scroll-percent">0</span>%</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill scroll-fill" id="scroll-fill"></div>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.insertBefore(container, document.body.firstChild);
+    
+    // Update scroll progress
+    function updateScrollProgress() {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrolled = window.scrollY;
+        const progress = documentHeight > 0 ? (scrolled / documentHeight) * 100 : 0;
+        
+        const scrollPercent = document.getElementById('scroll-percent');
+        const scrollFill = document.getElementById('scroll-fill');
+        if (scrollPercent) scrollPercent.textContent = Math.round(progress);
+        if (scrollFill) scrollFill.style.width = progress + '%';
+    }
+    
+    window.addEventListener('scroll', updateScrollProgress);
+    updateScrollProgress();
+}
+
+// Update saved items progress
+function updateSavedProgress() {
+    const level = document.body.getAttribute('data-level') || 'unknown';
+    const type = document.body.getAttribute('data-type') || 'unknown';
+    
+    if (level === 'unknown' || type === 'unknown') return;
+    
+    const totalItems = document.querySelectorAll('.vocabulary-table tbody tr, .sentences-table tbody tr').length;
+    const savedData = JSON.parse(localStorage.getItem('englishCourseProgress') || '{}');
+    const completedItems = savedData[level] && savedData[level][type] ? 
+        Object.values(savedData[level][type]).filter(Boolean).length : 0;
+    
+    const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+    
+    const savedCount = document.getElementById('saved-count');
+    const totalCount = document.getElementById('total-count');
+    const savedPercent = document.getElementById('saved-percent');
+    const progressFill = document.getElementById('progress-fill');
+    
+    if (savedCount) savedCount.textContent = completedItems;
+    if (totalCount) totalCount.textContent = totalItems;
+    if (savedPercent) savedPercent.textContent = percentage;
+    if (progressFill) progressFill.style.width = percentage + '%';
+}
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', () => {
+    createFixedProgressContainer();
+    updateSavedProgress();
+    
+    // Update when items are saved
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('save-btn')) {
+            setTimeout(updateSavedProgress, 100);
+        }
+    });
+});
