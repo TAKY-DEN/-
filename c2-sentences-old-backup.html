@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>جمل المستوى C2 - كورس اللغة الإنجليزية</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        .sentences-container {
+            background: white;
+            margin: 100px auto 50px;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .sentences-header {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .sentences-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sentences-table th {
+            background: #f8f9fa;
+            padding: 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .sentences-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #dee2e6;
+            line-height: 1.6;
+        }
+        .sentences-table tr:hover {
+            background: #f8f9fa;
+        }
+        .back-button {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 1000;
+        }
+        /* Color System for Grammar */
+        .subject { color: #e74c3c; font-weight: bold; }
+        .verb { color: #27ae60; font-weight: bold; }
+        .object { color: #3498db; font-weight: bold; }
+        .adjective { color: #9b59b6; font-weight: bold; }
+        .adverb { color: #f39c12; font-weight: bold; }
+        .preposition { color: #8b4513; font-weight: bold; }
+        .article { color: #7f8c8d; font-weight: bold; }
+        .auxiliary { color: #1abc9c; font-weight: bold; }
+    
+
+
+
+
+
+
+
+
+
+.fixed-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    color: white;
+}
+
+.fixed-progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.progress-section {
+    margin-bottom: 10px;
+}
+
+.progress-section:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.scroll-fill {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+body {
+    padding-top: 120px !important;
+}
+
+
+/* Fixed Progress Container */
+.fixed-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    color: white;
+}
+
+.progress-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.progress-row {
+    margin-bottom: 8px;
+}
+
+.progress-row:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.scroll-bar-fill {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+body {
+    padding-top: 100px !important;
+}
+
+</style>
+</head>
+<body data-level="c2" data-type="sentences">
+<a class="back-button" href="index.html">← العودة للرئيسية</a>
+<div class="sentences-container">
+<div class="sentences-header">
+<h1>جمل المستوى C2</h1>
+<p>100 جملة أساسية مع الترجمة العربية وطريقة النطق - نظام الألوان لفهم القواعد</p>
+</div>
+<div class="table-wrapper"><table class="sentences-table">
+<thead>
+<tr>
+<th>الجملة الإنجليزية</th>
+<th>الترجمة العربية</th>
+<th>طريقة النطق</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="article">The</span> paradigm <span class="subject">shift</span> <span class="preposition">in</span> <span class="adjective">contemporary</span> <span class="object">epistemology</span> has <span class="adverb">fundamentally</span> <span class="verb">altered</span> our <span class="object">understanding</span> <span class="preposition">of</span> knowledge <span class="object">acquisition</span>.</td>
+<td><td><span class="article">ال</span><span class="subject">تحول النموذجي</span> <span class="preposition">في</span> <span class="adjective">نظرية</span> <span class="object">المعرفة</span> <span class="auxiliary">قد</span> <span class="verb">غيّر</span> <span class="adverb">بشكل جذري</span> <span class="object">فهمنا</span> <span class="preposition">ل</span> <span class="object">اكتساب المعرفة</span>.</td></td>
+<td><td><span class="article">ذا</span> <span class="subject">باراديم شيفت</span> <span class="preposition">إن</span> <span class="adjective">كونتيمبوراري</span> <span class="object">إبيستيمولوجي</span> <span class="auxiliary">هاز</span> <span class="adverb">فانداميتالي</span> <span class="verb">أولتيرد</span> <span class="object">آور أندرستاندينج</span> <span class="preposition">أوف</span> <span class="object">نوليدج أكويزيشن</span></td></td>
+<td><button class="save-btn" data-index="1" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="adjective">ubiquitous</span> <span class="subject">nature</span> <span class="preposition">of</span> <span class="adjective">digital</span> <span class="object">technology</span> has <span class="verb">engendered</span> <span class="adjective">profound</span> <span class="adjective">societal</span> <span class="object">transformations</span>.</td>
+<td><span class="article">ال</span><span class="adjective">طبيعة</span> <span class="adjective">المنتشرة في كل مكان</span> <span class="subject">ل</span><span class="preposition">ل</span><span class="adjective">لتكنولوجيا</span> <span class="object">الرقمية</span> <span>ولّدت</span> <span class="verb">تحولات</span> <span class="adjective">مجتمعية</span> <span class="adjective">عميقة</span>.</td>
+<td><span class="article">ذا</span> <span class="adjective">يوبيكويتوس</span> <span class="subject">نيتشر</span> <span class="preposition">أوف</span> <span class="adjective">ديجيتال</span> <span class="object">تيكنولوجي</span> <span>هاز</span> <span class="verb">إنجيندرد</span> <span class="adjective">بروفاوند</span> <span class="adjective">سوسايتال</span> <span class="object">ترانسفورميشنز</span></td>
+<td><button class="save-btn" data-index="2" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">juxtaposition</span> <span class="preposition">of</span> <span class="verb">conflicting</span> <span class="object">ideologies</span> <span class="verb">reveals</span> <span class="adjective">inherent</span> <span class="object">contradictions</span> <span class="preposition">within</span> <span class="adjective">political</span> <span class="object">discourse</span>.</td>
+<td><span class="article">ال</span><span class="subject">تجاور</span> <span class="object">الأيديولوجيات</span> <span class="adjective">المتضاربة</span> <span class="verb">يكشف</span> <span class="preposition">عن</span> <span class="object">تناقضات</span> <span class="adjective">متأصلة</span> <span class="preposition">في</span> <span class="adjective">ال</span><span class="adjective">خطاب</span> <span class="object">السياسي</span>.</td>
+<td><span class="article">ذا</span> <span class="subject">جاكستابوزيشن</span> <span class="preposition">أوف</span> <span class="verb">كونفليكتينج</span> <span class="object">آيديولوجيز</span> <span class="verb">ريفيلز</span> <span class="adjective">إنهيرنت</span> <span class="object">كونتراديكشنز</span> <span class="preposition">ويذين</span> <span class="adjective">بوليتيكال</span> <span class="object">ديسكورس</span></td>
+<td><button class="save-btn" data-index="3" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Epistemological</span> <span class="subject">frameworks</span> <span class="verb">continue</span> to <span class="verb">evolve</span> <span class="preposition">in</span> <span class="object">response</span> <span class="preposition">to</span> <span class="verb">emerging</span> <span class="adjective">philosophical</span> <span class="object">challenges</span>.</td>
+<td><span class="adjective">الأطر المعرفية</span> <span class="verb">تستمر</span> <span class="preposition">في</span> <span class="verb">التطور</span> <span class="object">استجابة</span> <span class="preposition">لـ</span> <span class="object">التحديات</span> <span class="adjective">الفلسفية الناشئة</span>.</td>
+<td><span class="adjective">إبيستيمولوجيكال فريموركس</span> <span class="verb">كونتينيو</span> <span class="preposition">تو</span> <span class="verb">إيفولف</span> <span class="preposition">إن</span> <span class="object">ريسبونس</span> <span class="preposition">تو</span> <span class="verb">إيميرجينج</span> <span class="adjective">فيلوسوفيكال</span> <span class="object">تشالينجز</span></td>
+<td><button class="save-btn" data-index="4" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">dichotomy</span> <span class="preposition">between</span> <span class="object">empiricism</span> and rationalism has <span class="verb">shaped</span> <span class="object">centuries</span> <span class="preposition">of</span> <span class="adjective">philosophical</span> <span class="object">debate</span>.</td>
+<td><span class="article">الثنائية</span> <span class="preposition">بين</span> <span class="subject">التجريبية</span> و<span class="subject">العقلانية</span> <span class="verb">شكّلت</span> <span class="object">قروناً</span> <span class="preposition">من</span> <span class="adjective">النقاش</span> <span class="object">الفلسفي</span>.</td>
+<td><span class="article">ذا</span> <span class="subject">دايكوتومي</span> <span class="preposition">بيتوين</span> <span class="subject">إمبيريسيزم</span> <span class="subject">آند</span> <span class="subject">راشناليزم</span> <span class="verb">هاز</span> <span class="verb">شيبد</span> <span class="object">سينتشريز</span> <span class="preposition">أوف</span> <span class="adjective">فيلوسوفيكال</span> <span class="object">ديبيت</span></td>
+<td><button class="save-btn" data-index="5" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Ambiguous</span> <span class="adjective">legal</span> <span class="subject">terminology</span> <span class="adverb">often</span> <span class="verb">necessitates</span> <span class="adjective">extensive</span> <span class="adjective">judicial</span> <span class="object">interpretation</span> and clarification.</td>
+<td><span class="adjective">الغامضة</span> <span class="adjective">القانونية</span> <span class="subject">المصطلحات</span> <span class="adverb">غالباً</span> <span class="verb">تستلزم</span> <span class="adjective">واسعاً</span> <span class="adjective">قضائياً</span> <span class="object">تفسيراً</span> و<span class="object">توضيحاً</span>.</td>
+<td><span class="adjective">أمبيجيوس</span> <span class="adjective">ليجال</span> <span class="subject">تيرمينولوجي</span> <span class="adverb">أوفن</span> <span class="verb">نيسيسيتيتس</span> <span class="adjective">إكستينسيف</span> <span class="adjective">جوديشال</span> <span class="object">إنتيربريتيشن</span> <span class="object">آند كلاريفيكيشن</span></td>
+<td><button class="save-btn" data-index="6" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">conundrum</span> <span class="preposition">of</span> <span class="object">consciousness</span> <span class="verb">remains</span> <span class="object">one</span> <span class="preposition">of</span> philosophy's <span class="adverb">most</span> <span class="adjective">intractable</span> <span class="object">problems</span>.</td>
+<td><span class="article">لغز</span> <span class="subject">الوعي</span> <span class="verb">يبقى</span> <span class="object">واحداً</span> <span class="preposition">من</span> <span class="object">أكثر</span> <span class="adverb">مشاكل</span> <span class="adjective">الفلسفة</span> <span class="object">استعصاءً</span> <span class="object">على</span> <span class="object">الحل</span>.</td>
+<td><span class="article">ذا</span> <span class="subject">كونندرم</span> <span class="preposition">أوف</span> <span class="object">كونشسنس</span> <span class="verb">ريمينز</span> <span class="object">وان</span> <span class="preposition">أوف</span> <span class="object">فيلوسوفيز</span> <span class="adverb">موست</span> <span class="adjective">إنتراكتابل</span> <span class="object">بروبليمز</span></td>
+<td><button class="save-btn" data-index="7" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Ephemeral</span> <span class="adjective">artistic</span> <span class="subject">movements</span> <span class="adverb">often</span> <span class="verb">reflect</span> <span class="adjective">transient</span> <span class="adjective">cultural</span> <span class="object">anxieties</span> and aspirations.</td>
+<td><span class="adjective">الزائلة</span> <span class="adjective">الفنية</span> <span class="subject">الحركات</span> <span class="adverb">غالباً</span> <span class="verb">تعكس</span> <span class="adjective">عابرة</span> <span class="adjective">ثقافية</span> <span class="object">قلق</span> و<span class="object">طموحات</span>.</td>
+<td><span class="adjective">إفيميرال</span> <span class="adjective">آرتيستيك</span> <span class="subject">موفمنتس</span> <span class="adverb">أوفن</span> <span class="verb">ريفليكت</span> <span class="adjective">ترانزينت</span> <span class="adjective">كالتشرال</span> <span class="object">آنزايتيز</span> <span class="object">آند أسبيريشنز</span></td>
+<td><button class="save-btn" data-index="8" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Esoteric</span> knowledge <span class="subject">traditions</span> have <span class="adverb">historically</span> been <span class="verb">transmitted</span> <span class="preposition">through</span> <span class="adjective">selective</span> initiation <span class="object">processes</span>.</td>
+<td><span class="adjective">الباطنية</span> <span class="subject">تقاليد</span> <span class="adjective">المعرفة</span> <span class="verb">تم نقلها</span> <span class="adverb">تاريخياً</span> <span class="preposition">من خلال</span> <span class="object">عمليات تلقين انتقائية</span>.</td>
+<td><span class="adjective">إيسوتيريك</span> <span class="subject">تراديشنز</span> <span class="adjective">نوليدج</span> <span class="verb">هاف هيستوريكلي بين ترانسميتد</span> <span class="adverb">هيستوريكلي</span> <span class="preposition">ثرو</span> <span class="object">سيليكتيف إنيشييشن بروسيسز</span></td>
+<td><button class="save-btn" data-index="9" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="adjective">idiosyncratic</span> <span class="subject">nature</span> <span class="preposition">of</span> <span class="adjective">individual</span> perception <span class="object">complicates</span> <span class="adjective">objective</span> <span class="adjective">epistemological</span> <span class="object">claims</span>.</td>
+<td><span class="article">ال</span><span class="adjective">طبيعة</span> <span class="adjective">الخاصة</span> <span class="preposition">ل</span><span class="subject">لإدراك</span> <span class="adjective">الفردي</span> <span class="object">تعقّد</span> <span class="adjective">ال</span><span class="adjective">ادعاءات</span> <span class="adjective">المعرفية</span> <span class="object">الموضوعية</span>.</td>
+<td><span class="article">ذي</span> <span class="adjective">إديوسينكراتيك</span> <span class="subject">نيتشر</span> <span class="preposition">أوف</span> <span class="adjective">إنديفيجوال</span> <span class="subject">بيرسيبشن</span> <span class="object">كومبليكيتس</span> <span class="adjective">أوبجيكتيف</span> <span class="adjective">إبيستيمولوجيكال</span> <span class="object">كليمز</span>.</td>
+<td><button class="save-btn" data-index="10" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Indefatigable</span> <span class="subject">researchers</span> <span class="verb">continue</span> to <span class="verb">pursue</span> <span class="adjective">elusive</span> <span class="object">solutions</span> <span class="preposition">to</span> <span class="adjective">complex</span> <span class="adjective">scientific</span> <span class="object">problems</span>.</td>
+<td><span class="adjective">الدؤوبون</span> <span class="subject">الباحثون</span> <span class="verb">يواصلون</span> <span class="verb">السعي</span> <span class="adjective">بعيدة</span> <span class="object">الحلول</span> <span class="preposition">وراء</span> <span class="adjective">المعقدة</span> <span class="adjective">العلمية</span> <span class="object">المشاكل</span>.</td>
+<td><span class="adjective">إنديفاتيجابل</span> <span class="subject">ريسيرتشرز</span> <span class="verb">كونتينيو</span> <span class="verb">تو بيرسيو</span> <span class="adjective">إلوسيف</span> <span class="object">سوليوشنز</span> <span class="preposition">تو</span> <span class="adjective">كومبليكس</span> <span class="adjective">ساينتيفيك</span> <span class="object">بروبليمز</span>.</td>
+<td><button class="save-btn" data-index="11" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="adjective">insidious</span> effects <span class="preposition">of</span> <span class="adjective">systemic</span> inequality <span class="object">manifest</span> <span class="preposition">across</span> <span class="adjective">multiple</span> <span class="adjective">societal</span> <span class="object">dimensions</span>.</td>
+<td><span class="article">ال</span><span class="object">آثار</span> <span class="adjective">الخبيثة</span> <span class="preposition">ل</span><span class="article">عدم</span> <span class="adjective">المساواة</span> <span class="adjective">المنهجية</span> <span class="verb">تتجلى</span> <span class="preposition">عبر</span> <span class="object">أبعاد</span> <span class="adjective">مجتمعية</span> <span class="adjective">متعددة</span>.</td>
+<td><span class="article">ذي</span> <span class="adjective">إنسيديوس</span> <span class="object">إفيكتس</span> <span class="preposition">أوف</span> <span class="adjective">سيستيميك</span> <span class="adjective">إنيكواليتي</span> <span class="object">مانيفيست</span> <span class="preposition">أكروس</span> <span class="adjective">مالتيبل</span> <span class="adjective">سوسايتال</span> <span class="object">دايمينشنز</span></td>
+<td><button class="save-btn" data-index="12" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Loquacious</span> <span class="subject">individuals</span> <span class="adverb">often</span> <span class="verb">dominate</span> <span class="object">discourse</span> <span class="preposition">without</span> <span class="adverb">necessarily</span> <span class="verb">contributing</span> <span class="adjective">substantive</span> <span class="object">insights</span>.</td>
+<td><span class="adjective">الثرثارون</span> <span class="subject">الأفراد</span> <span class="adverb">غالباً</span> <span class="verb">يهيمنون</span> <span class="preposition">على</span> <span class="object">الخطاب</span> <span class="preposition">دون</span> <span class="adverb">بالضرورة</span> <span class="verb">المساهمة</span> <span class="adjective">جوهرية</span> <span class="object">برؤى</span>.</td>
+<td><span class="adjective">لوكويشس</span> <span class="subject">إنديفيجوالز</span> <span class="adverb">أوفن</span> <span class="verb">دومينيت</span> <span class="preposition">ديسكورس</span> <span class="preposition">ويذاوت</span> <span class="adverb">نيسيسيريلي</span> <span class="verb">كونتريبيوتينج</span> <span class="adjective">سابستانتيف</span> <span class="object">إنسايتس</span></td>
+<td><button class="save-btn" data-index="13" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Magnanimous</span> <span class="subject">leadership</span> fosters <span class="adjective">organizational</span> <span class="object">cohesion</span> and employee loyalty <span class="preposition">through</span> <span class="adjective">ethical</span> <span class="object">practices</span>.</td>
+<td><span class="adjective">الكرم</span> <span class="subject">القيادة</span> <span class="verb">تعزز</span> <span class="adjective">التنظيمي</span> <span class="object">التماسك</span> و<span class="object">ولاء الموظفين</span> <span class="preposition">من خلال</span> <span class="adjective">الأخلاقية</span> <span class="object">الممارسات</span>.</td>
+<td><span class="adjective">ماجنانيموس</span> <span class="subject">ليدرشيب</span> <span class="verb">فوسترز</span> <span class="adjective">أورجانايزيشنال</span> <span class="object">كوهيجن</span> و<span class="object">إمبلويي لويالتي</span> <span class="preposition">ثرو</span> <span class="adjective">إيثيكال</span> <span class="object">براكتيسز</span>.</td>
+<td><button class="save-btn" data-index="14" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Meticulous</span> attention <span class="preposition">to</span> <span class="adjective">methodological</span> rigor <span class="object">distinguishes</span> <span class="adjective">exceptional</span> research <span class="preposition">from</span> <span class="adjective">mediocre</span> <span class="object">studies</span>.</td>
+<td><span class="adjective">الاهتمام الدقيق</span> <span class="preposition">بال</span><span class="adjective">صرامة المنهجية</span> <span class="object">يميّز</span> <span class="adjective">البحث الاستثنائي</span> <span class="preposition">عن</span> <span class="adjective">الدراسات المتوسطة</span>.</td>
+<td><span class="adjective">ميتيكيولوس أتينشن تو</span> <span class="adjective">ميثودولوجيكال ريجر</span> <span class="object">ديستينجويشز</span> <span class="adjective">إكسيبشنال ريسيرتش</span> <span class="preposition">فروم</span> <span class="adjective">ميديوكر ستاديز</span></td>
+<td><button class="save-btn" data-index="15" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td>Obfuscation <span class="preposition">of</span> <span class="adjective">complex</span> <span class="object">issues</span> <span class="preposition">through</span> <span class="adjective">technical</span> jargon impedes <span class="adjective">public</span> <span class="object">understanding</span> and engagement.</td>
+<td><span class="verb">إبهام</span> <span class="object">القضايا</span> <span class="adjective">المعقدة</span> <span class="preposition">من</span> <span class="preposition">خلال</span> <span class="adjective">المصطلحات</span> <span class="adjective">التقنية</span> <span class="verb">يعيق</span> <span class="adjective">الفهم</span> <span class="adjective">العام</span> <span class="object">والمشاركة</span>.</td>
+<td><span class="verb">أوبفاسكيشن</span> <span class="preposition">أوف</span> <span class="adjective">كومبليكس</span> <span class="object">إيشوز</span> <span class="preposition">ثرو</span> <span class="adjective">تيكنيكال</span> <span class="object">جارجن</span> <span class="verb">إمبيدز</span> <span class="adjective">بابليك</span> <span class="object">أندرستاندينج</span> <span class="object">آند</span> <span class="object">إنجيجمنت</span></td>
+<td><button class="save-btn" data-index="16" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Ostentatious</span> <span class="subject">displays</span> <span class="preposition">of</span> <span class="object">wealth</span> <span class="adverb">often</span> <span class="verb">mask</span> <span class="adjective">underlying</span> <span class="object">insecurities</span> and <span class="adjective">existential</span> anxieties.</td>
+<td><span class="adjective">المظاهر المتفاخرة</span> <span class="preposition">لـ</span><span class="object">الثروة</span> <span class="adverb">غالباً</span> <span class="auxiliary">ما</span> <span class="verb">تخفي</span> <span class="adjective">انعدام الأمن الأساسي</span> و <span class="adjective">القلق الوجودي</span>.</td>
+<td><span class="adjective">أوستينتيشس</span> <span class="subject">ديسبليز</span> <span class="preposition">أوف</span> <span class="object">ويلث</span> <span class="adverb">أوفن</span> <span class="verb">ماسك</span> <span class="adjective">أندرلاينج</span> <span class="object">إنسيكيوريتيز</span> <span class="adjective">آند إجزيستينشال آنزايتيز</span></td>
+<td><button class="save-btn" data-index="17" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="subject">search</span> <span class="preposition">for</span> <span class="article">a</span> <span class="object">panacea</span> <span class="preposition">to</span> <span class="adjective">societal</span> <span class="object">ills</span> <span class="verb">reflects</span> <span class="adjective">utopian</span> <span class="object">aspirations</span> <span class="adverb">rather</span> <span class="preposition">than</span> <span class="adjective">pragmatic</span> <span class="object">solutions</span>.</td>
+<td><span class="article">البحث</span> <span class="preposition">عن</span> <span class="object">علاج شامل</span> <span class="preposition">ل</span><span class="object">علل المجتمع</span> <span class="verb">يعكس</span> <span class="adjective">تطلعات طوباوية</span> <span class="adverb">بدلاً</span> <span class="preposition">من</span> <span class="adjective">عملية</span> <span class="object">حلول</span>.</td>
+<td><span class="article">ذا</span> <span class="subject">سيرتش</span> <span class="preposition">فور</span> <span class="article">أ</span> <span class="object">باناسيا</span> <span class="preposition">تو</span> <span class="adjective">سوسايتال</span> <span class="object">إلز</span> <span class="verb">ريفليكتس</span> <span class="adjective">يوتوبيان</span> <span class="object">أسبيريشنز</span> <span class="adverb">راذر</span> <span class="preposition">ذان</span> <span class="adjective">براجماتيك</span> <span class="object">سوليوشنز</span></td>
+<td><button class="save-btn" data-index="18" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Paradoxical</span> <span class="subject">phenomena</span> <span class="verb">challenge</span> <span class="adjective">conventional</span> <span class="adjective">logical</span> <span class="object">frameworks</span> and <span class="verb">demand</span> <span class="adjective">innovative</span> <span class="adjective">analytical</span> <span class="object">approaches</span>.</td>
+<td><span class="adjective">المتناقضة</span> <span class="subject">الظواهر</span> <span class="verb">تتحدى</span> <span class="adjective">التقليدية</span> <span class="adjective">المنطقية</span> <span class="object">الأطر</span> و<span class="verb">تتطلب</span> <span class="adjective">مبتكرة</span> <span class="adjective">تحليلية</span> <span class="object">مناهج</span>.</td>
+<td><span class="adjective">باراداكسيكال</span> <span class="subject">فينومينا</span> <span class="verb">تشالينج</span> <span class="adjective">كونفينشنال</span> <span class="adjective">لوجيكال</span> <span class="object">فريموركس</span> آند <span class="verb">ديماند</span> <span class="adjective">إنوفيتيف</span> <span class="adjective">أناليتيكال</span> <span class="object">أبروتشز</span></td>
+<td><button class="save-btn" data-index="19" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td>Perfunctory <span class="subject">compliance</span> <span class="preposition">with</span> <span class="object">regulations</span> <span class="verb">fails</span> to <span class="verb">address</span> <span class="verb">underlying</span> <span class="adjective">systemic</span> <span class="object">inadequacies</span>.</td>
+<td>الامتثال <span class="subject">الروتيني</span> <span class="subject">للوائح</span> <span class="verb">يفشل</span> <span class="preposition">في</span> <span class="verb">معالجة</span> <span class="verb">أوجه</span> <span class="adjective">القصور</span> <span class="adjective">المنهجية</span> <span class="object">الأساسية</span>.</td>
+<td>بيرفانكتوري <span class="subject">كومبلايانس</span> <span class="preposition">ويذ</span> <span class="object">ريجيوليشنز</span> <span class="verb">فيلز</span> <span class="preposition">تو</span> <span class="verb">أدريس</span> <span class="verb">أندرلاينج</span> <span class="adjective">سيستيميك</span> <span class="object">إناديكواسيز</span></td>
+<td><button class="save-btn" data-index="20" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Perspicacious</span> <span class="subject">observers</span> <span class="verb">discern</span> <span class="adjective">subtle</span> <span class="object">patterns</span> <span class="subject">that</span> <span class="verb">elude</span> <span class="adjective">superficial</span> <span class="object">analysis</span> and <span class="adjective">casual</span> observation.</td>
+<td><span class="adjective">ثاقبو النظر</span> <span class="subject">المراقبون</span> <span class="verb">يميزون</span> <span class="adjective">دقيقة</span> <span class="object">أنماطاً</span> <span class="subject">التي</span> <span class="verb">تفلت</span> <span class="adjective">السطحي</span> <span class="object">التحليل</span> و <span class="adjective">العابرة</span> الملاحظة.</td>
+<td><span class="adjective">بيرسبيكيشس</span> <span class="subject">أوبزيرفرز</span> <span class="verb">ديسيرن</span> <span class="adjective">ساتل</span> <span class="object">باترنز</span> <span class="subject">ذات</span> <span class="verb">إلود</span> <span class="adjective">سوبيرفيشال</span> <span class="object">أناليسيس</span> آند <span class="adjective">كاجوال</span> أوبزيرفيشن</td>
+<td><button class="save-btn" data-index="21" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">A</span> <span class="subject">plethora</span> <span class="preposition">of</span> <span class="verb">competing</span> <span class="object">theories</span> <span class="verb">complicates</span> consensus-<span class="object">building</span> <span class="preposition">within</span> <span class="adjective">academic</span> <span class="object">disciplines</span>.</td>
+<td><span class="article">وفرة</span> <span class="preposition">من</span> <span class="subject">النظريات</span> <span class="verb">المتنافسة</span> <span class="verb">تعقّد</span> <span class="object">بناء</span> <span class="object">الإجماع</span> <span class="preposition">داخل</span> <span class="adjective">التخصصات</span> <span class="object">الأكاديمية</span>.</td>
+<td><span class="article">أ</span> <span class="subject">بليثورا</span> <span class="preposition">أوف</span> <span class="verb">كومبيتينج</span> <span class="verb">ثيوريز</span> <span class="verb">كومبليكيتس</span> <span class="object">كونسينسس-بيلدينج</span> <span class="preposition">ويذين</span> <span class="adjective">أكاديميك</span> <span class="object">ديسيبلينز</span></td>
+<td><button class="save-btn" data-index="22" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Pragmatic</span> approaches <span class="preposition">to</span> policy formulation balance <span class="adjective">ideological</span> <span class="object">commitments</span> <span class="preposition">with</span> <span class="adjective">practical</span> <span class="object">constraints</span>.</td>
+<td><span class="adjective">المناهج العملية</span> <span class="preposition">لـ</span> صياغة السياسات توازن <span class="preposition">بين</span> <span class="object">الالتزامات الأيديولوجية</span> <span class="preposition">و</span> <span class="adjective">القيود العملية</span>.</td>
+<td><span class="adjective">براجماتيك أبروتشز</span> <span class="preposition">تو</span> بوليسي فورميوليشن بالانس <span class="preposition">ويذ</span> <span class="object">آيديولوجيكال كوميتمنتس</span> <span class="preposition">ويذ</span> <span class="adjective">براكتيكال كونسترينتس</span></td>
+<td><button class="save-btn" data-index="23" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Precarious</span> <span class="adjective">economic</span> <span class="subject">conditions</span> <span class="verb">exacerbate</span> <span class="adjective">social</span> <span class="object">tensions</span> and <span class="adjective">political</span> instability <span class="preposition">across</span> <span class="object">regions</span>.</td>
+<td><span class="adjective">الظروف الاقتصادية غير المستقرة</span> <span class="verb">تفاقم</span> <span class="object">التوترات الاجتماعية</span> و<span class="adjective">عدم الاستقرار السياسي</span> <span class="preposition">عبر</span> <span class="object">المناطق</span>.</td>
+<td><span class="adjective">بريكيرياس إيكونوميك كونديشنز</span> <span class="verb">إجزاسيربيت</span> <span class="object">سوشال تينشنز</span> آند <span class="adjective">بوليتيكال إنستابيليتي</span> <span class="preposition">أكروس</span> <span class="object">ريجنز</span></td>
+<td><button class="save-btn" data-index="24" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> prerogative to <span class="verb">define</span> <span class="adjective">cultural</span> norms <span class="verb">rests</span> <span class="preposition">with</span> <span class="adjective">dominant</span> <span class="adjective">social</span> <span class="object">institutions</span> and power structures.</td>
+<td><span class="article">امتياز</span> <span class="verb">تحديد</span> <span class="adjective">المعايير الثقافية</span> <span class="verb">يكمن</span> <span class="preposition">في</span> <span class="adjective">المهيمنة</span> <span class="adjective">الاجتماعية</span> <span class="object">المؤسسات</span> و<span class="object">هياكل السلطة</span>.</td>
+<td><span class="article">ذا</span> <span class="verb">بريروجاتيف</span> <span class="verb">تو</span> <span class="adjective">ديفاين</span> <span class="adjective">كالتشرال نورمز</span> <span class="verb">ريستس</span> <span class="preposition">ويذ</span> <span class="adjective">دومينانت</span> <span class="adjective">سوشال</span> <span class="object">إنستيتيوشنز</span> <span class="object">آند باور ستراكتشرز</span></td>
+<td><button class="save-btn" data-index="25" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Individual</span> <span class="subject">propensity</span> <span class="preposition">toward</span> risk-<span class="verb">taking</span> <span class="object">behavior</span> <span class="verb">varies</span> <span class="adverb">significantly</span> <span class="preposition">across</span> <span class="adjective">demographic</span> <span class="object">cohorts</span>.</td>
+<td><span class="adjective">الميل الفردي</span> <span class="subject">نحو</span> <span class="object">سلوك المخاطرة</span> <span class="verb">يختلف</span> <span class="adverb">بشكل كبير</span> <span class="preposition">عبر</span> <span class="adjective">الفئات الديموغرافية</span>.</td>
+<td><span class="adjective">إنديفيجوال</span> <span class="subject">بروبينسيتي توورد</span> <span class="object">ريسك-تيكينج بيهيفيور</span> <span class="verb">فيريز</span> <span class="adverb">سيجنيفيكانتلي</span> <span class="preposition">أكروس</span> <span class="adjective">ديموجرافيك كوهورتس</span>.</td>
+<td><button class="save-btn" data-index="26" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="article">The</span> <span class="adjective">quintessential</span> <span class="subject">characteristics</span> <span class="preposition">of</span> <span class="object">modernism</span> <span class="verb">reflect</span> <span class="adjective">broader</span> <span class="adjective">cultural</span> <span class="object">transformations</span> and <span class="adjective">technological</span> advancements.</td>
+<td><span class="article">ال</span><span class="adjective">خصائص الجوهرية</span> <span class="preposition">ل</span><span class="object">الحداثة</span> <span class="verb">تعكس</span> <span class="adjective">أوسع ثقافية</span> <span class="object">تحولات</span> و <span class="adjective">تطورات تكنولوجية</span>.</td>
+<td><span class="article">ذا</span> <span class="adjective">كوينتيسينشال</span> <span class="subject">كاراكتيريستيكس</span> <span class="preposition">أوف</span> <span class="object">موديرنيزم</span> <span class="verb">ريفليكت</span> <span class="adjective">برودر</span> <span class="adjective">كالتشرال</span> <span class="object">ترانسفورميشنز</span> <span>آند</span> <span class="adjective">تيكنولوجيكال</span> <span class="adjective">أدفانسمنتس</span></td>
+<td><button class="save-btn" data-index="27" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Recalcitrant</span> <span class="subject">opposition</span> <span class="preposition">to</span> reform <span class="object">initiatives</span> perpetuates <span class="adjective">institutional</span> <span class="object">dysfunction</span> and inefficiency.</td>
+<td><span class="adjective">العنيدة</span> <span class="subject">المعارضة</span> <span class="preposition">لـ</span>مبادرات الإصلاح <span class="object">تديم</span> <span class="adjective">المؤسسي</span> <span class="object">الخلل</span> وعدم الكفاءة.</td>
+<td><span class="adjective">ريكالسيترانت</span> <span class="subject">أوبوزيشن</span> <span class="preposition">تو</span> ريفورم <span class="object">إنيشياتيفز</span> بيربيتشويتس <span class="adjective">إنستيتيوشنال</span> <span class="object">ديسفانكشن</span> آند إنيفيشنسي</td>
+<td><button class="save-btn" data-index="28" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Reclusive</span> <span class="subject">scholars</span> <span class="adverb">often</span> <span class="verb">produce</span> groundbreaking <span class="object">work</span> <span class="verb">removed</span> <span class="preposition">from</span> mainstream <span class="adjective">academic</span> <span class="object">discourse</span>.</td>
+<td><span class="adjective">العلماء المنعزلون</span> <span class="adverb">غالباً ما</span> <span class="verb">ينتجون</span> عملاً رائداً <span class="verb">بعيداً</span> <span class="preposition">عن</span> <span class="adjective">الخطاب الأكاديمي</span> <span class="object">السائد</span>.</td>
+<td><span class="adjective">ريكلوسيف</span> <span class="subject">سكولارز</span> <span class="adverb">أوفن</span> <span class="verb">بروديوس</span> جراوندبريكينج <span class="object">ورك</span> <span class="verb">ريموفد</span> <span class="preposition">فروم</span> <span class="adjective">مينستريم أكاديميك</span> <span class="object">ديسكورس</span>.</td>
+<td><button class="save-btn" data-index="29" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Redundant</span> <span class="adjective">bureaucratic</span> <span class="subject">procedures</span> <span class="verb">impede</span> <span class="adjective">organizational</span> <span class="object">efficiency</span> and <span class="adjective">frustrate</span> stakeholder engagement.</td>
+<td><span class="adjective">الزائدة</span> <span class="adjective">البيروقراطية</span> <span class="subject">الإجراءات</span> <span class="verb">تعيق</span> <span class="adjective">التنظيمية</span> <span class="object">الكفاءة</span> و <span class="adjective">تحبط</span> <span class="object">مشاركة أصحاب المصلحة</span>.</td>
+<td><span class="adjective">ريداندانت</span> <span class="adjective">بيوروكراتيك</span> <span class="subject">بروسيجرز</span> <span class="verb">إمبيد</span> <span class="adjective">أورجانايزيشنال</span> <span class="object">إيفيشنسي</span> <span class="adjective">آند</span> <span class="adjective">فراستريت</span> <span class="object">ستيكهولدر إنجيجمنت</span></td>
+<td><button class="save-btn" data-index="30" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Reticent</span> <span class="subject">individuals</span> may <span class="verb">possess</span> <span class="adjective">profound</span> <span class="object">insights</span> despite their <span class="object">reluctance</span> to <span class="verb">engage</span> <span class="preposition">in</span> <span class="adjective">public</span> <span class="object">discourse</span>.</td>
+<td><span class="adjective">المتحفظون</span> <span class="subject">الأفراد</span> قد <span class="verb">يمتلكون</span> <span class="adjective">عميقة</span> <span class="object">رؤى</span> على الرغم من <span class="object">ترددهم</span> في <span class="verb">الانخراط</span> <span class="preposition">في</span> <span class="adjective">العام</span> <span class="object">الخطاب</span>.</td>
+<td><span class="adjective">ريتيسنت</span> <span class="subject">إنديفيجوالز</span> مي <span class="verb">بوسيس</span> <span class="adjective">بروفاوند</span> <span class="object">إنسايتس</span> ديسبايت <span class="object">ذير ريلاكتانس</span> تو <span class="verb">إنجيج</span> <span class="preposition">إن</span> <span class="adjective">بابليك</span> <span class="object">ديسكورس</span></td>
+<td><button class="save-btn" data-index="31" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Sagacious</span> <span class="subject">leadership</span> <span class="verb">navigates</span> <span class="adjective">complex</span> <span class="object">challenges</span> <span class="preposition">through</span> <span class="adjective">strategic</span> <span class="object">foresight</span> and <span class="adjective">ethical</span> decision-making.</td>
+<td><span class="adjective">الحكيمة</span> <span class="subject">القيادة</span> <span class="verb">تتنقل</span> <span class="preposition">عبر</span> <span class="adjective">المعقدة</span> <span class="object">التحديات</span> <span class="preposition">من خلال</span> <span class="adjective">الاستراتيجية</span> <span class="object">البصيرة</span> و<span class="adjective">الأخلاقية</span> اتخاذ القرارات.</td>
+<td><span class="adjective">ساجيشس</span> <span class="subject">ليدرشيب</span> <span class="verb">نافيجيتس</span> <span class="preposition">ثرو</span> <span class="adjective">كومبليكس</span> <span class="object">تشالينجز</span> <span class="preposition">ثرو</span> <span class="adjective">ستراتيجيك</span> <span class="object">فورسايت</span> آند <span class="adjective">إيثيكال</span> ديسيجن-ميكينج</td>
+<td><button class="save-btn" data-index="32" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Serendipitous</span> <span class="subject">discoveries</span> <span class="verb">have</span> <span class="adverb">historically</span> <span class="verb">advanced</span> <span class="adjective">scientific</span> <span class="object">knowledge</span> <span class="preposition">beyond</span> <span class="verb">planned</span> research <span class="object">trajectories</span>.</td>
+<td><span class="adjective">الصدفية السعيدة</span> <span class="subject">الاكتشافات</span> <span class="verb">دفعت</span> <span class="adverb">تاريخياً</span> <span class="verb">المخططة</span> <span class="adjective">العلمية</span> <span class="object">المعرفة</span> <span class="preposition">إلى ما وراء</span> <span class="verb">المخططة</span> <span class="object">مسارات البحث</span>.</td>
+<td><span class="adjective">سيرينديبيتوس</span> <span class="subject">ديسكافريز</span> <span class="verb">هاف</span> <span class="adverb">هيستوريكلي</span> <span class="verb">بلاند</span> <span class="adjective">ساينتيفيك</span> <span class="object">نوليدج</span> <span class="preposition">بيوند</span> <span class="verb">بلاند</span> <span class="object">ريسيرتش تراجيكتوريز</span></td>
+<td><button class="save-btn" data-index="33" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Spurious</span> <span class="subject">correlations</span> <span class="verb">mislead</span> <span class="object">researchers</span> <span class="subject">who</span> <span class="verb">fail</span> to <span class="verb">distinguish</span> <span class="object">causation</span> <span class="preposition">from</span> <span class="adjective">mere</span> <span class="adjective">statistical</span> <span class="object">association</span>.</td>
+<td><span class="adjective">الزائفة</span> <span class="subject">الارتباطات</span> <span class="verb">تضلل</span> <span class="object">الباحثين</span> <span class="subject">الذين</span> <span class="verb">يفشلون</span> في <span class="verb">التمييز</span> بين <span class="object">السببية</span> <span class="preposition">و</span> <span class="adjective">المجرد</span> <span class="adjective">الإحصائي</span> <span class="object">الارتباط</span>.</td>
+<td><span class="adjective">سبيورياس</span> <span class="subject">كوريليشنز</span> <span class="verb">ميسليد</span> <span class="object">ريسرترز</span> <span class="subject">هو</span> <span class="verb">فيل</span> تو <span class="verb">ديستينجويش</span> <span class="object">كوزيشن</span> <span class="preposition">فروم</span> <span class="adjective">مير</span> <span class="adjective">ستاتيستيكال</span> <span class="object">أسوسييشن</span></td>
+<td><button class="save-btn" data-index="34" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Surreptitious</span> surveillance <span class="subject">practices</span> <span class="verb">raise</span> <span class="adjective">profound</span> <span class="adjective">ethical</span> <span class="object">concerns</span> <span class="verb">regarding</span> <span class="object">privacy</span> and <span class="adjective">civil</span> liberties.</td>
+<td><span class="adjective">الخفية</span> <span class="subject">ممارسات</span> <span class="verb">تثير</span> <span class="adjective">عميقة</span> <span class="adjective">أخلاقية</span> <span class="object">مخاوف</span> <span class="verb">بشأن</span> <span class="object">الخصوصية</span> و <span class="adjective">المدنية</span> <span class="object">الحريات</span>.</td>
+<td><span class="adjective">سيريبتيشس</span> <span class="subject">براكتيسز</span> <span class="verb">ريز</span> <span class="adjective">بروفاوند</span> <span class="adjective">إيثيكال</span> <span class="object">كونسيرنز</span> <span class="verb">ريجاردينج</span> <span class="object">برايفاسي</span> <span class="adjective">سيفيل</span> <span class="object">ليبيرتيز</span></td>
+<td><button class="save-btn" data-index="35" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Taciturn</span> <span class="subject">personalities</span> <span class="adverb">often</span> <span class="verb">conceal</span> <span class="adjective">rich</span> <span class="adjective">inner</span> <span class="object">lives</span> <span class="preposition">beneath</span> <span class="adjective">reserved</span> <span class="adjective">exterior</span> <span class="object">demeanors</span>.</td>
+<td><span class="adjective">قليلة الكلام</span> <span class="subject">الشخصيات</span> <span class="adverb">غالباً ما</span> <span class="verb">تخفي</span> <span class="adjective">غنية</span> <span class="adjective">داخلية</span> <span class="object">حياة</span> <span class="preposition">تحت</span> <span class="adjective">متحفظة</span> <span class="adjective">خارجية</span> <span class="object">سلوكيات</span>.</td>
+<td><span class="adjective">تاسيتيرن</span> <span class="subject">بيرسوناليتيز</span> <span class="adverb">أوفن</span> <span class="verb">كونسيل</span> <span class="adjective">ريتشي</span> <span class="adjective">إينر</span> <span class="object">لايفز</span> <span class="preposition">بينيث</span> <span class="adjective">ريزيرفد</span> <span class="adjective">إكستيريور</span> <span class="object">ديمينرز</span></td>
+<td><button class="save-btn" data-index="36" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Tenacious</span> <span class="subject">advocacy</span> <span class="preposition">for</span> <span class="adjective">social</span> <span class="object">justice</span> <span class="verb">requires</span> <span class="adjective">sustained</span> <span class="object">commitment</span> despite <span class="adjective">formidable</span> <span class="object">opposition</span>.</td>
+<td><span class="adjective">العنيد</span> <span class="subject">الدفاع</span> <span class="preposition">عن</span> <span class="adjective">الاجتماعية</span> <span class="object">العدالة</span> <span class="verb">يتطلب</span> <span class="adjective">مستداماً</span> <span class="object">التزاماً</span> <span>على الرغم من</span> <span class="adjective">الهائلة</span> <span class="object">المعارضة</span>.</td>
+<td><span class="adjective">تيناشس</span> <span class="subject">أدفوكاسي</span> <span class="preposition">فور</span> <span class="adjective">سوشال</span> <span class="object">جاستيس</span> <span class="verb">ريكوايرز</span> <span class="adjective">سستيند</span> <span class="object">كوميتمنت</span> <span>ديسبايت</span> <span class="adjective">فورميدابل</span> <span class="object">أوبوزيشن</span></td>
+<td><button class="save-btn" data-index="37" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Vicarious</span> <span class="subject">experiences</span> <span class="preposition">through</span> <span class="object">literature</span> and art <span class="verb">expand</span> <span class="adjective">empathetic</span> <span class="object">understanding</span> <span class="preposition">across</span> <span class="adjective">cultural</span> <span class="object">boundaries</span>.</td>
+<td><span class="adjective">التجارب</span> <span class="subject">بالنيابة</span> <span class="preposition">من خلال</span> <span class="object">الأدب</span> و <span class="object">الفن</span> <span class="verb">توسع</span> <span class="adjective">الفهم</span> <span class="object">التعاطفي</span> <span class="preposition">عبر</span> <span class="adjective">الحدود</span> <span class="object">الثقافية</span>.</td>
+<td><span class="adjective">فايكيرياس</span> <span class="subject">إكسبيريانسز</span> <span class="preposition">ثرو</span> <span class="object">ليتراتشر</span> <span class="object">آند آرت</span> <span class="verb">إكسباند</span> <span class="adjective">إمباثيتيك</span> <span class="object">أندرستاندينج</span> <span class="preposition">أكروس</span> <span class="adjective">كالتشرال</span> <span class="object">باونداريز</span></td>
+<td><button class="save-btn" data-index="38" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Historical</span> evidence <span class="verb">vindicates</span> <span class="verb">marginalized</span> <span class="object">perspectives</span> <span class="adverb">previously</span> <span class="verb">dismissed</span> <span class="preposition">by</span> <span class="adjective">dominant</span> <span class="object">narratives</span>.</td>
+<td><span class="adjective">الأدلة التاريخية</span> <span class="verb">تبرئ</span> <span class="verb">وجهات النظر المهمشة</span> التي <span class="verb">رفضتها</span> <span class="adverb">سابقاً</span> <span class="adjective">الروايات المهيمنة</span>.</td>
+<td><span class="adjective">هيستوريكال إفيدنس</span> <span class="verb">فينديكيتس</span> <span class="verb">مارجينالايزد</span> <span class="object">بيرسبيكتيفز</span> <span class="adverb">بريفياسلي</span> <span class="verb">ديسميسد</span> <span class="preposition">باي</span> <span class="adjective">دومينانت</span> <span class="object">ناراتيفز</span></td>
+<td><button class="save-btn" data-index="39" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Voracious</span> <span class="subject">readers</span> <span class="verb">accumulate</span> <span class="adjective">vast</span> knowledge <span class="object">repositories</span> <span class="subject">that</span> <span class="verb">inform</span> <span class="adjective">sophisticated</span> <span class="adjective">analytical</span> <span class="object">frameworks</span>.</td>
+<td><span class="adjective">النهمون</span> <span class="subject">القراء</span> <span class="verb">يجمعون</span> <span class="object">مستودعات</span> <span class="adjective">واسعة</span> <span class="adjective">معرفة</span> <span class="object">تُعلم</span> <span class="subject">أطراً</span> <span class="adjective">متطورة</span> <span class="adjective">تحليلية</span> <span class="verb">.</span></td>
+<td><span class="adjective">فوريشس</span> <span class="subject">ريدرز</span> <span class="verb">أكيوميوليت</span> <span class="object">ريبوزيتوريز</span> <span class="adjective">فاست</span> <span class="adjective">نوليدج</span> <span class="object">إنفورم</span> <span class="subject">ذات</span> <span class="adjective">سوفيستيكيتد</span> <span class="adjective">أناليتيكال</span> <span class="object">فريموركس</span>.</td>
+<td><button class="save-btn" data-index="40" data-level="c2">⭕ حفظ</button></td>
+</tr>
+<tr>
+<td><span class="adjective">Zealous</span> <span class="subject">commitment</span> <span class="preposition">to</span> <span class="adjective">ideological</span> <span class="object">purity</span> <span class="adverb">often</span> <span class="verb">precludes</span> <span class="adjective">pragmatic</span> <span class="object">compromise</span> and <span class="adjective">collaborative</span> problem-solving.</td>
+<td><span class="adjective">الالتزام المتحمس</span> <span class="subject">ب</span><span class="adjective">النقاء الأيديولوجي</span> <span class="adverb">غالباً ما</span> <span class="verb">يمنع</span> <span class="adjective">التسوية العملية</span> و<span class="adjective">حل المشكلات التعاوني</span>.</td>
+<td><span class="adjective">زيلوس</span> <span class="subject">كوميتمنت تو</span> <span class="adjective">آيديولوجيكال بيوريتي</span> <span class="adverb">أوفن</span> <span class="verb">بريكلودز</span> <span class="adjective">براجماتيك كومبروماي</span> <span class="adjective">آند كولابوراتيف بروبليم-سولفينج</span></td>
+<td><button class="save-btn" data-index="41" data-level="c2">⭕ حفظ</button></td>
+</tr>
+</tbody>
+</table></div>
+<div style="padding: 2rem; background: #f8f9fa; text-align: center; border-top: 1px solid #dee2e6;">
+<h3 style="color: #333; margin-bottom: 1rem;">دليل الألوان</h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; font-size: 0.9rem;">
+<span><span class="subject">● الفاعل</span></span>
+<span><span class="verb">● الفعل</span></span>
+<span><span class="object">● المفعول</span></span>
+<span><span class="adjective">● الصفة</span></span>
+<span><span class="adverb">● الظرف</span></span>
+<span><span class="preposition">● حرف الجر</span></span>
+<span><span class="article">● أداة التعريف</span></span>
+<span><span class="auxiliary">● الفعل المساعد</span></span>
+</div>
+</div>
+</div>
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<!-- Firebase Configuration -->
+<script src="firebase-config.js"></script>
+<script src="firebase-main.js"></script>
+<script src="progress-system.js"></script>
+<script src="script.js"></script>
+<script>
+// نظام حفظ بسيط يعمل مباشرة في المتصفح
+(function() {
+    'use strict';
+    
+    // إنشاء كائن عام للنظام
+    window.SaveSystem = {
+        // حفظ عنصر
+        save: function(level, type, index) {
+            try {
+                // قراءة البيانات الحالية
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                
+                // التأكد من وجود المستوى
+                if (!data[level]) {
+                    data[level] = {};
+                }
+                
+                // التأكد من وجود النوع
+                if (!data[level][type]) {
+                    data[level][type] = {};
+                }
+                
+                // تبديل الحالة
+                if (data[level][type][index]) {
+                    delete data[level][type][index];
+                } else {
+                    data[level][type][index] = {
+                        saved: true,
+                        date: new Date().toISOString()
+                    };
+                }
+                
+                // حفظ البيانات
+                localStorage.setItem('courseProgress', JSON.stringify(data));
+                
+                // تحديث الواجهة
+                this.updateUI(level, type);
+                
+                return true;
+            } catch (e) {
+                console.error('خطأ في الحفظ:', e);
+                alert('حدث خطأ في الحفظ. الرجاء المحاولة مرة أخرى.');
+                return false;
+            }
+        },
+        
+        // التحقق من حالة الحفظ
+        isSaved: function(level, type, index) {
+            try {
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                return !!(data[level] && data[level][type] && data[level][type][index]);
+            } catch (e) {
+                return false;
+            }
+        },
+        
+        // تحديث واجهة المستخدم
+        updateUI: function(level, type) {
+            // تحديث جميع الأزرار في الصفحة
+            let buttons = document.querySelectorAll('.save-btn');
+            buttons.forEach(btn => {
+                let btnLevel = btn.getAttribute('data-level');
+                let btnType = btn.getAttribute('data-type');
+                let btnIndex = btn.getAttribute('data-index');
+                
+                if (btnLevel === level && btnType === type) {
+                    if (this.isSaved(level, type, btnIndex)) {
+                        btn.textContent = '✅ محفوظ';
+                        btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                        btn.parentElement.parentElement.style.background = '#d4edda';
+                    } else {
+                        btn.textContent = '⭕ حفظ';
+                        btn.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+                        btn.parentElement.parentElement.style.background = '';
+                    }
+                }
+            });
+            
+            // تحديث شريط التقدم
+            this.updateProgressBar(level, type);
+        },
+        
+        // تحديث شريط التقدم
+        updateProgressBar: function(level, type) {
+            let buttons = document.querySelectorAll(`.save-btn[data-level="${level}"][data-type="${type}"]`);
+            let total = buttons.length;
+            let saved = 0;
+            
+            buttons.forEach(btn => {
+                let index = btn.getAttribute('data-index');
+                if (this.isSaved(level, type, index)) {
+                    saved++;
+                }
+            });
+            
+            let percentage = total > 0 ? Math.round((saved / total) * 100) : 0;
+            
+            // تحديث شريط التقدم إذا كان موجوداً
+            let progressBar = document.querySelector('.progress-bar');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+                progressBar.textContent = `${saved}/${total} (${percentage}%)`;
+            }
+            
+            // تحديث النص في الأعلى
+            let progressText = document.querySelector('.progress-text');
+            if (progressText) {
+                progressText.textContent = `📊 التقدم في هذه الصفحة: ${saved}/${total} ${percentage}%`;
+            }
+        },
+        
+        // تهيئة الصفحة
+        init: function(level, type) {
+            // تحديث جميع الأزرار عند تحميل الصفحة
+            let buttons = document.querySelectorAll('.save-btn');
+            buttons.forEach(btn => {
+                let btnLevel = btn.getAttribute('data-level');
+                let btnType = btn.getAttribute('data-type');
+                let btnIndex = btn.getAttribute('data-index');
+                
+                if (this.isSaved(btnLevel, btnType, btnIndex)) {
+                    btn.textContent = '✅ محفوظ';
+                    btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+                    btn.parentElement.parentElement.style.background = '#d4edda';
+                }
+            });
+            
+            // تحديث شريط التقدم
+            if (level && type) {
+                this.updateProgressBar(level, type);
+            }
+        },
+        
+        // الحصول على الإحصائيات
+        getStats: function() {
+            try {
+                let data = JSON.parse(localStorage.getItem('courseProgress') || '{}');
+                let stats = {
+                    total: 0,
+                    byLevel: {}
+                };
+                
+                for (let level in data) {
+                    stats.byLevel[level] = {
+                        sentences: 0,
+                        vocabulary: 0,
+                        total: 0
+                    };
+                    
+                    if (data[level].sentences) {
+                        stats.byLevel[level].sentences = Object.keys(data[level].sentences).length;
+                    }
+                    
+                    if (data[level].vocabulary) {
+                        stats.byLevel[level].vocabulary = Object.keys(data[level].vocabulary).length;
+                    }
+                    
+                    stats.byLevel[level].total = stats.byLevel[level].sentences + stats.byLevel[level].vocabulary;
+                    stats.total += stats.byLevel[level].total;
+                }
+                
+                return stats;
+            } catch (e) {
+                console.error('خطأ في قراءة الإحصائيات:', e);
+                return { total: 0, byLevel: {} };
+            }
+        }
+    };
+    
+    console.log('✅ نظام الحفظ جاهز!');
+})();
+
+
+</script>
+<script>
+(function() {
+    const level = document.body.getAttribute('data-level');
+    const type = document.body.getAttribute('data-type');
+    
+    if (!level || !type) return;
+    
+    // Create fixed progress bar
+    const bar = document.createElement('div');
+    bar.className = 'fixed-progress-bar';
+    bar.innerHTML = `
+        <div class="progress-content">
+            <div class="progress-row">
+                <div class="progress-label">📊 التقدم في الحفظ: <span id="save-count">0</span>/<span id="total-count">0</span> (<span id="save-percent">0</span>%)</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="save-fill"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    `;
+    document.body.insertBefore(bar, document.body.firstChild);
+    
+    // Update save progress
+    function updateSaveProgress() {
+        const total = document.querySelectorAll('tbody tr').length;
+        const data = JSON.parse(localStorage.getItem('englishCourseProgress') || '{}');
+        const saved = (data[level] && data[level][type]) ? 
+            Object.values(data[level][type]).filter(Boolean).length : 0;
+        const percent = total > 0 ? Math.round((saved / total) * 100) : 0;
+        
+        document.getElementById('save-count').textContent = saved;
+        document.getElementById('total-count').textContent = total;
+        document.getElementById('save-percent').textContent = percent;
+        document.getElementById('save-fill').style.width = percent + '%';
+    }
+    
+    
+    
+    // Initialize
+    updateSaveProgress();
+    
+    
+    // Listen for changes
+    
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('save-btn')) {
+            setTimeout(updateSaveProgress, 200);
+        }
+    });
+    
+    // Update periodically
+    setInterval(updateSaveProgress, 1000);
+})();
+</script>
+</body>
+</html>

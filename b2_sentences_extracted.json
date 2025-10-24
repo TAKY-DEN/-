@@ -1,0 +1,272 @@
+[
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">company</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">implemented</span> <span class=\"article\">a</span> <span class=\"adjective\">comprehensive</span> <span class=\"object\">strategy</span> <span class=\"preposition\">for</span> <span class=\"adjective\">digital</span> <span class=\"object\">transformation</span>.",
+    "arabic_html": "<span class=\"article\">الـ</span><span class=\"subject\">شركة</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">طبقت</span> <span class=\"object\">استراتيجية</span> <span class=\"adjective\">شاملة</span> <span class=\"preposition\">لـ</span><span class=\"object\">التحول</span> <span class=\"adjective\">الرقمي</span>.",
+    "pronunciation_html": "ذا كمباني هاز إمبليمنتد أ كومبريهنسيف ستراتيجي فور ديجيتال ترانسفورميشن",
+    "english_plain": "The company has implemented a comprehensive strategy for digital transformation."
+  },
+  {
+    "english_html": "<span class=\"article\">Our</span> <span class=\"subject\">organization</span> <span class=\"verb\">prioritizes</span> <span class=\"adjective\">sustainable</span> <span class=\"object\">practices</span> <span class=\"preposition\">in</span> <span class=\"article\">all</span> <span class=\"adjective\">operational</span> <span class=\"object\">procedures</span>.",
+    "arabic_html": "<span class=\"subject\">منظمتنا</span> <span class=\"verb\">تعطي الأولوية</span> <span class=\"preposition\">لـ</span><span class=\"object\">الممارسات</span> <span class=\"adjective\">المستدامة</span> <span class=\"preposition\">في</span> <span class=\"article\">جميع</span> <span class=\"object\">الإجراءات</span> <span class=\"adjective\">التشغيلية</span>.",
+    "pronunciation_html": "آور أورغانايزيشن برايوريتايزز سوستينابل براكتيسز إن أول أوبريشنال بروسيدجرز",
+    "english_plain": "Our organization prioritizes sustainable practices in all operational procedures."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">board</span> <span class=\"preposition\">of</span> <span class=\"object\">directors</span> <span class=\"auxiliary\">will</span> <span class=\"verb\">evaluate</span> <span class=\"article\">the</span> <span class=\"adjective\">proposed</span> <span class=\"object\">merger</span> <span class=\"adverb\">thoroughly</span>.",
+    "arabic_html": "<span class=\"subject\">مجلس الإدارة</span> <span class=\"auxiliary\">سوف</span> <span class=\"verb\">يقيم</span> <span class=\"object\">الاندماج</span> <span class=\"adjective\">المقترح</span> <span class=\"adverb\">بدقة</span>.",
+    "pronunciation_html": "ذا بورد أوف دايريكترز ويل إيفاليويت ذا بروبوزد مرجر ثوروغلي",
+    "english_plain": "The board of directors will evaluate the proposed merger thoroughly."
+  },
+  {
+    "english_html": "<span class=\"subject\">Stakeholders</span> <span class=\"auxiliary\">are</span> <span class=\"adverb\">increasingly</span> <span class=\"verb\">demanding</span> <span class=\"adjective\">transparent</span> <span class=\"object\">reporting</span> <span class=\"preposition\">on</span> <span class=\"adjective\">environmental</span> <span class=\"object\">impact</span>.",
+    "arabic_html": "<span class=\"subject\">أصحاب المصلحة</span> <span class=\"auxiliary\">يطالبون</span> <span class=\"adverb\">بشكل متزايد</span> <span class=\"preposition\">بـ</span><span class=\"object\">تقارير</span> <span class=\"adjective\">شفافة</span> <span class=\"preposition\">حول</span> <span class=\"object\">التأثير</span> <span class=\"adjective\">البيئي</span>.",
+    "pronunciation_html": "ستيك هولدرز آر إنكريسينغلي ديماندينغ ترانسبارنت ريبورتينغ أون إنفايرونمنتال إمباكت",
+    "english_plain": "Stakeholders are increasingly demanding transparent reporting on environmental impact."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">acquisition</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">strengthened</span> <span class=\"article\">our</span> <span class=\"adjective\">competitive</span> <span class=\"object\">position</span> <span class=\"preposition\">in</span> <span class=\"article\">the</span> <span class=\"adjective\">global</span> <span class=\"object\">market</span>.",
+    "arabic_html": "<span class=\"subject\">الاستحواذ</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">عزز</span> <span class=\"object\">موقفنا</span> <span class=\"adjective\">التنافسي</span> <span class=\"preposition\">في</span> <span class=\"object\">السوق</span> <span class=\"adjective\">العالمي</span>.",
+    "pronunciation_html": "ذا أكويزيشن هاز سترينغثند آور كومبيتيتيف بوزيشن إن ذا غلوبال ماركت",
+    "english_plain": "The acquisition has strengthened our competitive position in the global market."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">portfolio</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">diversified</span> <span class=\"preposition\">across</span> <span class=\"adjective\">multiple</span> <span class=\"object\">sectors</span> <span class=\"preposition\">to</span> <span class=\"verb\">minimize</span> <span class=\"object\">risk</span>.",
+    "arabic_html": "<span class=\"subject\">المحفظة</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">تنوعت</span> <span class=\"preposition\">عبر</span> <span class=\"object\">قطاعات</span> <span class=\"adjective\">متعددة</span> <span class=\"preposition\">لـ</span><span class=\"verb\">تقليل</span> <span class=\"object\">المخاطر</span>.",
+    "pronunciation_html": "ذا بورتفوليو هاز دايفرسيفايد أكروس مالتيبل سيكترز تو مينيمايز ريسك",
+    "english_plain": "The portfolio has diversified across multiple sectors to minimize risk."
+  },
+  {
+    "english_html": "<span class=\"subject\">Investors</span> <span class=\"auxiliary\">are</span> <span class=\"adverb\">carefully</span> <span class=\"verb\">monitoring</span> <span class=\"article\">the</span> <span class=\"adjective\">volatile</span> <span class=\"object\">cryptocurrency</span> <span class=\"object\">market</span>.",
+    "arabic_html": "<span class=\"subject\">المستثمرون</span> <span class=\"auxiliary\">يراقبون</span> <span class=\"adverb\">بعناية</span> <span class=\"object\">سوق</span> <span class=\"object\">العملات المشفرة</span> <span class=\"adjective\">المتقلب</span>.",
+    "pronunciation_html": "إنفيسترز آر كيرفولي مونيتورينغ ذا فولاتايل كريبتوكارنسي ماركت",
+    "english_plain": "Investors are carefully monitoring the volatile cryptocurrency market."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">central bank</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">adjusted</span> <span class=\"adjective\">monetary</span> <span class=\"object\">policy</span> <span class=\"preposition\">to</span> <span class=\"verb\">combat</span> <span class=\"adjective\">rising</span> <span class=\"object\">inflation</span>.",
+    "arabic_html": "<span class=\"subject\">البنك المركزي</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">عدل</span> <span class=\"object\">السياسة</span> <span class=\"adjective\">النقدية</span> <span class=\"preposition\">لـ</span><span class=\"verb\">مكافحة</span> <span class=\"object\">التضخم</span> <span class=\"adjective\">المتزايد</span>.",
+    "pronunciation_html": "ذا سنترال بانك هاز أدجاستد مونيتري بوليسي تو كومبات رايزينغ إنفليشن",
+    "english_plain": "The central bank has adjusted monetary policy to combat rising inflation."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Quarterly</span> <span class=\"object\">earnings</span> <span class=\"auxiliary\">have</span> <span class=\"verb\">exceeded</span> <span class=\"object\">expectations</span> <span class=\"preposition\">despite</span> <span class=\"adjective\">challenging</span> <span class=\"adjective\">economic</span> <span class=\"object\">conditions</span>.",
+    "arabic_html": "<span class=\"object\">الأرباح</span> <span class=\"adjective\">الربع سنوية</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">تجاوزت</span> <span class=\"object\">التوقعات</span> <span class=\"preposition\">رغم</span> <span class=\"object\">الظروف</span> <span class=\"adjective\">الاقتصادية</span> <span class=\"adjective\">الصعبة</span>.",
+    "pronunciation_html": "كوارترلي إيرنينغز هاف إكسيدد إكسبيكتيشنز ديسبايت تشالنجينغ إكونوميك كونديشنز",
+    "english_plain": "Quarterly earnings have exceeded expectations despite challenging economic conditions."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">company</span> <span class=\"auxiliary\">is</span> <span class=\"verb\">considering</span> <span class=\"article\">an</span> <span class=\"adjective\">initial</span> <span class=\"adjective\">public</span> <span class=\"object\">offering</span> <span class=\"preposition\">to</span> <span class=\"verb\">raise</span> <span class=\"object\">capital</span>.",
+    "arabic_html": "<span class=\"subject\">الشركة</span> <span class=\"auxiliary\">تدرس</span> <span class=\"object\">طرح</span> <span class=\"adjective\">عام</span> <span class=\"adjective\">أولي</span> <span class=\"preposition\">لـ</span><span class=\"verb\">جمع</span> <span class=\"object\">رأس المال</span>.",
+    "pronunciation_html": "ذا كمباني إز كونسيدرينغ آن إنيشال بابليك أوفرينغ تو رايز كابيتال",
+    "english_plain": "The company is considering an initial public offering to raise capital."
+  },
+  {
+    "english_html": "<span class=\"article\">Our</span> <span class=\"adjective\">omnichannel</span> <span class=\"object\">approach</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">improved</span> <span class=\"adjective\">customer</span> <span class=\"object\">engagement</span> <span class=\"preposition\">across</span> <span class=\"adjective\">multiple</span> <span class=\"object\">touchpoints</span>.",
+    "arabic_html": "<span class=\"object\">نهجنا</span> <span class=\"adjective\">متعدد القنوات</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">حسن</span> <span class=\"object\">مشاركة</span> <span class=\"adjective\">العملاء</span> <span class=\"preposition\">عبر</span> <span class=\"object\">نقاط التفاعل</span> <span class=\"adjective\">المتعددة</span>.",
+    "pronunciation_html": "آور أومني تشانل أبروتش هاز إمبروفد كاستمر إنغيجمنت أكروس مالتيبل تاتش بوينتس",
+    "english_plain": "Our omnichannel approach has improved customer engagement across multiple touchpoints."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">algorithm</span> <span class=\"verb\">analyzes</span> <span class=\"adjective\">consumer</span> <span class=\"object\">behavior</span> <span class=\"preposition\">to</span> <span class=\"verb\">personalize</span> <span class=\"adjective\">marketing</span> <span class=\"object\">campaigns</span>.",
+    "arabic_html": "<span class=\"subject\">الخوارزمية</span> <span class=\"verb\">تحلل</span> <span class=\"object\">سلوك</span> <span class=\"adjective\">المستهلكين</span> <span class=\"preposition\">لـ</span><span class=\"verb\">تخصيص</span> <span class=\"object\">الحملات</span> <span class=\"adjective\">التسويقية</span>.",
+    "pronunciation_html": "ذا ألغوريذم أناليزز كونسيومر بيهيفيور تو برسونالايز ماركتينغ كامبينز",
+    "english_plain": "The algorithm analyzes consumer behavior to personalize marketing campaigns."
+  },
+  {
+    "english_html": "<span class=\"subject\">Influencer marketing</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">become</span> <span class=\"article\">an</span> <span class=\"adjective\">integral</span> <span class=\"object\">component</span> <span class=\"preposition\">of</span> <span class=\"adjective\">modern</span> <span class=\"adjective\">digital</span> <span class=\"object\">strategies</span>.",
+    "arabic_html": "<span class=\"subject\">التسويق عبر المؤثرين</span> <span class=\"auxiliary\">أصبح</span> <span class=\"object\">عنصراً</span> <span class=\"adjective\">أساسياً</span> <span class=\"preposition\">في</span> <span class=\"object\">الاستراتيجيات</span> <span class=\"adjective\">الرقمية</span> <span class=\"adjective\">الحديثة</span>.",
+    "pronunciation_html": "إنفلوينسر ماركتينغ هاز بيكم آن إنتيغرال كومبونينت أوف مودرن ديجيتال ستراتيجيز",
+    "english_plain": "Influencer marketing has become an integral component of modern digital strategies."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">brand</span> <span class=\"auxiliary\">is</span> <span class=\"verb\">leveraging</span> <span class=\"adjective\">artificial</span> <span class=\"object\">intelligence</span> <span class=\"preposition\">to</span> <span class=\"verb\">optimize</span> <span class=\"adjective\">customer</span> <span class=\"object\">experience</span>.",
+    "arabic_html": "<span class=\"subject\">العلامة التجارية</span> <span class=\"auxiliary\">تستفيد من</span> <span class=\"object\">الذكاء</span> <span class=\"adjective\">الاصطناعي</span> <span class=\"preposition\">لـ</span><span class=\"verb\">تحسين</span> <span class=\"object\">تجربة</span> <span class=\"adjective\">العملاء</span>.",
+    "pronunciation_html": "ذا براند إز ليفيريجينغ آرتيفيشال إنتليجنس تو أوبتيمايز كاستمر إكسبيرينس",
+    "english_plain": "The brand is leveraging artificial intelligence to optimize customer experience."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Data-driven</span> <span class=\"object\">insights</span> <span class=\"auxiliary\">are</span> <span class=\"verb\">transforming</span> <span class=\"article\">how</span> <span class=\"subject\">companies</span> <span class=\"verb\">approach</span> <span class=\"adjective\">market</span> <span class=\"object\">segmentation</span>.",
+    "arabic_html": "<span class=\"object\">الرؤى</span> <span class=\"adjective\">المبنية على البيانات</span> <span class=\"auxiliary\">تغير</span> <span class=\"object\">طريقة</span> <span class=\"verb\">تعامل</span> <span class=\"subject\">الشركات</span> <span class=\"preposition\">مع</span> <span class=\"object\">تقسيم</span> <span class=\"adjective\">السوق</span>.",
+    "pronunciation_html": "ديتا دريفن إنسايتس آر ترانسفورمينغ هاو كمبانيز أبروتش ماركت سيغمنتيشن",
+    "english_plain": "Data-driven insights are transforming how companies approach market segmentation."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Blockchain</span> <span class=\"object\">technology</span> <span class=\"auxiliary\">is</span> <span class=\"verb\">revolutionizing</span> <span class=\"adjective\">supply</span> <span class=\"object\">chain</span> <span class=\"object\">transparency</span> <span class=\"preposition\">across</span> <span class=\"object\">industries</span>.",
+    "arabic_html": "<span class=\"object\">تقنية</span> <span class=\"adjective\">البلوك تشين</span> <span class=\"auxiliary\">تحدث ثورة في</span> <span class=\"object\">شفافية</span> <span class=\"object\">سلسلة التوريد</span> <span class=\"preposition\">عبر</span> <span class=\"object\">الصناعات</span>.",
+    "pronunciation_html": "بلوك تشين تيكنولوجي إز ريفولوشنايزينغ سابلاي تشين ترانسبارنسي أكروس إندستريز",
+    "english_plain": "Blockchain technology is revolutionizing supply chain transparency across industries."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">implementation</span> <span class=\"preposition\">of</span> <span class=\"adjective\">machine</span> <span class=\"object\">learning</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">enhanced</span> <span class=\"adjective\">predictive</span> <span class=\"object\">analytics</span> <span class=\"object\">capabilities</span>.",
+    "arabic_html": "<span class=\"subject\">تطبيق</span> <span class=\"object\">التعلم</span> <span class=\"adjective\">الآلي</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">عزز</span> <span class=\"object\">قدرات</span> <span class=\"object\">التحليلات</span> <span class=\"adjective\">التنبؤية</span>.",
+    "pronunciation_html": "ذا إمبليمنتيشن أوف ماشين لرنينغ هاز إنهانسد بريديكتيف أناليتيكس كابابيليتيز",
+    "english_plain": "The implementation of machine learning has enhanced predictive analytics capabilities."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Cloud</span> <span class=\"object\">infrastructure</span> <span class=\"verb\">enables</span> <span class=\"adjective\">seamless</span> <span class=\"object\">collaboration</span> <span class=\"preposition\">between</span> <span class=\"adjective\">remote</span> <span class=\"object\">teams</span> <span class=\"adverb\">globally</span>.",
+    "arabic_html": "<span class=\"object\">البنية التحتية</span> <span class=\"adjective\">السحابية</span> <span class=\"verb\">تمكن</span> <span class=\"object\">التعاون</span> <span class=\"adjective\">السلس</span> <span class=\"preposition\">بين</span> <span class=\"object\">الفرق</span> <span class=\"adjective\">البعيدة</span> <span class=\"adverb\">عالمياً</span>.",
+    "pronunciation_html": "كلاود إنفراستراكتشر إنيبلز سيمليس كولابوريشن بيتوين ريموت تيمز غلوبالي",
+    "english_plain": "Cloud infrastructure enables seamless collaboration between remote teams globally."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Cybersecurity</span> <span class=\"object\">protocols</span> <span class=\"auxiliary\">must</span> <span class=\"verb\">evolve</span> <span class=\"adverb\">continuously</span> <span class=\"preposition\">to</span> <span class=\"verb\">address</span> <span class=\"adjective\">emerging</span> <span class=\"object\">threats</span>.",
+    "arabic_html": "<span class=\"object\">بروتوكولات</span> <span class=\"adjective\">الأمن السيبراني</span> <span class=\"auxiliary\">يجب أن</span> <span class=\"verb\">تتطور</span> <span class=\"adverb\">باستمرار</span> <span class=\"preposition\">لـ</span><span class=\"verb\">مواجهة</span> <span class=\"object\">التهديدات</span> <span class=\"adjective\">الناشئة</span>.",
+    "pronunciation_html": "سايبر سيكيوريتي بروتوكولز مست إيفولف كونتينيوسلي تو أدريس إيمرجينغ ثريتس",
+    "english_plain": "Cybersecurity protocols must evolve continuously to address emerging threats."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"adjective\">Internet</span> <span class=\"preposition\">of</span> <span class=\"object\">Things</span> <span class=\"auxiliary\">is</span> <span class=\"verb\">creating</span> <span class=\"adjective\">unprecedented</span> <span class=\"object\">opportunities</span> <span class=\"preposition\">for</span> <span class=\"object\">automation</span>.",
+    "arabic_html": "<span class=\"object\">إنترنت الأشياء</span> <span class=\"auxiliary\">يخلق</span> <span class=\"object\">فرصاً</span> <span class=\"adjective\">غير مسبوقة</span> <span class=\"preposition\">لـ</span><span class=\"object\">الأتمتة</span>.",
+    "pronunciation_html": "ذا إنترنت أوف ثينغز إز كريتينغ أنبريسيدنتد أوبورتيونيتيز فور أوتوميشن",
+    "english_plain": "The Internet of Things is creating unprecedented opportunities for automation."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"adjective\">interdisciplinary</span> <span class=\"object\">research</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">yielded</span> <span class=\"adjective\">significant</span> <span class=\"object\">insights</span> <span class=\"preposition\">into</span> <span class=\"adjective\">complex</span> <span class=\"object\">phenomena</span>.",
+    "arabic_html": "<span class=\"object\">البحث</span> <span class=\"adjective\">متعدد التخصصات</span> <span class=\"auxiliary\">قد</span> <span class=\"verb\">أنتج</span> <span class=\"object\">رؤى</span> <span class=\"adjective\">مهمة</span> <span class=\"preposition\">حول</span> <span class=\"object\">الظواهر</span> <span class=\"adjective\">المعقدة</span>.",
+    "pronunciation_html": "ذا إنتر ديسيبليناري ريسيرش هاز يلدد سيغنيفيكانت إنسايتس إنتو كومبليكس فينومينا",
+    "english_plain": "The interdisciplinary research has yielded significant insights into complex phenomena."
+  },
+  {
+    "english_html": "<span class=\"subject\">Peer review</span> <span class=\"verb\">ensures</span> <span class=\"article\">the</span> <span class=\"object\">quality</span> <span class=\"preposition\">and</span> <span class=\"object\">credibility</span> <span class=\"preposition\">of</span> <span class=\"adjective\">academic</span> <span class=\"object\">publications</span>.",
+    "arabic_html": "<span class=\"subject\">مراجعة الأقران</span> <span class=\"verb\">تضمن</span> <span class=\"object\">جودة</span> <span class=\"preposition\">و</span><span class=\"object\">مصداقية</span> <span class=\"object\">المنشورات</span> <span class=\"adjective\">الأكاديمية</span>.",
+    "pronunciation_html": "بير ريفيو إنشورز ذا كواليتي أند كريديبيليتي أوف أكاديميك بابليكيشنز",
+    "english_plain": "Peer review ensures the quality and credibility of academic publications."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"object\">methodology</span> <span class=\"auxiliary\">was</span> <span class=\"verb\">designed</span> <span class=\"preposition\">to</span> <span class=\"verb\">minimize</span> <span class=\"adjective\">experimental</span> <span class=\"object\">bias</span> <span class=\"preposition\">and</span> <span class=\"verb\">enhance</span> <span class=\"object\">validity</span>.",
+    "arabic_html": "<span class=\"object\">المنهجية</span> <span class=\"auxiliary\">صُممت</span> <span class=\"preposition\">لـ</span><span class=\"verb\">تقليل</span> <span class=\"object\">التحيز</span> <span class=\"adjective\">التجريبي</span> <span class=\"preposition\">و</span><span class=\"verb\">تعزيز</span> <span class=\"object\">الصحة</span>.",
+    "pronunciation_html": "ذا ميثودولوجي واز ديزايند تو مينيمايز إكسبيريمنتال بايس أند إنهانس فاليديتي",
+    "english_plain": "The methodology was designed to minimize experimental bias and enhance validity."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Empirical</span> <span class=\"object\">evidence</span> <span class=\"verb\">supports</span> <span class=\"article\">the</span> <span class=\"adjective\">theoretical</span> <span class=\"object\">framework</span> <span class=\"verb\">proposed</span> <span class=\"preposition\">in</span> <span class=\"article\">this</span> <span class=\"object\">study</span>.",
+    "arabic_html": "<span class=\"object\">الأدلة</span> <span class=\"adjective\">التجريبية</span> <span class=\"verb\">تدعم</span> <span class=\"object\">الإطار</span> <span class=\"adjective\">النظري</span> <span class=\"verb\">المقترح</span> <span class=\"preposition\">في</span> <span class=\"article\">هذه</span> <span class=\"object\">الدراسة</span>.",
+    "pronunciation_html": "إمبيريكال إيفيدنس سابورتس ذا ثيوريتيكال فريم وورك بروبوزد إن ذيس ستادي",
+    "english_plain": "Empirical evidence supports the theoretical framework proposed in this study."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"object\">hypothesis</span> <span class=\"auxiliary\">was</span> <span class=\"verb\">tested</span> <span class=\"preposition\">using</span> <span class=\"adjective\">rigorous</span> <span class=\"adjective\">statistical</span> <span class=\"object\">methods</span> <span class=\"preposition\">and</span> <span class=\"adjective\">multiple</span> <span class=\"object\">datasets</span>.",
+    "arabic_html": "<span class=\"object\">الفرضية</span> <span class=\"auxiliary\">اختُبرت</span> <span class=\"preposition\">باستخدام</span> <span class=\"object\">طرق</span> <span class=\"adjective\">إحصائية</span> <span class=\"adjective\">صارمة</span> <span class=\"preposition\">و</span><span class=\"object\">مجموعات بيانات</span> <span class=\"adjective\">متعددة</span>.",
+    "pronunciation_html": "ذا هايبوثيسيس واز تيستد يوزينغ ريغوروس ستاتيستيكال ميثودز أند مالتيبل ديتاسيتس",
+    "english_plain": "The hypothesis was tested using rigorous statistical methods and multiple datasets."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">contract</span> <span class=\"verb\">stipulates</span> <span class=\"adjective\">specific</span> <span class=\"object\">terms</span> <span class=\"preposition\">regarding</span> <span class=\"adjective\">intellectual</span> <span class=\"object\">property</span> <span class=\"object\">rights</span>.",
+    "arabic_html": "<span class=\"subject\">العقد</span> <span class=\"verb\">ينص على</span> <span class=\"object\">شروط</span> <span class=\"adjective\">محددة</span> <span class=\"preposition\">بخصوص</span> <span class=\"object\">حقوق</span> <span class=\"object\">الملكية</span> <span class=\"adjective\">الفكرية</span>.",
+    "pronunciation_html": "ذا كونتراكت ستيبيوليتس سبيسيفيك تيرمز ريغاردينغ إنتليكتشوال بروبرتي رايتس",
+    "english_plain": "The contract stipulates specific terms regarding intellectual property rights."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Regulatory</span> <span class=\"object\">compliance</span> <span class=\"auxiliary\">requires</span> <span class=\"adjective\">continuous</span> <span class=\"object\">monitoring</span> <span class=\"preposition\">and</span> <span class=\"adjective\">regular</span> <span class=\"object\">audits</span>.",
+    "arabic_html": "<span class=\"object\">الامتثال</span> <span class=\"adjective\">التنظيمي</span> <span class=\"auxiliary\">يتطلب</span> <span class=\"object\">مراقبة</span> <span class=\"adjective\">مستمرة</span> <span class=\"preposition\">و</span><span class=\"object\">تدقيقات</span> <span class=\"adjective\">منتظمة</span>.",
+    "pronunciation_html": "ريغيولاتوري كومبلاينس ريكوايرز كونتينيوس مونيتورينغ أند ريغيولار أوديتس",
+    "english_plain": "Regulatory compliance requires continuous monitoring and regular audits."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">arbitration</span> <span class=\"object\">process</span> <span class=\"verb\">provides</span> <span class=\"article\">an</span> <span class=\"adjective\">alternative</span> <span class=\"preposition\">to</span> <span class=\"adjective\">traditional</span> <span class=\"object\">litigation</span>.",
+    "arabic_html": "<span class=\"object\">عملية</span> <span class=\"subject\">التحكيم</span> <span class=\"verb\">توفر</span> <span class=\"object\">بديلاً</span> <span class=\"preposition\">عن</span> <span class=\"object\">التقاضي</span> <span class=\"adjective\">التقليدي</span>.",
+    "pronunciation_html": "ذا آربيتريشن بروسيس بروفايدز آن ألترنيتيف تو تراديشنال ليتيغيشن",
+    "english_plain": "The arbitration process provides an alternative to traditional litigation."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Due</span> <span class=\"object\">diligence</span> <span class=\"auxiliary\">must</span> <span class=\"auxiliary\">be</span> <span class=\"verb\">conducted</span> <span class=\"preposition\">before</span> <span class=\"article\">any</span> <span class=\"adjective\">major</span> <span class=\"adjective\">corporate</span> <span class=\"object\">transaction</span>.",
+    "arabic_html": "<span class=\"object\">العناية الواجبة</span> <span class=\"auxiliary\">يجب أن</span> <span class=\"auxiliary\">تُجرى</span> <span class=\"preposition\">قبل</span> <span class=\"article\">أي</span> <span class=\"object\">معاملة</span> <span class=\"adjective\">شركات</span> <span class=\"adjective\">كبيرة</span>.",
+    "pronunciation_html": "ديو ديليجنس مست بي كونداكتد بيفور إني ميجر كوربوريت ترانزاكشن",
+    "english_plain": "Due diligence must be conducted before any major corporate transaction."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">jurisdiction</span> <span class=\"verb\">determines</span> <span class=\"article\">which</span> <span class=\"object\">laws</span> <span class=\"auxiliary\">will</span> <span class=\"auxiliary\">be</span> <span class=\"verb\">applied</span> <span class=\"preposition\">in</span> <span class=\"object\">dispute</span> <span class=\"object\">resolution</span>.",
+    "arabic_html": "<span class=\"subject\">الاختصاص القضائي</span> <span class=\"verb\">يحدد</span> <span class=\"article\">أي</span> <span class=\"object\">قوانين</span> <span class=\"auxiliary\">ستُطبق</span> <span class=\"preposition\">في</span> <span class=\"object\">حل</span> <span class=\"object\">النزاعات</span>.",
+    "pronunciation_html": "ذا جوريسديكشن ديتيرمينز ويتش لوز ويل بي أبلايد إن ديسبيوت ريزولوشن",
+    "english_plain": "The jurisdiction determines which laws will be applied in dispute resolution."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Sustainable</span> <span class=\"object\">practices</span> <span class=\"auxiliary\">are</span> <span class=\"verb\">becoming</span> <span class=\"adjective\">essential</span> <span class=\"preposition\">for</span> <span class=\"adjective\">long-term</span> <span class=\"adjective\">corporate</span> <span class=\"object\">viability</span>.",
+    "arabic_html": "<span class=\"object\">الممارسات</span> <span class=\"adjective\">المستدامة</span> <span class=\"auxiliary\">تصبح</span> <span class=\"adjective\">ضرورية</span> <span class=\"preposition\">لـ</span><span class=\"object\">الجدوى</span> <span class=\"adjective\">الشركات</span> <span class=\"adjective\">طويلة المدى</span>.",
+    "pronunciation_html": "سوستينابل براكتيسز آر بيكمينغ إسينشال فور لونغ تيرم كوربوريت فايابيليتي",
+    "english_plain": "Sustainable practices are becoming essential for long-term corporate viability."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">organization</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">committed</span> <span class=\"preposition\">to</span> <span class=\"verb\">achieving</span> <span class=\"adjective\">carbon</span> <span class=\"object\">neutrality</span> <span class=\"preposition\">by</span> <span class=\"object\">2030</span>.",
+    "arabic_html": "<span class=\"subject\">المنظمة</span> <span class=\"auxiliary\">التزمت بـ</span><span class=\"verb\">تحقيق</span> <span class=\"object\">الحياد</span> <span class=\"adjective\">الكربوني</span> <span class=\"preposition\">بحلول</span> <span class=\"object\">2030</span>.",
+    "pronunciation_html": "ذا أورغانايزيشن هاز كوميتد تو أتشيفينغ كاربن نيوتراليتي باي 2030",
+    "english_plain": "The organization has committed to achieving carbon neutrality by 2030."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Renewable</span> <span class=\"object\">energy</span> <span class=\"object\">investments</span> <span class=\"auxiliary\">are</span> <span class=\"verb\">driving</span> <span class=\"adjective\">significant</span> <span class=\"object\">changes</span> <span class=\"preposition\">in</span> <span class=\"article\">the</span> <span class=\"adjective\">global</span> <span class=\"object\">economy</span>.",
+    "arabic_html": "<span class=\"object\">استثمارات</span> <span class=\"object\">الطاقة</span> <span class=\"adjective\">المتجددة</span> <span class=\"auxiliary\">تقود</span> <span class=\"object\">تغييرات</span> <span class=\"adjective\">كبيرة</span> <span class=\"preposition\">في</span> <span class=\"object\">الاقتصاد</span> <span class=\"adjective\">العالمي</span>.",
+    "pronunciation_html": "رينيوابل إنرجي إنفيستمنتس آر درايفينغ سيغنيفيكانت تشينجيز إن ذا غلوبال إكونومي",
+    "english_plain": "Renewable energy investments are driving significant changes in the global economy."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Environmental</span> <span class=\"object\">impact</span> <span class=\"object\">assessments</span> <span class=\"auxiliary\">must</span> <span class=\"auxiliary\">be</span> <span class=\"verb\">conducted</span> <span class=\"preposition\">before</span> <span class=\"adjective\">major</span> <span class=\"object\">projects</span>.",
+    "arabic_html": "<span class=\"object\">تقييمات</span> <span class=\"object\">التأثير</span> <span class=\"adjective\">البيئي</span> <span class=\"auxiliary\">يجب أن</span> <span class=\"auxiliary\">تُجرى</span> <span class=\"preposition\">قبل</span> <span class=\"object\">المشاريع</span> <span class=\"adjective\">الكبيرة</span>.",
+    "pronunciation_html": "إنفايرونمنتال إمباكت أسيسمنتس مست بي كونداكتد بيفور ميجر بروجيكتس",
+    "english_plain": "Environmental impact assessments must be conducted before major projects."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"adjective\">circular</span> <span class=\"object\">economy</span> <span class=\"verb\">promotes</span> <span class=\"adjective\">resource</span> <span class=\"object\">efficiency</span> <span class=\"preposition\">and</span> <span class=\"object\">waste</span> <span class=\"object\">reduction</span>.",
+    "arabic_html": "<span class=\"object\">الاقتصاد</span> <span class=\"adjective\">الدائري</span> <span class=\"verb\">يعزز</span> <span class=\"object\">كفاءة</span> <span class=\"adjective\">الموارد</span> <span class=\"preposition\">و</span><span class=\"object\">تقليل</span> <span class=\"object\">النفايات</span>.",
+    "pronunciation_html": "ذا سيركيولار إكونومي بروموتس ريسورس إيفيشنسي أند ويست ريداكشن",
+    "english_plain": "The circular economy promotes resource efficiency and waste reduction."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Telemedicine</span> <span class=\"auxiliary\">has</span> <span class=\"verb\">transformed</span> <span class=\"adjective\">healthcare</span> <span class=\"object\">delivery</span> <span class=\"preposition\">during</span> <span class=\"article\">the</span> <span class=\"object\">pandemic</span>.",
+    "arabic_html": "<span class=\"adjective\">الطب عن بُعد</span> <span class=\"auxiliary\">غيّر</span> <span class=\"object\">تقديم</span> <span class=\"adjective\">الرعاية الصحية</span> <span class=\"preposition\">خلال</span> <span class=\"object\">الجائحة</span>.",
+    "pronunciation_html": "تيليميديسين هاز ترانسفورمد هيلث كير ديليفري دورينغ ذا بانديميك",
+    "english_plain": "Telemedicine has transformed healthcare delivery during the pandemic."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Personalized</span> <span class=\"object\">medicine</span> <span class=\"verb\">utilizes</span> <span class=\"adjective\">genetic</span> <span class=\"object\">information</span> <span class=\"preposition\">to</span> <span class=\"verb\">tailor</span> <span class=\"object\">treatments</span>.",
+    "arabic_html": "<span class=\"object\">الطب</span> <span class=\"adjective\">الشخصي</span> <span class=\"verb\">يستخدم</span> <span class=\"object\">المعلومات</span> <span class=\"adjective\">الجينية</span> <span class=\"preposition\">لـ</span><span class=\"verb\">تخصيص</span> <span class=\"object\">العلاجات</span>.",
+    "pronunciation_html": "برسونالايزد ميديسين يوتيلايزز جينيتيك إنفورميشن تو تيلر تريتمنتس",
+    "english_plain": "Personalized medicine utilizes genetic information to tailor treatments."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Clinical</span> <span class=\"object\">trials</span> <span class=\"auxiliary\">are</span> <span class=\"adjective\">essential</span> <span class=\"preposition\">for</span> <span class=\"verb\">validating</span> <span class=\"adjective\">new</span> <span class=\"adjective\">therapeutic</span> <span class=\"object\">interventions</span>.",
+    "arabic_html": "<span class=\"object\">التجارب</span> <span class=\"adjective\">السريرية</span> <span class=\"auxiliary\">ضرورية</span> <span class=\"preposition\">لـ</span><span class=\"verb\">التحقق من</span> <span class=\"object\">التدخلات</span> <span class=\"adjective\">العلاجية</span> <span class=\"adjective\">الجديدة</span>.",
+    "pronunciation_html": "كلينيكال ترايلز آر إسينشال فور فاليديتينغ نيو ثيرابيوتيك إنتيرفينشنز",
+    "english_plain": "Clinical trials are essential for validating new therapeutic interventions."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">healthcare system</span> <span class=\"auxiliary\">is</span> <span class=\"verb\">adopting</span> <span class=\"adjective\">artificial</span> <span class=\"object\">intelligence</span> <span class=\"preposition\">for</span> <span class=\"adjective\">diagnostic</span> <span class=\"object\">purposes</span>.",
+    "arabic_html": "<span class=\"subject\">نظام الرعاية الصحية</span> <span class=\"auxiliary\">يتبنى</span> <span class=\"object\">الذكاء</span> <span class=\"adjective\">الاصطناعي</span> <span class=\"preposition\">لـ</span><span class=\"object\">أغراض</span> <span class=\"adjective\">التشخيص</span>.",
+    "pronunciation_html": "ذا هيلث كير سيستم إز أدوبتينغ آرتيفيشال إنتليجنس فور دايغنوستيك برببوسيز",
+    "english_plain": "The healthcare system is adopting artificial intelligence for diagnostic purposes."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Preventive</span> <span class=\"object\">care</span> <span class=\"verb\">reduces</span> <span class=\"adjective\">long-term</span> <span class=\"adjective\">healthcare</span> <span class=\"object\">costs</span> <span class=\"preposition\">and</span> <span class=\"verb\">improves</span> <span class=\"object\">outcomes</span>.",
+    "arabic_html": "<span class=\"object\">الرعاية</span> <span class=\"adjective\">الوقائية</span> <span class=\"verb\">تقلل</span> <span class=\"object\">تكاليف</span> <span class=\"adjective\">الرعاية الصحية</span> <span class=\"adjective\">طويلة المدى</span> <span class=\"preposition\">و</span><span class=\"verb\">تحسن</span> <span class=\"object\">النتائج</span>.",
+    "pronunciation_html": "بريفنتيف كير ريديوسيز لونغ تيرم هيلث كير كوستس أند إمبروفز آوتكمز",
+    "english_plain": "Preventive care reduces long-term healthcare costs and improves outcomes."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Multilateral</span> <span class=\"object\">agreements</span> <span class=\"verb\">facilitate</span> <span class=\"adjective\">international</span> <span class=\"object\">cooperation</span> <span class=\"preposition\">on</span> <span class=\"adjective\">global</span> <span class=\"object\">challenges</span>.",
+    "arabic_html": "<span class=\"object\">الاتفاقيات</span> <span class=\"adjective\">متعددة الأطراف</span> <span class=\"verb\">تسهل</span> <span class=\"object\">التعاون</span> <span class=\"adjective\">الدولي</span> <span class=\"preposition\">حول</span> <span class=\"object\">التحديات</span> <span class=\"adjective\">العالمية</span>.",
+    "pronunciation_html": "مالتيلاترال أغريمنتس فاسيليتيت إنترناشنال كووبيريشن أون غلوبال تشالنجيز",
+    "english_plain": "Multilateral agreements facilitate international cooperation on global challenges."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">ambassador</span> <span class=\"auxiliary\">will</span> <span class=\"verb\">represent</span> <span class=\"adjective\">national</span> <span class=\"object\">interests</span> <span class=\"preposition\">in</span> <span class=\"adjective\">bilateral</span> <span class=\"object\">negotiations</span>.",
+    "arabic_html": "<span class=\"subject\">السفير</span> <span class=\"auxiliary\">سوف</span> <span class=\"verb\">يمثل</span> <span class=\"object\">المصالح</span> <span class=\"adjective\">الوطنية</span> <span class=\"preposition\">في</span> <span class=\"object\">المفاوضات</span> <span class=\"adjective\">الثنائية</span>.",
+    "pronunciation_html": "ذا أمباسادور ويل ريبريزنت ناشنال إنتيريستس إن بايلاترال نيغوسييشنز",
+    "english_plain": "The ambassador will represent national interests in bilateral negotiations."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Diplomatic</span> <span class=\"object\">immunity</span> <span class=\"verb\">protects</span> <span class=\"object\">representatives</span> <span class=\"preposition\">from</span> <span class=\"adjective\">legal</span> <span class=\"object\">prosecution</span> <span class=\"preposition\">in</span> <span class=\"adjective\">host</span> <span class=\"object\">countries</span>.",
+    "arabic_html": "<span class=\"object\">الحصانة</span> <span class=\"adjective\">الدبلوماسية</span> <span class=\"verb\">تحمي</span> <span class=\"object\">الممثلين</span> <span class=\"preposition\">من</span> <span class=\"object\">المقاضاة</span> <span class=\"adjective\">القانونية</span> <span class=\"preposition\">في</span> <span class=\"object\">البلدان</span> <span class=\"adjective\">المضيفة</span>.",
+    "pronunciation_html": "ديبلوماتيك إميونيتي بروتيكتس ريبريزنتيتيفز فروم ليغال بروسيكيوشن إن هوست كنتريز",
+    "english_plain": "Diplomatic immunity protects representatives from legal prosecution in host countries."
+  },
+  {
+    "english_html": "<span class=\"article\">The</span> <span class=\"subject\">referendum</span> <span class=\"auxiliary\">will</span> <span class=\"verb\">determine</span> <span class=\"adjective\">public</span> <span class=\"object\">opinion</span> <span class=\"preposition\">on</span> <span class=\"adjective\">constitutional</span> <span class=\"object\">amendments</span>.",
+    "arabic_html": "<span class=\"subject\">الاستفتاء</span> <span class=\"auxiliary\">سوف</span> <span class=\"verb\">يحدد</span> <span class=\"object\">الرأي</span> <span class=\"adjective\">العام</span> <span class=\"preposition\">حول</span> <span class=\"object\">التعديلات</span> <span class=\"adjective\">الدستورية</span>.",
+    "pronunciation_html": "ذا ريفيريندوم ويل ديتيرمين بابليك أوبينيون أون كونستيتيوشنال أميندمنتس",
+    "english_plain": "The referendum will determine public opinion on constitutional amendments."
+  },
+  {
+    "english_html": "<span class=\"adjective\">Economic</span> <span class=\"object\">sanctions</span> <span class=\"auxiliary\">are</span> <span class=\"verb\">imposed</span> <span class=\"preposition\">to</span> <span class=\"verb\">influence</span> <span class=\"adjective\">political</span> <span class=\"object\">behavior</span> <span class=\"preposition\">without</span> <span class=\"adjective\">military</span> <span class=\"object\">intervention</span>.",
+    "arabic_html": "<span class=\"object\">العقوبات</span> <span class=\"adjective\">الاقتصادية</span> <span class=\"auxiliary\">تُفرض</span> <span class=\"preposition\">لـ</span><span class=\"verb\">التأثير على</span> <span class=\"object\">السلوك</span> <span class=\"adjective\">السياسي</span> <span class=\"preposition\">بدون</span> <span class=\"object\">تدخل</span> <span class=\"adjective\">عسكري</span>.",
+    "pronunciation_html": "إكونوميك سانكشنز آر إمبوزد تو إنفلوينس بوليتيكال بيهيفيور ويذاوت ميليتري إنتيرفينشن",
+    "english_plain": "Economic sanctions are imposed to influence political behavior without military intervention."
+  }
+]

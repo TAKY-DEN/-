@@ -1,0 +1,374 @@
+[
+  {
+    "index": 1,
+    "text": "I work in the office"
+  },
+  {
+    "index": 2,
+    "text": "He drinks coffee daily"
+  },
+  {
+    "index": 3,
+    "text": "She reads the new book"
+  },
+  {
+    "index": 4,
+    "text": "We eat delicious food"
+  },
+  {
+    "index": 5,
+    "text": "You listen to beautiful music"
+  },
+  {
+    "index": 6,
+    "text": "They play football in the park"
+  },
+  {
+    "index": 7,
+    "text": "The manager talks with the employees"
+  },
+  {
+    "index": 8,
+    "text": "The customer buys the new product"
+  },
+  {
+    "index": 9,
+    "text": "The accountant calculates the numbers carefully"
+  },
+  {
+    "index": 10,
+    "text": "The company sells good products"
+  },
+  {
+    "index": 11,
+    "text": "I love my work very much"
+  },
+  {
+    "index": 12,
+    "text": "He writes the report now"
+  },
+  {
+    "index": 13,
+    "text": "She helps the customers daily"
+  },
+  {
+    "index": 14,
+    "text": "We attend the important meeting"
+  },
+  {
+    "index": 15,
+    "text": "You pay the bill monthly"
+  },
+  {
+    "index": 16,
+    "text": "They plan for the future"
+  },
+  {
+    "index": 17,
+    "text": "The team works hard on the project"
+  },
+  {
+    "index": 18,
+    "text": "The school teaches the students well"
+  },
+  {
+    "index": 19,
+    "text": "The doctor examines the patients carefully"
+  },
+  {
+    "index": 20,
+    "text": "The driver drives the car safely"
+  },
+  {
+    "index": 21,
+    "text": "My name is Ahmed"
+  },
+  {
+    "index": 22,
+    "text": "I am 25 years old"
+  },
+  {
+    "index": 23,
+    "text": "I am from Egypt"
+  },
+  {
+    "index": 24,
+    "text": "I speak a little English"
+  },
+  {
+    "index": 25,
+    "text": "I don't understand"
+  },
+  {
+    "index": 26,
+    "text": "Where is the bathroom?"
+  },
+  {
+    "index": 27,
+    "text": "How much does this cost?"
+  },
+  {
+    "index": 28,
+    "text": "I would like to pay by credit card"
+  },
+  {
+    "index": 29,
+    "text": "The manager is in a meeting"
+  },
+  {
+    "index": 30,
+    "text": "The project deadline is tomorrow"
+  },
+  {
+    "index": 31,
+    "text": "We need to prepare a report"
+  },
+  {
+    "index": 32,
+    "text": "The company's goal is to increase sales"
+  },
+  {
+    "index": 33,
+    "text": "Our marketing campaign was successful"
+  },
+  {
+    "index": 34,
+    "text": "The new product will be launched next month"
+  },
+  {
+    "index": 35,
+    "text": "The customer is always right"
+  },
+  {
+    "index": 36,
+    "text": "I need to check my email"
+  },
+  {
+    "index": 37,
+    "text": "The company's profit increased this year"
+  },
+  {
+    "index": 38,
+    "text": "We need to reduce costs"
+  },
+  {
+    "index": 39,
+    "text": "The new budget is very tight"
+  },
+  {
+    "index": 40,
+    "text": "I have a meeting with a client this afternoon"
+  },
+  {
+    "index": 41,
+    "text": "The supplier will deliver the goods tomorrow"
+  },
+  {
+    "index": 42,
+    "text": "Our team is working on a new strategy"
+  },
+  {
+    "index": 43,
+    "text": "The company has a strong brand"
+  },
+  {
+    "index": 44,
+    "text": "I need to make a phone call"
+  },
+  {
+    "index": 45,
+    "text": "The website is down"
+  },
+  {
+    "index": 46,
+    "text": "I forgot my password"
+  },
+  {
+    "index": 47,
+    "text": "I need to login to my account"
+  },
+  {
+    "index": 48,
+    "text": "Please save the file"
+  },
+  {
+    "index": 49,
+    "text": "You can download the document from the website"
+  },
+  {
+    "index": 50,
+    "text": "I need to edit this report"
+  },
+  {
+    "index": 51,
+    "text": "Please delete the old file"
+  },
+  {
+    "index": 52,
+    "text": "I will copy the text and paste it here"
+  },
+  {
+    "index": 53,
+    "text": "Hello, what's your name?"
+  },
+  {
+    "index": 54,
+    "text": "Good morning, how are you?"
+  },
+  {
+    "index": 55,
+    "text": "I'm fine, thank you. And you?"
+  },
+  {
+    "index": 56,
+    "text": "Do you speak English?"
+  },
+  {
+    "index": 57,
+    "text": "Good evening, how was your day?"
+  },
+  {
+    "index": 58,
+    "text": "It was a busy day"
+  },
+  {
+    "index": 59,
+    "text": "What do you do for a living?"
+  },
+  {
+    "index": 60,
+    "text": "I work as a teacher"
+  },
+  {
+    "index": 61,
+    "text": "Where do you live?"
+  },
+  {
+    "index": 62,
+    "text": "I live in Cairo"
+  },
+  {
+    "index": 63,
+    "text": "What time is it?"
+  },
+  {
+    "index": 64,
+    "text": "It's three o'clock"
+  },
+  {
+    "index": 65,
+    "text": "How is the weather today?"
+  },
+  {
+    "index": 66,
+    "text": "It's sunny and warm"
+  },
+  {
+    "index": 67,
+    "text": "Can you help me?"
+  },
+  {
+    "index": 68,
+    "text": "Of course, what do you need?"
+  },
+  {
+    "index": 69,
+    "text": "Thank you very much"
+  },
+  {
+    "index": 70,
+    "text": "You're welcome"
+  },
+  {
+    "index": 71,
+    "text": "Excuse me, where is the bank?"
+  },
+  {
+    "index": 72,
+    "text": "It's next to the post office"
+  },
+  {
+    "index": 73,
+    "text": "I am hungry"
+  },
+  {
+    "index": 74,
+    "text": "Let's go to a restaurant"
+  },
+  {
+    "index": 75,
+    "text": "I would like a cup of coffee"
+  },
+  {
+    "index": 76,
+    "text": "How much does it cost?"
+  },
+  {
+    "index": 77,
+    "text": "It costs five dollars"
+  },
+  {
+    "index": 78,
+    "text": "I need to go to the airport"
+  },
+  {
+    "index": 79,
+    "text": "What time does the flight leave?"
+  },
+  {
+    "index": 80,
+    "text": "It leaves at six thirty"
+  },
+  {
+    "index": 81,
+    "text": "Have a nice day!"
+  },
+  {
+    "index": 82,
+    "text": "See you later!"
+  },
+  {
+    "index": 83,
+    "text": "Good night!"
+  },
+  {
+    "index": 84,
+    "text": "The office opens at nine"
+  },
+  {
+    "index": 85,
+    "text": "I start work early"
+  },
+  {
+    "index": 86,
+    "text": "She finishes work late"
+  },
+  {
+    "index": 87,
+    "text": "We have lunch together"
+  },
+  {
+    "index": 88,
+    "text": "The meeting starts soon"
+  },
+  {
+    "index": 89,
+    "text": "I take the bus to work"
+  },
+  {
+    "index": 90,
+    "text": "The train is fast"
+  },
+  {
+    "index": 91,
+    "text": "My car is new"
+  },
+  {
+    "index": 92,
+    "text": "The road is busy"
+  },
+  {
+    "index": 93,
+    "text": "I walk to the store"
+  }
+]
