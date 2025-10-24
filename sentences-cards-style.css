@@ -1,0 +1,201 @@
+/* Sentence Cards Styling */
+.sentences-cards-container {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    padding: 20px;
+}
+
+.sentence-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.sentence-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sentence-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.sentence-row {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8f9fa;
+}
+
+.sentence-row:last-of-type {
+    margin-bottom: 20px;
+}
+
+.english-row {
+    background: linear-gradient(to right, #e3f2fd, #f8f9fa);
+    border-right: 4px solid #2196f3;
+}
+
+.arabic-row {
+    background: linear-gradient(to right, #fff3e0, #f8f9fa);
+    border-right: 4px solid #ff9800;
+}
+
+.pronunciation-row {
+    background: linear-gradient(to right, #f3e5f5, #f8f9fa);
+    border-right: 4px solid #9c27b0;
+}
+
+.row-label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.row-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    padding-right: 50px;
+}
+
+/* Grammar Colors - Same as before */
+.subject { color: #e74c3c; font-weight: bold; }
+.verb { color: #27ae60; font-weight: bold; }
+.object { color: #3498db; font-weight: bold; }
+.adjective { color: #9b59b6; font-weight: bold; }
+.adverb { color: #f39c12; font-weight: bold; }
+.preposition { color: #8b4513; font-weight: bold; }
+.article { color: #7f8c8d; font-weight: bold; }
+.auxiliary { color: #1abc9c; font-weight: bold; }
+
+/* Action Buttons */
+.sentence-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.save-btn, .audio-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+}
+
+.save-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.save-btn.saved {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+.audio-btn {
+    background: linear-gradient(45deg, #f39c12, #f1c40f);
+    color: white;
+}
+
+.audio-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .sentences-cards-container {
+        margin: 100px auto 30px;
+        padding: 15px;
+    }
+    
+    .sentence-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .sentence-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .row-label {
+        font-size: 0.9rem;
+    }
+    
+    .row-content {
+        font-size: 1rem;
+        padding-right: 40px;
+    }
+    
+    .sentence-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .save-btn, .audio-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+/* Header for Cards Page */
+.sentences-header {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.sentences-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.sentences-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .sentences-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .sentences-header p {
+        font-size: 1rem;
+    }
+}
+

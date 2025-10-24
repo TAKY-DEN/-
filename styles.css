@@ -14,7 +14,7 @@ body {
     color: #333;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    padding-top: 80px;
+    padding-top: 0;
 }
 
 .container {
@@ -27,8 +27,7 @@ body {
 .header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
+    position: relative;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -42,9 +41,15 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #667eea;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.3rem;
+    }
 }
 
 .nav {
@@ -56,7 +61,14 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 0.9rem;
+    }
 }
 
 .nav-link:hover {
@@ -71,16 +83,29 @@ body {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
 .hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
 }
 
 .hero-stats {
@@ -96,27 +121,46 @@ body {
 
 .stat-number {
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ffd700;
 }
 
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 1.8rem;
+    }
+}
+
 .stat-label {
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .stat-label {
+        font-size: 0.9rem;
+    }
 }
 
 .cta-button {
     display: inline-block;
     background: linear-gradient(45deg, #ffd700, #ffed4e);
     color: #333;
-    padding: 15px 30px;
+    padding: 18px 40px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+    }
 }
 
 .cta-button:hover {
