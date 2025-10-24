@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الأصوات - Web Speech API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .test-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        select, button {
+            padding: 12px 20px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .voice-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .quality-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .high-quality {
+            background: #27ae60;
+            color: white;
+        }
+        .medium-quality {
+            background: #f39c12;
+            color: white;
+        }
+        .low-quality {
+            background: #e74c3c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 اختبار جودة الأصوات</h1>
+        
+        <div class="test-section">
+            <h3>اختر الصوت:</h3>
+            <select id="voiceSelect" style="width: 100%; max-width: 500px;">
+                <option value="">جاري تحميل الأصوات...</option>
+            </select>
+            
+            <div class="voice-info" id="voiceInfo"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>جملة الاختبار:</h3>
+            <input type="text" id="testText" value="I work in the office" style="width: 100%; padding: 12px; border-radius: 8px; border: 2px solid #667eea; font-size: 1rem;">
+            
+            <div style="margin-top: 15px;">
+                <button onclick="testVoice()">🔊 تشغيل</button>
+                <button onclick="stopVoice()" style="background: #e74c3c;">⏹️ إيقاف</button>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <label>السرعة: <span id="rateValue">0.85</span></label>
+                <input type="range" id="rate" min="0.5" max="1.5" step="0.05" value="0.85" style="width: 100%;" oninput="document.getElementById('rateValue').textContent = this.value">
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>📊 الأصوات الإنجليزية المتاحة:</h3>
+            <div id="englishVoices"></div>
+        </div>
+    </div>
+
+    <script>
+        let voices = [];
+        let selectedVoice = null;
+
+        // Load voices
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+            
+            if (voices.length === 0) {
+                setTimeout(loadVoices, 100);
+                return;
+            }
+            
+            // Filter English voices
+            const englishVoices = voices.filter(v => v.lang.startsWith('en'));
+            
+            // Populate select
+            const select = document.getElementById('voiceSelect');
+            select.innerHTML = '';
+            
+            englishVoices.forEach((voice, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                
+                let quality = '';
+                if (voice.name.includes('Google') || voice.name.includes('Microsoft')) {
+                    quality = ' ⭐ عالية الجودة';
+                } else if (voice.localService) {
+                    quality = ' ✓ محلي';
+                } else {
+                    quality = ' ☁️ سحابي';
+                }
+                
+                option.textContent = `${voice.name} (${voice.lang})${quality}`;
+                option.dataset.voiceName = voice.name;
+                option.dataset.lang = voice.lang;
+                option.dataset.local = voice.localService;
+                
+                select.appendChild(option);
+            });
+            
+            // Display all English voices
+            displayEnglishVoices(englishVoices);
+            
+            // Select first voice
+            if (englishVoices.length > 0) {
+                select.selectedIndex = 0;
+                updateVoiceInfo();
+            }
+        }
+
+        function displayEnglishVoices(englishVoices) {
+            const container = document.getElementById('englishVoices');
+            container.innerHTML = '';
+            
+            englishVoices.forEach((voice, index) => {
+                const div = document.createElement('div');
+                div.style.padding = '10px';
+                div.style.margin = '5px 0';
+                div.style.background = 'white';
+                div.style.borderRadius = '8px';
+                div.style.borderRight = '4px solid #667eea';
+                
+                let qualityBadge = '';
+                if (voice.name.includes('Google')) {
+                    qualityBadge = '<span class="quality-badge high-quality">Google - جودة عالية جداً</span>';
+                } else if (voice.name.includes('Microsoft')) {
+                    qualityBadge = '<span class="quality-badge high-quality">Microsoft - جودة عالية</span>';
+                } else if (voice.name.includes('Apple')) {
+                    qualityBadge = '<span class="quality-badge high-quality">Apple - جودة عالية</span>';
+                } else if (voice.localService) {
+                    qualityBadge = '<span class="quality-badge medium-quality">محلي</span>';
+                } else {
+                    qualityBadge = '<span class="quality-badge low-quality">أساسي</span>';
+                }
+                
+                div.innerHTML = `
+                    <strong>${index + 1}. ${voice.name}</strong><br>
+                    ${qualityBadge}
+                    <span style="color: #666;">اللغة: ${voice.lang}</span>
+                    <span style="color: #666;">| ${voice.localService ? 'محلي ✓' : 'سحابي ☁️'}</span>
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+
+        function updateVoiceInfo() {
+            const select = document.getElementById('voiceSelect');
+            const selectedIndex = select.value;
+            
+            if (selectedIndex === '') return;
+            
+            const englishVoices = voices.filter(v => v.lang.startsWith('en'));
+            selectedVoice = englishVoices[selectedIndex];
+            
+            const info = document.getElementById('voiceInfo');
+            info.innerHTML = `
+                <strong>الصوت المختار:</strong> ${selectedVoice.name}<br>
+                <strong>اللغة:</strong> ${selectedVoice.lang}<br>
+                <strong>النوع:</strong> ${selectedVoice.localService ? 'محلي (سريع)' : 'سحابي (قد يكون أبطأ)'}<br>
+                <strong>URI:</strong> ${selectedVoice.voiceURI}
+            `;
+        }
+
+        function testVoice() {
+            if (!selectedVoice) {
+                alert('الرجاء اختيار صوت أولاً');
+                return;
+            }
+            
+            const text = document.getElementById('testText').value;
+            const rate = parseFloat(document.getElementById('rate').value);
+            
+            // Stop any playing speech
+            speechSynthesis.cancel();
+            
+            // Create utterance
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.voice = selectedVoice;
+            utterance.rate = rate;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+            
+            utterance.onstart = () => console.log('🔊 بدأ التشغيل');
+            utterance.onend = () => console.log('✅ انتهى التشغيل');
+            utterance.onerror = (e) => console.error('❌ خطأ:', e);
+            
+            // Speak
+            speechSynthesis.speak(utterance);
+        }
+
+        function stopVoice() {
+            speechSynthesis.cancel();
+        }
+
+        // Event listeners
+        document.getElementById('voiceSelect').addEventListener('change', updateVoiceInfo);
+        
+        // Load voices on page load
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        loadVoices();
+    </script>
+</body>
+</html>
+
