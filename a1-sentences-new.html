@@ -133,13 +133,18 @@ body {
 <div class="voice-settings">
     <label for="voice-select">🎤 اختر الصوت:</label>
     <select id="voice-select">
-        <option value="US">🇺🇸 أمريكي (Google)</option>
-        <option value="UK">🇬🇧 بريطاني (Google)</option>
-        <option value="AU">🇦🇺 أسترالي (Google)</option>
-        <option value="CA">🇨🇦 كندي (Google)</option>
+        <option value="Brian">🇬🇧 Brian - بريطاني ذكر (احترافي)</option>
+        <option value="Amy">🇬🇧 Amy - بريطاني أنثى</option>
+        <option value="Emma">🇬🇧 Emma - بريطاني أنثى</option>
+        <option value="Joey">🇺🇸 Joey - أمريكي ذكر</option>
+        <option value="Matthew">🇺🇸 Matthew - أمريكي ذكر</option>
+        <option value="Joanna">🇺🇸 Joanna - أمريكي أنثى</option>
+        <option value="Salli">🇺🇸 Salli - أمريكي أنثى</option>
+        <option value="Russell">🇦🇺 Russell - أسترالي ذكر</option>
+        <option value="Nicole">🇦🇺 Nicole - أسترالي أنثى</option>
     </select>
     <div style="margin-top: 10px; font-size: 0.85rem; color: #666;">
-        ✨ يستخدم أفضل صوت متاح في جهازك
+        ✨ أصوات Amazon Polly الاحترافية (مجانية)
     </div>
 </div>
 
@@ -1921,160 +1926,67 @@ body {
     </div>
 </div>
 
-<!-- Enhanced Web Speech API with Best Available Voices -->
+<!-- StreamElements TTS using Amazon Polly (Professional & Free) -->
 <script>
 // Global variables
-let availableVoices = [];
-let selectedVoice = null;
-let selectedLanguage = 'en-US';
-
-// Load voices
-function loadVoices() {
-    availableVoices = speechSynthesis.getVoices();
-    
-    if (availableVoices.length === 0) {
-        // Retry after a short delay
-        setTimeout(loadVoices, 100);
-        return;
-    }
-    
-    console.log('🎤 Available voices:', availableVoices.length);
-    
-    // Find best English voice
-    selectBestVoice();
-}
-
-// Select best available English voice
-function selectBestVoice() {
-    const lang = selectedLanguage;
-    
-    // Priority order for voice selection
-    const priorities = [
-        // Google voices (best quality)
-        v => v.name.includes('Google') && v.lang.startsWith(lang.substring(0, 2)),
-        // Microsoft voices
-        v => v.name.includes('Microsoft') && v.lang.startsWith(lang.substring(0, 2)),
-        // Apple voices
-        v => v.name.includes('Apple') && v.lang.startsWith(lang.substring(0, 2)),
-        // Any voice matching exact language
-        v => v.lang === lang,
-        // Any English voice
-        v => v.lang.startsWith('en')
-    ];
-    
-    for (const priority of priorities) {
-        const voice = availableVoices.find(priority);
-        if (voice) {
-            selectedVoice = voice;
-            console.log('✅ Selected voice:', voice.name, '(' + voice.lang + ')');
-            return;
-        }
-    }
-    
-    // Fallback to first available voice
-    if (availableVoices.length > 0) {
-        selectedVoice = availableVoices[0];
-        console.log('⚠️ Using fallback voice:', selectedVoice.name);
-    }
-}
-
-// Initialize voices
-if (speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = loadVoices;
-}
-loadVoices();
+let selectedVoice = 'Brian';  // Default: British male (professional)
+let currentAudio = null;
 
 // Update voice when selection changes
 document.addEventListener('DOMContentLoaded', function() {
     const voiceSelect = document.getElementById('voice-select');
     if (voiceSelect) {
         voiceSelect.addEventListener('change', function() {
-            const value = this.value;
-            
-            // Map selection to language code
-            switch(value) {
-                case 'US':
-                    selectedLanguage = 'en-US';
-                    break;
-                case 'UK':
-                    selectedLanguage = 'en-GB';
-                    break;
-                case 'AU':
-                    selectedLanguage = 'en-AU';
-                    break;
-                case 'CA':
-                    selectedLanguage = 'en-CA';
-                    break;
-                default:
-                    selectedLanguage = 'en-US';
-            }
-            
-            console.log('🌍 Language changed to:', selectedLanguage);
-            selectBestVoice();
+            selectedVoice = this.value;
+            console.log('🎤 Voice changed to:', selectedVoice);
         });
     }
 });
 
-// Professional Text-to-Speech function
+// Professional Text-to-Speech function using StreamElements (Amazon Polly)
 function speakText(text) {
     try {
-        // Check if speech synthesis is supported
-        if (!('speechSynthesis' in window)) {
-            alert('عذراً، متصفحك لا يدعم تقنية تحويل النص إلى كلام');
-            return;
+        // Stop any currently playing audio
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
         }
         
-        // Stop any currently playing speech
-        speechSynthesis.cancel();
-        
-        // Make sure voices are loaded
-        if (availableVoices.length === 0) {
-            loadVoices();
-            // Retry after a short delay
-            setTimeout(() => speakText(text), 200);
-            return;
-        }
-        
-        // Clean text
+        // Clean text (remove HTML tags if any)
         const cleanText = text.replace(/<[^>]*>/g, '').trim();
         
+        // StreamElements TTS API URL (uses Amazon Polly)
+        const ttsUrl = `https://api.streamelements.com/kappa/v2/speech?voice=${selectedVoice}&text=${encodeURIComponent(cleanText)}`;
+        
         console.log('🔊 Playing:', cleanText);
-        console.log('🎤 Using voice:', selectedVoice ? selectedVoice.name : 'default');
+        console.log('🎤 Voice:', selectedVoice);
+        console.log('🌍 API URL:', ttsUrl);
         
-        // Create utterance
-        const utterance = new SpeechSynthesisUtterance(cleanText);
+        // Create and play audio
+        currentAudio = new Audio(ttsUrl);
         
-        // Set voice if available
-        if (selectedVoice) {
-            utterance.voice = selectedVoice;
-        }
+        // Set playback rate (slightly slower for learning)
+        currentAudio.playbackRate = 0.9;
         
-        // Set language
-        utterance.lang = selectedLanguage;
-        
-        // Set speech parameters (optimized for learning)
-        utterance.rate = 0.85;  // Slightly slower
-        utterance.pitch = 1.0;  // Normal pitch
-        utterance.volume = 1.0; // Full volume
+        // Play audio
+        currentAudio.play().then(() => {
+            console.log('✅ Audio started successfully');
+        }).catch(error => {
+            console.error('❌ Error playing audio:', error);
+            alert('حدث خطأ في تشغيل الصوت. يرجى المحاولة مرة أخرى.');
+        });
         
         // Event handlers
-        utterance.onstart = () => {
-            console.log('✅ Speech started');
+        currentAudio.onended = () => {
+            console.log('✅ Audio finished');
+            currentAudio = null;
         };
         
-        utterance.onend = () => {
-            console.log('✅ Speech finished');
+        currentAudio.onerror = (error) => {
+            console.error('❌ Audio error:', error);
+            currentAudio = null;
         };
-        
-        utterance.onerror = (event) => {
-            console.error('❌ Speech error:', event.error);
-            if (event.error !== 'interrupted' && event.error !== 'canceled') {
-                alert('حدث خطأ في تشغيل الصوت: ' + event.error);
-            }
-        };
-        
-        // Speak
-        speechSynthesis.speak(utterance);
         
     } catch (error) {
         console.error('❌ Error in speakText:', error);
@@ -2084,8 +1996,10 @@ function speakText(text) {
 
 // Function to stop speech
 function stopSpeech() {
-    if ('speechSynthesis' in window) {
-        speechSynthesis.cancel();
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
         console.log('⏹️ Speech stopped');
     }
 }
