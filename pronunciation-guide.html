@@ -679,7 +679,24 @@
 
     <script>
         function playAudio(word) {
-            // استخدام Google Translate Text-to-Speech
+            // قائمة الحروف الإنجليزية
+            const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+            
+            // إذا كانت الكلمة حرف واحد من A-Z، استخدم الملف الصوتي
+            if (letters.includes(word.toUpperCase()) && word.length === 1) {
+                const audio = new Audio(`audio/pronunciation/${word.toLowerCase()}.mp3`);
+                audio.play().catch(err => {
+                    console.error('فشل تشغيل الصوت:', err);
+                    // في حالة الفشل، استخدم Text-to-Speech
+                    fallbackToTTS(word);
+                });
+            } else {
+                // للكلمات الأخرى، استخدم Text-to-Speech
+                fallbackToTTS(word);
+            }
+        }
+        
+        function fallbackToTTS(word) {
             const utterance = new SpeechSynthesisUtterance(word);
             utterance.lang = 'en-US';
             utterance.rate = 0.8;
