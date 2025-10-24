@@ -8,6 +8,8 @@
 <link href="styles.css" rel="stylesheet"/>
 <link href="sentences-cards-style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<!-- ResponsiveVoice API for Professional Text-to-Speech -->
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=jQZ2zCqM"></script>
 <style>
 /* Fixed Progress Bar */
 .fixed-progress-bar {
@@ -81,11 +83,63 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
+
+/* Voice Settings Panel */
+.voice-settings {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.voice-settings label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.voice-settings select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .voice-settings {
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 40px);
+        max-width: 300px;
+    }
+}
 </style>
 </head>
 <body data-level="a1" data-type="sentences">
 
 <a class="back-button" href="index.html">← العودة للرئيسية</a>
+
+<!-- Voice Settings Panel -->
+<div class="voice-settings">
+    <label for="voice-select">🎤 اختر الصوت:</label>
+    <select id="voice-select">
+        <option value="US English Female">🇺🇸 أمريكي - أنثى</option>
+        <option value="US English Male">🇺🇸 أمريكي - ذكر</option>
+        <option value="UK English Female">🇬🇧 بريطاني - أنثى</option>
+        <option value="UK English Male">🇬🇧 بريطاني - ذكر</option>
+    </select>
+</div>
 
 <div class="sentences-cards-container">
     <div class="sentences-header">
@@ -1865,17 +1919,53 @@ body {
     </div>
 </div>
 
-<!-- Text-to-Speech Function -->
+<!-- Professional Text-to-Speech Function using ResponsiveVoice -->
 <script>
+// Global variable to store selected voice
+let selectedVoice = 'US English Female';
+
+// Update voice when selection changes
+document.addEventListener('DOMContentLoaded', function() {
+    const voiceSelect = document.getElementById('voice-select');
+    if (voiceSelect) {
+        voiceSelect.addEventListener('change', function() {
+            selectedVoice = this.value;
+            console.log('Voice changed to:', selectedVoice);
+        });
+    }
+});
+
+// Professional Text-to-Speech function
 function speakText(text) {
-    if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-US';
-        utterance.rate = 0.8;
-        utterance.pitch = 1;
-        window.speechSynthesis.speak(utterance);
+    if (typeof responsiveVoice !== 'undefined') {
+        // Stop any currently playing speech
+        responsiveVoice.cancel();
+        
+        // Speak with selected voice
+        responsiveVoice.speak(text, selectedVoice, {
+            pitch: 1,
+            rate: 0.85,  // Slightly slower for learning
+            volume: 1,
+            onstart: function() {
+                console.log('🔊 Playing:', text);
+            },
+            onend: function() {
+                console.log('✅ Finished playing');
+            },
+            onerror: function(error) {
+                console.error('❌ Error:', error);
+                alert('حدث خطأ في تشغيل الصوت');
+            }
+        });
     } else {
-        alert('عذراً، متصفحك لا يدعم تقنية تحويل النص إلى كلام');
+        alert('عذراً، نظام الصوتيات غير متاح حالياً');
+    }
+}
+
+// Function to stop speech
+function stopSpeech() {
+    if (typeof responsiveVoice !== 'undefined') {
+        responsiveVoice.cancel();
     }
 }
 </script>
