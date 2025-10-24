@@ -139,7 +139,7 @@ body {
         <option value="CA">🇨🇦 كندي (Google)</option>
     </select>
     <div style="margin-top: 10px; font-size: 0.85rem; color: #666;">
-        ✨ صوت احترافي من Google Translate
+        ✨ يستخدم أفضل صوت متاح في جهازك
     </div>
 </div>
 
@@ -1921,11 +1921,68 @@ body {
     </div>
 </div>
 
-<!-- Professional Text-to-Speech using Google Translate TTS (Free & High Quality) -->
+<!-- Enhanced Web Speech API with Best Available Voices -->
 <script>
 // Global variables
-let selectedVoiceAccent = 'com';  // com = US, co.uk = UK
-let currentAudio = null;
+let availableVoices = [];
+let selectedVoice = null;
+let selectedLanguage = 'en-US';
+
+// Load voices
+function loadVoices() {
+    availableVoices = speechSynthesis.getVoices();
+    
+    if (availableVoices.length === 0) {
+        // Retry after a short delay
+        setTimeout(loadVoices, 100);
+        return;
+    }
+    
+    console.log('🎤 Available voices:', availableVoices.length);
+    
+    // Find best English voice
+    selectBestVoice();
+}
+
+// Select best available English voice
+function selectBestVoice() {
+    const lang = selectedLanguage;
+    
+    // Priority order for voice selection
+    const priorities = [
+        // Google voices (best quality)
+        v => v.name.includes('Google') && v.lang.startsWith(lang.substring(0, 2)),
+        // Microsoft voices
+        v => v.name.includes('Microsoft') && v.lang.startsWith(lang.substring(0, 2)),
+        // Apple voices
+        v => v.name.includes('Apple') && v.lang.startsWith(lang.substring(0, 2)),
+        // Any voice matching exact language
+        v => v.lang === lang,
+        // Any English voice
+        v => v.lang.startsWith('en')
+    ];
+    
+    for (const priority of priorities) {
+        const voice = availableVoices.find(priority);
+        if (voice) {
+            selectedVoice = voice;
+            console.log('✅ Selected voice:', voice.name, '(' + voice.lang + ')');
+            return;
+        }
+    }
+    
+    // Fallback to first available voice
+    if (availableVoices.length > 0) {
+        selectedVoice = availableVoices[0];
+        console.log('⚠️ Using fallback voice:', selectedVoice.name);
+    }
+}
+
+// Initialize voices
+if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = loadVoices;
+}
+loadVoices();
 
 // Update voice when selection changes
 document.addEventListener('DOMContentLoaded', function() {
@@ -1933,84 +1990,103 @@ document.addEventListener('DOMContentLoaded', function() {
     if (voiceSelect) {
         voiceSelect.addEventListener('change', function() {
             const value = this.value;
-            // Map selection to Google TTS accent
-            if (value.includes('US')) {
-                selectedVoiceAccent = 'com';  // American
-            } else if (value.includes('UK')) {
-                selectedVoiceAccent = 'co.uk';  // British
-            } else if (value.includes('AU')) {
-                selectedVoiceAccent = 'com.au';  // Australian
-            } else if (value.includes('CA')) {
-                selectedVoiceAccent = 'ca';  // Canadian
+            
+            // Map selection to language code
+            switch(value) {
+                case 'US':
+                    selectedLanguage = 'en-US';
+                    break;
+                case 'UK':
+                    selectedLanguage = 'en-GB';
+                    break;
+                case 'AU':
+                    selectedLanguage = 'en-AU';
+                    break;
+                case 'CA':
+                    selectedLanguage = 'en-CA';
+                    break;
+                default:
+                    selectedLanguage = 'en-US';
             }
-            console.log('🎤 Voice accent changed to:', selectedVoiceAccent);
+            
+            console.log('🌍 Language changed to:', selectedLanguage);
+            selectBestVoice();
         });
     }
 });
 
-// Professional Text-to-Speech function using Google Translate
+// Professional Text-to-Speech function
 function speakText(text) {
     try {
-        // Stop any currently playing audio
-        if (currentAudio) {
-            currentAudio.pause();
-            currentAudio = null;
+        // Check if speech synthesis is supported
+        if (!('speechSynthesis' in window)) {
+            alert('عذراً، متصفحك لا يدعم تقنية تحويل النص إلى كلام');
+            return;
         }
         
-        // Clean text (remove HTML tags if any)
+        // Stop any currently playing speech
+        speechSynthesis.cancel();
+        
+        // Make sure voices are loaded
+        if (availableVoices.length === 0) {
+            loadVoices();
+            // Retry after a short delay
+            setTimeout(() => speakText(text), 200);
+            return;
+        }
+        
+        // Clean text
         const cleanText = text.replace(/<[^>]*>/g, '').trim();
         
-        // Google Translate TTS URL
-        const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encodeURIComponent(cleanText)}&ttsspeed=0.8&tld=${selectedVoiceAccent}`;
-        
         console.log('🔊 Playing:', cleanText);
-        console.log('🌍 Accent:', selectedVoiceAccent);
+        console.log('🎤 Using voice:', selectedVoice ? selectedVoice.name : 'default');
         
-        // Create and play audio
-        currentAudio = new Audio(ttsUrl);
-        currentAudio.playbackRate = 0.9;  // Slightly slower for learning
+        // Create utterance
+        const utterance = new SpeechSynthesisUtterance(cleanText);
         
-        currentAudio.play().then(() => {
-            console.log('✅ Audio started successfully');
-        }).catch(error => {
-            console.error('❌ Error playing audio:', error);
-            // Fallback to Web Speech API if Google TTS fails
-            fallbackToWebSpeech(cleanText);
-        });
+        // Set voice if available
+        if (selectedVoice) {
+            utterance.voice = selectedVoice;
+        }
         
-        currentAudio.onended = () => {
-            console.log('✅ Audio finished');
-            currentAudio = null;
+        // Set language
+        utterance.lang = selectedLanguage;
+        
+        // Set speech parameters (optimized for learning)
+        utterance.rate = 0.85;  // Slightly slower
+        utterance.pitch = 1.0;  // Normal pitch
+        utterance.volume = 1.0; // Full volume
+        
+        // Event handlers
+        utterance.onstart = () => {
+            console.log('✅ Speech started');
         };
+        
+        utterance.onend = () => {
+            console.log('✅ Speech finished');
+        };
+        
+        utterance.onerror = (event) => {
+            console.error('❌ Speech error:', event.error);
+            if (event.error !== 'interrupted' && event.error !== 'canceled') {
+                alert('حدث خطأ في تشغيل الصوت: ' + event.error);
+            }
+        };
+        
+        // Speak
+        speechSynthesis.speak(utterance);
         
     } catch (error) {
         console.error('❌ Error in speakText:', error);
-        fallbackToWebSpeech(text);
-    }
-}
-
-// Fallback to Web Speech API if Google TTS fails
-function fallbackToWebSpeech(text) {
-    console.log('⚠️ Falling back to Web Speech API');
-    if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = selectedVoiceAccent === 'co.uk' ? 'en-GB' : 'en-US';
-        utterance.rate = 0.85;
-        utterance.pitch = 1;
-        window.speechSynthesis.speak(utterance);
-    } else {
-        alert('عذراً، نظام الصوتيات غير متاح حالياً');
+        alert('حدث خطأ: ' + error.message);
     }
 }
 
 // Function to stop speech
 function stopSpeech() {
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio = null;
-    }
     if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
+        speechSynthesis.cancel();
+        console.log('⏹️ Speech stopped');
     }
 }
 </script>
