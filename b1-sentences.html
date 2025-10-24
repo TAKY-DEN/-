@@ -83,62 +83,14 @@ body {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
-/* Voice Settings Panel */
-.voice-settings {
-    position: fixed;
-    top: 80px;
-    left: 20px;
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
 
-.voice-settings label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.voice-settings select {
-    width: 100%;
-    padding: 8px;
-    border: 2px solid #667eea;
-    border-radius: 8px;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .voice-settings {
-        top: auto;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 40px);
-        max-width: 300px;
-    }
-}
 </style>
 </head>
 <body data-level="b1" data-type="sentences">
 
 <a class="back-button" href="index.html">← العودة للرئيسية</a>
 
-<!-- Voice Gender Selection -->
-<div class="voice-settings">
-    <label for="voice-gender" style="font-weight: bold; color: #2c3e50; margin-bottom: 8px; display: block;">
-        🎤 اختر الصوت:
-    </label>
-    <select id="voice-gender" style="width: 100%; padding: 10px; font-size: 1rem; border: 2px solid #3498db; border-radius: 8px; background: white; cursor: pointer;">
-        <option value="male" selected>👨 ذكر (Male)</option>
-        <option value="female">👩 أنثى (Female)</option>
-    </select>
-</div>
+
 
 <div class="sentences-cards-container">
     <div class="sentences-header">
