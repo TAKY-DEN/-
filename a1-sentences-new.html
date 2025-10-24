@@ -131,20 +131,14 @@ body {
 
 <!-- Voice Settings Panel -->
 <div class="voice-settings">
-    <label for="voice-select">🎤 اختر الصوت:</label>
-    <select id="voice-select">
-        <option value="Brian">🇬🇧 Brian - بريطاني ذكر (احترافي)</option>
-        <option value="Amy">🇬🇧 Amy - بريطاني أنثى</option>
-        <option value="Emma">🇬🇧 Emma - بريطاني أنثى</option>
-        <option value="Joey">🇺🇸 Joey - أمريكي ذكر</option>
-        <option value="Matthew">🇺🇸 Matthew - أمريكي ذكر</option>
-        <option value="Joanna">🇺🇸 Joanna - أمريكي أنثى</option>
-        <option value="Salli">🇺🇸 Salli - أمريكي أنثى</option>
-        <option value="Russell">🇦🇺 Russell - أسترالي ذكر</option>
-        <option value="Nicole">🇦🇺 Nicole - أسترالي أنثى</option>
-    </select>
-    <div style="margin-top: 10px; font-size: 0.85rem; color: #666;">
-        ✨ أصوات Amazon Polly الاحترافية (مجانية)
+    <div style="text-align: center; padding: 15px;">
+        <div style="font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 8px;">
+            🎵 صوتيات احترافية
+        </div>
+        <div style="font-size: 0.9rem; color: #666;">
+            ✨ Google Text-to-Speech<br>
+            🇺🇸 لهجة أمريكية احترافية
+        </div>
     </div>
 </div>
 
@@ -172,7 +166,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="1">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I work in the office')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="1">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="2">
@@ -191,7 +185,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="2">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('He drinks coffee daily')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="2">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="3">
@@ -210,7 +204,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="3">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('She reads the new book')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="3">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="4">
@@ -229,7 +223,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="4">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('We eat delicious food')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="4">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="5">
@@ -248,7 +242,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="5">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('You listen to beautiful music')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="5">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="6">
@@ -267,7 +261,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="6">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('They play football in the park')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="6">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="7">
@@ -286,7 +280,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="7">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The manager talks with the employees')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="7">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="8">
@@ -305,7 +299,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="8">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The customer buys the new product')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="8">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="9">
@@ -324,7 +318,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="9">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The accountant calculates the numbers carefully')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="9">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="10">
@@ -343,7 +337,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="10">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The company sells good products')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="10">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="11">
@@ -362,7 +356,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="11">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I love my work very much')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="11">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="12">
@@ -381,7 +375,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="12">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('He writes the report now')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="12">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="13">
@@ -400,7 +394,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="13">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('She helps the customers daily')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="13">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="14">
@@ -419,7 +413,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="14">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('We attend the important meeting')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="14">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="15">
@@ -438,7 +432,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="15">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('You pay the bill monthly')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="15">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="16">
@@ -457,7 +451,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="16">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('They plan for the future')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="16">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="17">
@@ -476,7 +470,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="17">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The team works hard on the project')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="17">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="18">
@@ -495,7 +489,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="18">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The school teaches the students well')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="18">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="19">
@@ -514,7 +508,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="19">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The doctor examines the patients carefully')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="19">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="20">
@@ -533,7 +527,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="20">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The driver drives the car safely')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="20">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="21">
@@ -552,7 +546,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="21">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('My name is Ahmed')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="21">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="22">
@@ -571,7 +565,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="22">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I am 25 years old')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="22">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="23">
@@ -590,7 +584,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="23">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I am from Egypt')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="23">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="24">
@@ -609,7 +603,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="24">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I speak a little English')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="24">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="25">
@@ -647,7 +641,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="26">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Where is the bathroom?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="25">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="27">
@@ -666,7 +660,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="27">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('How much does this cost?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="26">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="28">
@@ -685,7 +679,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="28">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I would like to pay by credit card')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="27">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="29">
@@ -704,7 +698,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="29">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The manager is in a meeting')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="28">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="30">
@@ -723,7 +717,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="30">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The project deadline is tomorrow')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="29">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="31">
@@ -742,7 +736,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="31">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('We need to prepare a report')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="30">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="32">
@@ -780,7 +774,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="33">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Our marketing campaign was successful')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="31">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="34">
@@ -799,7 +793,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="34">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The new product will be launched next month')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="32">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="35">
@@ -818,7 +812,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="35">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The customer is always right')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="33">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="36">
@@ -837,7 +831,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="36">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I need to check my email')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="34">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="37">
@@ -875,7 +869,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="38">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('We need to reduce costs')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="35">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="39">
@@ -894,7 +888,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="39">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The new budget is very tight')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="36">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="40">
@@ -913,7 +907,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="40">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I have a meeting with a client this afternoon')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="37">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="41">
@@ -932,7 +926,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="41">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The supplier will deliver the goods tomorrow')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="38">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="42">
@@ -951,7 +945,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="42">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Our team is working on a new strategy')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="39">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="43">
@@ -970,7 +964,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="43">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The company has a strong brand')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="40">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="44">
@@ -989,7 +983,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="44">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I need to make a phone call')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="41">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="45">
@@ -1008,7 +1002,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="45">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The website is down')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="42">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="46">
@@ -1027,7 +1021,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="46">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I forgot my password')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="43">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="47">
@@ -1046,7 +1040,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="47">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I need to login to my account')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="44">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="48">
@@ -1065,7 +1059,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="48">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Please save the file')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="45">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="49">
@@ -1084,7 +1078,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="49">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('You can download the document from the website')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="46">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="50">
@@ -1103,7 +1097,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="50">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I need to edit this report')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="47">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="51">
@@ -1122,7 +1116,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="51">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Please delete the old file')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="48">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="52">
@@ -1141,7 +1135,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="52">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I will copy the text and paste it here')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="49">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="53">
@@ -1179,7 +1173,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="54">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Good morning, how are you?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="50">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="55">
@@ -1217,7 +1211,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="56">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Do you speak English?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="51">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="57">
@@ -1236,7 +1230,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="57">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Good evening, how was your day?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="52">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="58">
@@ -1255,7 +1249,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="58">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('It was a busy day')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="53">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="59">
@@ -1274,7 +1268,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="59">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('What do you do for a living?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="54">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="60">
@@ -1293,7 +1287,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="60">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I work as a teacher')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="55">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="61">
@@ -1312,7 +1306,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="61">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Where do you live?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="56">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="62">
@@ -1331,7 +1325,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="62">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I live in Cairo')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="57">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="63">
@@ -1350,7 +1344,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="63">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('What time is it?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="58">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="64">
@@ -1388,7 +1382,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="65">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('How is the weather today?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="59">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="66">
@@ -1426,7 +1420,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="67">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Can you help me?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="60">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="68">
@@ -1445,7 +1439,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="68">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Of course, what do you need?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="61">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="69">
@@ -1464,7 +1458,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="69">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Thank you very much')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="62">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="70">
@@ -1502,7 +1496,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="71">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Excuse me, where is the bank?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="63">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="72">
@@ -1540,7 +1534,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="73">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I am hungry')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="64">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="74">
@@ -1578,7 +1572,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="75">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I would like a cup of coffee')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="65">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="76">
@@ -1597,7 +1591,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="76">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('How much does it cost?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="66">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="77">
@@ -1616,7 +1610,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="77">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('It costs five dollars')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="67">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="78">
@@ -1635,7 +1629,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="78">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I need to go to the airport')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="68">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="79">
@@ -1654,7 +1648,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="79">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('What time does the flight leave?')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="69">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="80">
@@ -1673,7 +1667,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="80">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('It leaves at six thirty')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="70">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="81">
@@ -1692,7 +1686,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="81">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Have a nice day!')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="71">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="82">
@@ -1711,7 +1705,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="82">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('See you later!')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="72">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="83">
@@ -1730,7 +1724,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="83">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('Good night!')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="73">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="84">
@@ -1749,7 +1743,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="84">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The office opens at nine')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="74">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="85">
@@ -1768,7 +1762,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="85">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I start work early')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="75">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="86">
@@ -1787,7 +1781,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="86">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('She finishes work late')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="76">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="87">
@@ -1806,7 +1800,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="87">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('We have lunch together')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="77">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="88">
@@ -1825,7 +1819,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="88">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The meeting starts soon')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="78">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="89">
@@ -1844,7 +1838,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="89">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I take the bus to work')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="79">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="90">
@@ -1863,7 +1857,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="90">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The train is fast')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="80">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="91">
@@ -1882,7 +1876,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="91">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('My car is new')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="81">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="92">
@@ -1901,7 +1895,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="92">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('The road is busy')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="82">🔊 استماع</button>
             </div>
         </div>
         <div class="sentence-card" data-index="93">
@@ -1920,7 +1914,7 @@ body {
             </div>
             <div class="sentence-actions">
                 <button class="save-btn" data-index="93">💾 حفظ</button>
-                <button class="audio-btn" onclick="speakText('I walk to the store')">🔊 استماع</button>
+                <button class="audio-btn" data-audio-index="83">🔊 استماع</button>
             </div>
         </div>
     </div>
@@ -1929,22 +1923,20 @@ body {
 <!-- StreamElements TTS using Amazon Polly (Professional & Free) -->
 <script>
 // Global variables
-let selectedVoice = 'Brian';  // Default: British male (professional)
 let currentAudio = null;
 
-// Update voice when selection changes
-document.addEventListener('DOMContentLoaded', function() {
-    const voiceSelect = document.getElementById('voice-select');
-    if (voiceSelect) {
-        voiceSelect.addEventListener('change', function() {
-            selectedVoice = this.value;
-            console.log('🎤 Voice changed to:', selectedVoice);
-        });
+// Professional Audio Playback using Local MP3 Files (Google TTS)
+// Add click event listener for audio buttons
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('audio-btn')) {
+        const audioIndex = e.target.getAttribute('data-audio-index');
+        if (audioIndex) {
+            playLocalAudio(audioIndex);
+        }
     }
 });
 
-// Professional Text-to-Speech function using StreamElements (Amazon Polly)
-function speakText(text) {
+function playLocalAudio(index) {
     try {
         // Stop any currently playing audio
         if (currentAudio) {
@@ -1953,21 +1945,14 @@ function speakText(text) {
             currentAudio = null;
         }
         
-        // Clean text (remove HTML tags if any)
-        const cleanText = text.replace(/<[^>]*>/g, '').trim();
+        // Play local MP3 file (Google TTS - Professional Quality)
+        const audioUrl = `audio/a1/sentence_${index}.mp3`;
         
-        // StreamElements TTS API URL (uses Amazon Polly)
-        const ttsUrl = `https://api.streamelements.com/kappa/v2/speech?voice=${selectedVoice}&text=${encodeURIComponent(cleanText)}`;
-        
-        console.log('🔊 Playing:', cleanText);
-        console.log('🎤 Voice:', selectedVoice);
-        console.log('🌍 API URL:', ttsUrl);
+        console.log('🔊 Playing audio:', index);
+        console.log('🎵 Audio URL:', audioUrl);
         
         // Create and play audio
-        currentAudio = new Audio(ttsUrl);
-        
-        // Set playback rate (slightly slower for learning)
-        currentAudio.playbackRate = 0.9;
+        currentAudio = new Audio(audioUrl);
         
         // Play audio
         currentAudio.play().then(() => {
@@ -1985,11 +1970,12 @@ function speakText(text) {
         
         currentAudio.onerror = (error) => {
             console.error('❌ Audio error:', error);
+            alert('حدث خطأ في تحميل الملف الصوتي');
             currentAudio = null;
         };
         
     } catch (error) {
-        console.error('❌ Error in speakText:', error);
+        console.error('❌ Error in playLocalAudio:', error);
         alert('حدث خطأ: ' + error.message);
     }
 }
