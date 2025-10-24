@@ -129,17 +129,15 @@ body {
 
 <a class="back-button" href="index.html">← العودة للرئيسية</a>
 
-<!-- Voice Settings Panel -->
+<!-- Voice Gender Selection -->
 <div class="voice-settings">
-    <div style="text-align: center; padding: 15px;">
-        <div style="font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 8px;">
-            🎵 صوتيات احترافية
-        </div>
-        <div style="font-size: 0.9rem; color: #666;">
-            ✨ Google Text-to-Speech<br>
-            🇺🇸 لهجة أمريكية احترافية
-        </div>
-    </div>
+    <label for="voice-gender" style="font-weight: bold; color: #2c3e50; margin-bottom: 8px; display: block;">
+        🎤 اختر الصوت:
+    </label>
+    <select id="voice-gender" style="width: 100%; padding: 10px; font-size: 1rem; border: 2px solid #3498db; border-radius: 8px; background: white; cursor: pointer;">
+        <option value="male" selected>👨 ذكر (Male)</option>
+        <option value="female">👩 أنثى (Female)</option>
+    </select>
 </div>
 
 <div class="sentences-cards-container">
@@ -1924,6 +1922,18 @@ body {
 <script>
 // Global variables
 let currentAudio = null;
+let selectedGender = 'male';  // Default: male voice
+
+// Update gender when selection changes
+document.addEventListener('DOMContentLoaded', function() {
+    const genderSelect = document.getElementById('voice-gender');
+    if (genderSelect) {
+        genderSelect.addEventListener('change', function() {
+            selectedGender = this.value;
+            console.log('🎤 Voice gender changed to:', selectedGender);
+        });
+    }
+});
 
 // Professional Audio Playback using Local MP3 Files (Google TTS)
 // Add click event listener for audio buttons
@@ -1946,7 +1956,7 @@ function playLocalAudio(index) {
         }
         
         // Play local MP3 file (Google TTS - Professional Quality)
-        const audioUrl = `audio/a1/sentence_${index}.mp3`;
+        const audioUrl = `audio/a1/${selectedGender}/sentence_${index}.mp3`;
         
         console.log('🔊 Playing audio:', index);
         console.log('🎵 Audio URL:', audioUrl);
