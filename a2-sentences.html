@@ -1267,7 +1267,6 @@ body {
 <script>
 // Global variables
 let currentAudio = null;
-let selectedGender = 'male';  // Default: male voice
 
 // Update gender when selection changes
 document.addEventListener('DOMContentLoaded', function() {
@@ -1301,7 +1300,7 @@ function playLocalAudio(index) {
         }
         
         // Play local MP3 file (Google TTS - Professional Quality)
-        const audioUrl = `audio/a2/${selectedGender}/sentence_${index}.mp3`;
+        const audioUrl = `audio/a2/sentence_${index}.mp3`;
         
         console.log('🔊 Playing audio:', index);
         console.log('🎵 Audio URL:', audioUrl);
