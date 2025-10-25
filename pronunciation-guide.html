@@ -130,7 +130,8 @@
                     <h3>A a</h3>
                     <p>النطق: إي</p>
                     <p class="ipa-symbol">/eɪ/</p>
-                    <button class="audio-button" onclick="playAudio('A')">🔊 استمع</button>
+                    <button class="audio-button" onclick="playLetterName('a')">🔊 اسم الحرف</button>
+                    <button class="audio-button" onclick="playLetterSound('a')">🎵 صوت الحرف</button>
                 </div>
                 <div class="letter-card">
                     <h3>B b</h3>
@@ -678,25 +679,24 @@
     </div>
 
     <script>
-        function playAudio(word) {
-            // قائمة الحروف الإنجليزية
-            const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-            
-            // إذا كانت الكلمة حرف واحد من A-Z، استخدم الملف الصوتي
-            if (letters.includes(word.toUpperCase()) && word.length === 1) {
-                const audio = new Audio(`audio/pronunciation/${word.toLowerCase()}.mp3`);
-                audio.play().catch(err => {
-                    console.error('فشل تشغيل الصوت:', err);
-                    // في حالة الفشل، استخدم Text-to-Speech
-                    fallbackToTTS(word);
-                });
-            } else {
-                // للكلمات الأخرى، استخدم Text-to-Speech
-                fallbackToTTS(word);
-            }
+        // تشغيل اسم الحرف (A = "ay")
+        function playLetterName(letter) {
+            const audio = new Audio(`audio/letter_names/${letter}.mp3`);
+            audio.play().catch(err => {
+                console.error('فشل تشغيل اسم الحرف:', err);
+            });
         }
         
-        function fallbackToTTS(word) {
+        // تشغيل صوت الحرف (A = "ah")
+        function playLetterSound(letter) {
+            const audio = new Audio(`audio/letter_sounds/${letter}.mp3`);
+            audio.play().catch(err => {
+                console.error('فشل تشغيل صوت الحرف:', err);
+            });
+        }
+        
+        // تشغيل الكلمات باستخدام Text-to-Speech
+        function playAudio(word) {
             const utterance = new SpeechSynthesisUtterance(word);
             utterance.lang = 'en-US';
             utterance.rate = 0.8;
