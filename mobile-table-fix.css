@@ -1,147 +1,164 @@
-/* تحسين عرض الجداول على الموبايل - بدون تمرير */
+/* تصميم الجداول على الموبايل - عرض عمودي */
 
 @media (max-width: 768px) {
-    /* إزالة التمرير الأفقي */
-    .vocabulary-container {
-        margin: 80px 2px 20px;
-        padding: 0 2px;
-        overflow-x: hidden !important;
+    /* إخفاء رأس الجدول */
+    .vocabulary-table thead,
+    .sentences-table thead {
+        display: none;
     }
     
-    /* جعل الجدول يأخذ عرض الشاشة بالكامل */
-    .vocabulary-table {
+    /* جعل كل صف block */
+    .vocabulary-table tbody tr,
+    .sentences-table tbody tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* إخفاء صفوف category-header */
+    .vocabulary-table tbody tr.category-header,
+    .sentences-table tbody tr.category-header {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    .vocabulary-table tbody tr.category-header td,
+    .sentences-table tbody tr.category-header td {
+        display: block;
+        padding: 0;
+        border: none;
+    }
+    
+    /* جعل كل خلية block مع label */
+    .vocabulary-table tbody tr:not(.category-header) td,
+    .sentences-table tbody tr:not(.category-header) td {
+        display: block;
+        text-align: right;
+        padding: 0.8rem 0;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 1rem !important; /* تكبير الخط */
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:last-child,
+    .sentences-table tbody tr:not(.category-header) td:last-child {
+        border-bottom: none;
+    }
+    
+    /* إضافة labels قبل كل خلية */
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(1)::before {
+        content: "🔤 الكلمة الإنجليزية: ";
+        font-weight: bold;
+        color: #667eea;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(2)::before {
+        content: "🇸🇦 الترجمة العربية: ";
+        font-weight: bold;
+        color: #27ae60;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(3)::before {
+        content: "🗣 طريقة النطق: ";
+        font-weight: bold;
+        color: #e74c3c;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(4) {
+        text-align: center;
+        padding: 1rem 0 0 0;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(4)::before {
+        content: "";
+        display: none;
+    }
+    
+    /* للجمل */
+    .sentences-table tbody tr:not(.category-header) td:nth-child(1)::before {
+        content: "🇬🇧 الجملة الإنجليزية: ";
+        font-weight: bold;
+        color: #667eea;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    
+    .sentences-table tbody tr:not(.category-header) td:nth-child(2)::before {
+        content: "🇸🇦 الترجمة العربية: ";
+        font-weight: bold;
+        color: #27ae60;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    
+    /* تنسيق أزرار الحفظ */
+    .save-btn {
+        width: 100%;
+        padding: 0.8rem 1rem !important;
+        font-size: 1rem !important;
+        border-radius: 12px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .save-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    
+    .save-btn.saved {
+        background: linear-gradient(45deg, #2ecc71, #27ae60);
+    }
+    
+    /* إزالة overflow */
+    .table-wrapper {
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+    }
+    
+    .vocabulary-table,
+    .sentences-table {
         width: 100% !important;
-        max-width: 100% !important;
-        display: table !important;
-        table-layout: fixed !important;
-        border-collapse: collapse !important;
+        display: block;
     }
     
-    /* تصغير حجم الخط والحشو */
-    .vocabulary-table th,
-    .vocabulary-table td {
-        padding: 0.3rem 0.1rem !important;
-        font-size: 0.7rem !important;
-        word-wrap: break-word !important;
-        white-space: normal !important;
-        line-height: 1.2 !important;
-        overflow: hidden !important;
-    }
-    
-    /* توزيع عرض الأعمدة - النسب الجديدة */
-    .vocabulary-table th:nth-child(1),
-    .vocabulary-table td:nth-child(1) {
-        width: 25% !important;
-    }
-    
-    .vocabulary-table th:nth-child(2),
-    .vocabulary-table td:nth-child(2) {
-        width: 25% !important;
-    }
-    
-    .vocabulary-table th:nth-child(3),
-    .vocabulary-table td:nth-child(3) {
-        width: 25% !important;
-        font-size: 0.65rem !important;
-    }
-    
-    .vocabulary-table th:nth-child(4),
-    .vocabulary-table td:nth-child(4) {
-        width: 10% !important;
-        text-align: center !important;
-        padding: 0.1rem !important;
-    }
-    
-    /* تصغير حجم الأزرار */
-    .vocabulary-table button {
-        padding: 0.2rem 0.25rem !important;
-        font-size: 0.6rem !important;
-        white-space: nowrap !important;
+    .vocabulary-table tbody,
+    .sentences-table tbody {
+        display: block;
+        width: 100%;
     }
 }
 
 /* للشاشات الصغيرة جداً */
 @media (max-width: 480px) {
-    .vocabulary-container {
-        margin: 80px 1px 20px;
-        padding: 0 1px;
+    .vocabulary-table tbody tr:not(.category-header) td,
+    .sentences-table tbody tr:not(.category-header) td {
+        font-size: 0.95rem !important;
     }
     
-    .vocabulary-table th,
-    .vocabulary-table td {
-        padding: 0.25rem 0.05rem !important;
-        font-size: 0.65rem !important;
-    }
-    
-    .vocabulary-table th:nth-child(1),
-    .vocabulary-table td:nth-child(1) {
-        width: 25% !important;
-    }
-    
-    .vocabulary-table th:nth-child(2),
-    .vocabulary-table td:nth-child(2) {
-        width: 25% !important;
-    }
-    
-    .vocabulary-table th:nth-child(3),
-    .vocabulary-table td:nth-child(3) {
-        width: 25% !important;
-        font-size: 0.6rem !important;
-    }
-    
-    .vocabulary-table th:nth-child(4),
-    .vocabulary-table td:nth-child(4) {
-        width: 10% !important;
-    }
-    
-    .vocabulary-table button {
-        padding: 0.15rem 0.2rem !important;
-        font-size: 0.55rem !important;
-    }
-}
-
-/* تحسين عرض الجداول في صفحات الجمل */
-@media (max-width: 768px) {
-    .sentences-container {
-        margin: 80px 2px 20px;
-        padding: 0 2px;
-        overflow-x: hidden !important;
-    }
-    
-    .sentences-table {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: table !important;
-        table-layout: fixed !important;
-    }
-    
-    .sentences-table th,
-    .sentences-table td {
-        padding: 0.3rem 0.1rem !important;
-        font-size: 0.7rem !important;
-        word-wrap: break-word !important;
-        white-space: normal !important;
-        line-height: 1.2 !important;
-    }
-    
-    .sentences-table th:nth-child(1),
-    .sentences-table td:nth-child(1) {
-        width: 45% !important;
-    }
-    
-    .sentences-table th:nth-child(2),
-    .sentences-table td:nth-child(2) {
-        width: 40% !important;
-    }
-    
-    .sentences-table th:nth-child(3),
-    .sentences-table td:nth-child(3) {
-        width: 15% !important;
-        text-align: center !important;
-    }
-    
-    .sentences-table button {
-        padding: 0.2rem 0.25rem !important;
-        font-size: 0.6rem !important;
+    .save-btn {
+        font-size: 0.95rem !important;
+        padding: 0.7rem 0.9rem !important;
     }
 }
