@@ -191,17 +191,30 @@ body {
         border-collapse: collapse !important;
     }
     
-    /* للمفردات - 3 أعمدة */
+    /* للمفردات - 4 أعمدة */
     .vocabulary-table th:nth-child(1),
     .vocabulary-table td:nth-child(1) {
-        width: 30% !important;
-        max-width: 30% !important;
+        width: 25% !important;
+        max-width: 25% !important;
     }
     
     .vocabulary-table th:nth-child(2),
     .vocabulary-table td:nth-child(2) {
-        width: 35% !important;
-        max-width: 35% !important;
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        width: 20% !important;
+        max-width: 20% !important;
+        text-align: center !important;
     }
     
     .vocabulary-table th:nth-child(3),
@@ -279,17 +292,30 @@ body {
         border-collapse: collapse !important;
     }
     
-    /* للمفردات - 3 أعمدة */
+    /* للمفردات - 4 أعمدة */
     .vocabulary-table th:nth-child(1),
     .vocabulary-table td:nth-child(1) {
-        width: 30% !important;
-        max-width: 30% !important;
+        width: 25% !important;
+        max-width: 25% !important;
     }
     
     .vocabulary-table th:nth-child(2),
     .vocabulary-table td:nth-child(2) {
-        width: 35% !important;
-        max-width: 35% !important;
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        width: 20% !important;
+        max-width: 20% !important;
+        text-align: center !important;
     }
     
     .vocabulary-table th:nth-child(3),
@@ -342,6 +368,35 @@ body {
     }
 }
 
+
+    .save-btn {
+        padding: 0.4rem 0.6rem;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .save-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    
+    .save-btn.saved {
+        background: linear-gradient(45deg, #2ecc71, #27ae60);
+    }
+    
+    @media (max-width: 768px) {
+        .save-btn {
+            padding: 0.3rem 0.4rem;
+            font-size: 0.7rem;
+        }
+    }
+
 </style>
 </head>
 <body data-level="b2" data-type="vocab">
@@ -360,6 +415,7 @@ body {
                     <th>الكلمة الإنجليزية</th>
                     <th>الترجمة العربية</th>
                     <th>طريقة النطق</th>
+                    <th>الحفظ</th>
 </tr>
             </thead>
             <tbody>
@@ -372,120 +428,160 @@ body {
                     <td>استحواذ، شراء شركة</td>
                     <td>أكويزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="2" onclick="window.SaveSystem.save('b2', 'vocab', 2)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="2" onclick="window.SaveSystem.save('b2', 'vocab', 2)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Benchmarking</strong></td>
                     <td>قياس الأداء مقارنة بالمعايير</td>
                     <td>بينتش ماركينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="3" onclick="window.SaveSystem.save('b2', 'vocab', 3)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="3" onclick="window.SaveSystem.save('b2', 'vocab', 3)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Consolidation</strong></td>
                     <td>توحيد، دمج</td>
                     <td>كونسوليديشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="4" onclick="window.SaveSystem.save('b2', 'vocab', 4)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="4" onclick="window.SaveSystem.save('b2', 'vocab', 4)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Diversification</strong></td>
                     <td>تنويع الاستثمارات</td>
                     <td>دايفرسيفيكيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="5" onclick="window.SaveSystem.save('b2', 'vocab', 5)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="5" onclick="window.SaveSystem.save('b2', 'vocab', 5)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Entrepreneur</strong></td>
                     <td>رائد أعمال</td>
                     <td>أنتربرينور</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="6" onclick="window.SaveSystem.save('b2', 'vocab', 6)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="6" onclick="window.SaveSystem.save('b2', 'vocab', 6)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Feasibility</strong></td>
                     <td>جدوى، إمكانية التنفيذ</td>
                     <td>فيزيبيليتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="7" onclick="window.SaveSystem.save('b2', 'vocab', 7)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="7" onclick="window.SaveSystem.save('b2', 'vocab', 7)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Governance</strong></td>
                     <td>حوكمة، إدارة رشيدة</td>
                     <td>غفرننس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="8" onclick="window.SaveSystem.save('b2', 'vocab', 8)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="8" onclick="window.SaveSystem.save('b2', 'vocab', 8)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hierarchy</strong></td>
                     <td>تسلسل هرمي</td>
                     <td>هايراركي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="9" onclick="window.SaveSystem.save('b2', 'vocab', 9)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="9" onclick="window.SaveSystem.save('b2', 'vocab', 9)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Innovation</strong></td>
                     <td>ابتكار، إبداع</td>
                     <td>إنوفيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="10" onclick="window.SaveSystem.save('b2', 'vocab', 10)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="10" onclick="window.SaveSystem.save('b2', 'vocab', 10)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Jurisdiction</strong></td>
                     <td>اختصاص قانوني</td>
                     <td>جوريسديكشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="11" onclick="window.SaveSystem.save('b2', 'vocab', 11)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="11" onclick="window.SaveSystem.save('b2', 'vocab', 11)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Leverage</strong></td>
                     <td>رافعة مالية، استفادة</td>
                     <td>ليفيريج</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="12" onclick="window.SaveSystem.save('b2', 'vocab', 12)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="12" onclick="window.SaveSystem.save('b2', 'vocab', 12)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Merger</strong></td>
                     <td>اندماج شركات</td>
                     <td>مرجر</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="13" onclick="window.SaveSystem.save('b2', 'vocab', 13)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="13" onclick="window.SaveSystem.save('b2', 'vocab', 13)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Negotiation</strong></td>
                     <td>تفاوض، مفاوضة</td>
                     <td>نيغوسييشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="14" onclick="window.SaveSystem.save('b2', 'vocab', 14)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="14" onclick="window.SaveSystem.save('b2', 'vocab', 14)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Optimization</strong></td>
                     <td>تحسين، تطوير</td>
                     <td>أوبتيمايزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="15" onclick="window.SaveSystem.save('b2', 'vocab', 15)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="15" onclick="window.SaveSystem.save('b2', 'vocab', 15)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Partnership</strong></td>
                     <td>شراكة تجارية</td>
                     <td>بارتنرشيب</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="16" onclick="window.SaveSystem.save('b2', 'vocab', 16)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="16" onclick="window.SaveSystem.save('b2', 'vocab', 16)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Quarterly</strong></td>
                     <td>ربع سنوي</td>
                     <td>كوارترلي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="17" onclick="window.SaveSystem.save('b2', 'vocab', 17)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="17" onclick="window.SaveSystem.save('b2', 'vocab', 17)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Restructuring</strong></td>
                     <td>إعادة هيكلة</td>
                     <td>ريستراكتشرينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="18" onclick="window.SaveSystem.save('b2', 'vocab', 18)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="18" onclick="window.SaveSystem.save('b2', 'vocab', 18)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Sustainability</strong></td>
                     <td>استدامة</td>
                     <td>سوستينابيليتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="19" onclick="window.SaveSystem.save('b2', 'vocab', 19)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="19" onclick="window.SaveSystem.save('b2', 'vocab', 19)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Transformation</strong></td>
                     <td>تحول جذري</td>
                     <td>ترانسفورميشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="20" onclick="window.SaveSystem.save('b2', 'vocab', 20)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="20" onclick="window.SaveSystem.save('b2', 'vocab', 20)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Utilization</strong></td>
                     <td>استخدام، استغلال</td>
                     <td>يوتيليزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="21" onclick="window.SaveSystem.save('b2', 'vocab', 21)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="21" onclick="window.SaveSystem.save('b2', 'vocab', 21)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- Advanced Financial & Accounting Terms -->
@@ -497,120 +593,160 @@ body {
                     <td>إطفاء الدين</td>
                     <td>أمورتايزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="22" onclick="window.SaveSystem.save('b2', 'vocab', 22)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="22" onclick="window.SaveSystem.save('b2', 'vocab', 22)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Bankruptcy</strong></td>
                     <td>إفلاس</td>
                     <td>بانكرابتسي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="23" onclick="window.SaveSystem.save('b2', 'vocab', 23)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="23" onclick="window.SaveSystem.save('b2', 'vocab', 23)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Collateral</strong></td>
                     <td>ضمان، رهن</td>
                     <td>كولاترال</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="24" onclick="window.SaveSystem.save('b2', 'vocab', 24)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="24" onclick="window.SaveSystem.save('b2', 'vocab', 24)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Depreciation</strong></td>
                     <td>انخفاض القيمة</td>
                     <td>ديبريسييشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="25" onclick="window.SaveSystem.save('b2', 'vocab', 25)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="25" onclick="window.SaveSystem.save('b2', 'vocab', 25)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Equity</strong></td>
                     <td>حقوق الملكية</td>
                     <td>إيكويتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="26" onclick="window.SaveSystem.save('b2', 'vocab', 26)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="26" onclick="window.SaveSystem.save('b2', 'vocab', 26)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Forecasting</strong></td>
                     <td>التنبؤ المالي</td>
                     <td>فوركاستينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="27" onclick="window.SaveSystem.save('b2', 'vocab', 27)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="27" onclick="window.SaveSystem.save('b2', 'vocab', 27)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Goodwill</strong></td>
                     <td>الشهرة التجارية</td>
                     <td>غود ويل</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="28" onclick="window.SaveSystem.save('b2', 'vocab', 28)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="28" onclick="window.SaveSystem.save('b2', 'vocab', 28)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hedging</strong></td>
                     <td>التحوط المالي</td>
                     <td>هيدجينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="29" onclick="window.SaveSystem.save('b2', 'vocab', 29)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="29" onclick="window.SaveSystem.save('b2', 'vocab', 29)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Inflation</strong></td>
                     <td>تضخم اقتصادي</td>
                     <td>إنفليشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="30" onclick="window.SaveSystem.save('b2', 'vocab', 30)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="30" onclick="window.SaveSystem.save('b2', 'vocab', 30)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Junk Bond</strong></td>
                     <td>سند عالي المخاطر</td>
                     <td>جانك بوند</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="31" onclick="window.SaveSystem.save('b2', 'vocab', 31)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="31" onclick="window.SaveSystem.save('b2', 'vocab', 31)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Liquidity</strong></td>
                     <td>سيولة مالية</td>
                     <td>ليكويديتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="32" onclick="window.SaveSystem.save('b2', 'vocab', 32)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="32" onclick="window.SaveSystem.save('b2', 'vocab', 32)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Margin</strong></td>
                     <td>هامش ربح</td>
                     <td>مارجن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="33" onclick="window.SaveSystem.save('b2', 'vocab', 33)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="33" onclick="window.SaveSystem.save('b2', 'vocab', 33)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Nominal</strong></td>
                     <td>اسمي، رمزي</td>
                     <td>نومينال</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="34" onclick="window.SaveSystem.save('b2', 'vocab', 34)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="34" onclick="window.SaveSystem.save('b2', 'vocab', 34)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Overhead</strong></td>
                     <td>تكاليف عامة</td>
                     <td>أوفرهيد</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="35" onclick="window.SaveSystem.save('b2', 'vocab', 35)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="35" onclick="window.SaveSystem.save('b2', 'vocab', 35)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Portfolio</strong></td>
                     <td>محفظة استثمارية</td>
                     <td>بورتفوليو</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="36" onclick="window.SaveSystem.save('b2', 'vocab', 36)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="36" onclick="window.SaveSystem.save('b2', 'vocab', 36)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Quantitative</strong></td>
                     <td>كمي، رقمي</td>
                     <td>كوانتيتيتيف</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="37" onclick="window.SaveSystem.save('b2', 'vocab', 37)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="37" onclick="window.SaveSystem.save('b2', 'vocab', 37)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Recession</strong></td>
                     <td>ركود اقتصادي</td>
                     <td>ريسيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="38" onclick="window.SaveSystem.save('b2', 'vocab', 38)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="38" onclick="window.SaveSystem.save('b2', 'vocab', 38)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Subsidiary</strong></td>
                     <td>شركة تابعة</td>
                     <td>سابسيدياري</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="39" onclick="window.SaveSystem.save('b2', 'vocab', 39)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="39" onclick="window.SaveSystem.save('b2', 'vocab', 39)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Taxation</strong></td>
                     <td>نظام الضرائب</td>
                     <td>تاكسيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="40" onclick="window.SaveSystem.save('b2', 'vocab', 40)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="40" onclick="window.SaveSystem.save('b2', 'vocab', 40)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Underwriting</strong></td>
                     <td>ضمان الاكتتاب</td>
                     <td>أندررايتينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="41" onclick="window.SaveSystem.save('b2', 'vocab', 41)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="41" onclick="window.SaveSystem.save('b2', 'vocab', 41)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- Advanced Marketing & Sales Terms -->
@@ -622,120 +758,160 @@ body {
                     <td>تحليلات البيانات</td>
                     <td>أناليتيكس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="42" onclick="window.SaveSystem.save('b2', 'vocab', 42)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="42" onclick="window.SaveSystem.save('b2', 'vocab', 42)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Branding</strong></td>
                     <td>بناء العلامة التجارية</td>
                     <td>براندينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="43" onclick="window.SaveSystem.save('b2', 'vocab', 43)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="43" onclick="window.SaveSystem.save('b2', 'vocab', 43)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Conversion</strong></td>
                     <td>تحويل العملاء</td>
                     <td>كونفرشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="44" onclick="window.SaveSystem.save('b2', 'vocab', 44)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="44" onclick="window.SaveSystem.save('b2', 'vocab', 44)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Demographics</strong></td>
                     <td>التركيبة السكانية</td>
                     <td>ديموغرافيكس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="45" onclick="window.SaveSystem.save('b2', 'vocab', 45)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="45" onclick="window.SaveSystem.save('b2', 'vocab', 45)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Engagement</strong></td>
                     <td>مشاركة العملاء</td>
                     <td>إنغيجمنت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="46" onclick="window.SaveSystem.save('b2', 'vocab', 46)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="46" onclick="window.SaveSystem.save('b2', 'vocab', 46)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Funnel</strong></td>
                     <td>قمع المبيعات</td>
                     <td>فانل</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="47" onclick="window.SaveSystem.save('b2', 'vocab', 47)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="47" onclick="window.SaveSystem.save('b2', 'vocab', 47)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Guerrilla Marketing</strong></td>
                     <td>تسويق حرب العصابات</td>
                     <td>غيريلا ماركتينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="48" onclick="window.SaveSystem.save('b2', 'vocab', 48)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="48" onclick="window.SaveSystem.save('b2', 'vocab', 48)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hashtag</strong></td>
                     <td>وسم إلكتروني</td>
                     <td>هاشتاغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="49" onclick="window.SaveSystem.save('b2', 'vocab', 49)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="49" onclick="window.SaveSystem.save('b2', 'vocab', 49)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Influencer</strong></td>
                     <td>مؤثر على وسائل التواصل</td>
                     <td>إنفلوينسر</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="50" onclick="window.SaveSystem.save('b2', 'vocab', 50)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="50" onclick="window.SaveSystem.save('b2', 'vocab', 50)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Jingle</strong></td>
                     <td>نغمة إعلانية</td>
                     <td>جينغل</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="51" onclick="window.SaveSystem.save('b2', 'vocab', 51)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="51" onclick="window.SaveSystem.save('b2', 'vocab', 51)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Keywords</strong></td>
                     <td>كلمات مفتاحية</td>
                     <td>كي وردز</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="52" onclick="window.SaveSystem.save('b2', 'vocab', 52)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="52" onclick="window.SaveSystem.save('b2', 'vocab', 52)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Lead Generation</strong></td>
                     <td>توليد العملاء المحتملين</td>
                     <td>ليد جينيريشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="53" onclick="window.SaveSystem.save('b2', 'vocab', 53)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="53" onclick="window.SaveSystem.save('b2', 'vocab', 53)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Metrics</strong></td>
                     <td>مقاييس الأداء</td>
                     <td>ميتريكس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="54" onclick="window.SaveSystem.save('b2', 'vocab', 54)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="54" onclick="window.SaveSystem.save('b2', 'vocab', 54)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Niche Market</strong></td>
                     <td>سوق متخصص</td>
                     <td>نيش ماركت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="55" onclick="window.SaveSystem.save('b2', 'vocab', 55)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="55" onclick="window.SaveSystem.save('b2', 'vocab', 55)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Omnichannel</strong></td>
                     <td>متعدد القنوات</td>
                     <td>أومني تشانل</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="56" onclick="window.SaveSystem.save('b2', 'vocab', 56)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="56" onclick="window.SaveSystem.save('b2', 'vocab', 56)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Personalization</strong></td>
                     <td>تخصيص المحتوى</td>
                     <td>برسونالايزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="57" onclick="window.SaveSystem.save('b2', 'vocab', 57)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="57" onclick="window.SaveSystem.save('b2', 'vocab', 57)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Quality Assurance</strong></td>
                     <td>ضمان الجودة</td>
                     <td>كواليتي أشورانس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="58" onclick="window.SaveSystem.save('b2', 'vocab', 58)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="58" onclick="window.SaveSystem.save('b2', 'vocab', 58)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Retention</strong></td>
                     <td>الاحتفاظ بالعملاء</td>
                     <td>ريتنشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="59" onclick="window.SaveSystem.save('b2', 'vocab', 59)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="59" onclick="window.SaveSystem.save('b2', 'vocab', 59)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Segmentation</strong></td>
                     <td>تقسيم السوق</td>
                     <td>سيغمنتيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="60" onclick="window.SaveSystem.save('b2', 'vocab', 60)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="60" onclick="window.SaveSystem.save('b2', 'vocab', 60)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Targeting</strong></td>
                     <td>استهداف العملاء</td>
                     <td>تارغيتينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="61" onclick="window.SaveSystem.save('b2', 'vocab', 61)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="61" onclick="window.SaveSystem.save('b2', 'vocab', 61)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- Technology & Digital Terms -->
@@ -747,120 +923,160 @@ body {
                     <td>خوارزمية</td>
                     <td>ألغوريذم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="62" onclick="window.SaveSystem.save('b2', 'vocab', 62)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="62" onclick="window.SaveSystem.save('b2', 'vocab', 62)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Blockchain</strong></td>
                     <td>سلسلة الكتل</td>
                     <td>بلوك تشين</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="63" onclick="window.SaveSystem.save('b2', 'vocab', 63)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="63" onclick="window.SaveSystem.save('b2', 'vocab', 63)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Cloud Computing</strong></td>
                     <td>الحوسبة السحابية</td>
                     <td>كلاود كومبيوتينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="64" onclick="window.SaveSystem.save('b2', 'vocab', 64)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="64" onclick="window.SaveSystem.save('b2', 'vocab', 64)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Database</strong></td>
                     <td>قاعدة بيانات</td>
                     <td>ديتابيس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="65" onclick="window.SaveSystem.save('b2', 'vocab', 65)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="65" onclick="window.SaveSystem.save('b2', 'vocab', 65)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Encryption</strong></td>
                     <td>تشفير البيانات</td>
                     <td>إنكريبشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="66" onclick="window.SaveSystem.save('b2', 'vocab', 66)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="66" onclick="window.SaveSystem.save('b2', 'vocab', 66)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Firewall</strong></td>
                     <td>جدار حماية</td>
                     <td>فاير وول</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="67" onclick="window.SaveSystem.save('b2', 'vocab', 67)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="67" onclick="window.SaveSystem.save('b2', 'vocab', 67)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Gateway</strong></td>
                     <td>بوابة إلكترونية</td>
                     <td>غيت وي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="68" onclick="window.SaveSystem.save('b2', 'vocab', 68)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="68" onclick="window.SaveSystem.save('b2', 'vocab', 68)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hardware</strong></td>
                     <td>عتاد الحاسوب</td>
                     <td>هارد وير</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="69" onclick="window.SaveSystem.save('b2', 'vocab', 69)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="69" onclick="window.SaveSystem.save('b2', 'vocab', 69)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Interface</strong></td>
                     <td>واجهة المستخدم</td>
                     <td>إنترفيس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="70" onclick="window.SaveSystem.save('b2', 'vocab', 70)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="70" onclick="window.SaveSystem.save('b2', 'vocab', 70)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>JavaScript</strong></td>
                     <td>لغة برمجة جافا سكريبت</td>
                     <td>جافا سكريبت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="71" onclick="window.SaveSystem.save('b2', 'vocab', 71)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="71" onclick="window.SaveSystem.save('b2', 'vocab', 71)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Kernel</strong></td>
                     <td>نواة النظام</td>
                     <td>كيرنل</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="72" onclick="window.SaveSystem.save('b2', 'vocab', 72)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="72" onclick="window.SaveSystem.save('b2', 'vocab', 72)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Linux</strong></td>
                     <td>نظام تشغيل لينكس</td>
                     <td>لينكس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="73" onclick="window.SaveSystem.save('b2', 'vocab', 73)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="73" onclick="window.SaveSystem.save('b2', 'vocab', 73)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Malware</strong></td>
                     <td>برمجيات خبيثة</td>
                     <td>مال وير</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="74" onclick="window.SaveSystem.save('b2', 'vocab', 74)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="74" onclick="window.SaveSystem.save('b2', 'vocab', 74)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Network</strong></td>
                     <td>شبكة حاسوبية</td>
                     <td>نت وورك</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="75" onclick="window.SaveSystem.save('b2', 'vocab', 75)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="75" onclick="window.SaveSystem.save('b2', 'vocab', 75)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Operating System</strong></td>
                     <td>نظام التشغيل</td>
                     <td>أوبريتينغ سيستم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="76" onclick="window.SaveSystem.save('b2', 'vocab', 76)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="76" onclick="window.SaveSystem.save('b2', 'vocab', 76)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Protocol</strong></td>
                     <td>بروتوكول اتصال</td>
                     <td>بروتوكول</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="77" onclick="window.SaveSystem.save('b2', 'vocab', 77)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="77" onclick="window.SaveSystem.save('b2', 'vocab', 77)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Query</strong></td>
                     <td>استعلام قاعدة بيانات</td>
                     <td>كويري</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="78" onclick="window.SaveSystem.save('b2', 'vocab', 78)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="78" onclick="window.SaveSystem.save('b2', 'vocab', 78)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Router</strong></td>
                     <td>موجه الشبكة</td>
                     <td>راوتر</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="79" onclick="window.SaveSystem.save('b2', 'vocab', 79)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="79" onclick="window.SaveSystem.save('b2', 'vocab', 79)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Software</strong></td>
                     <td>برمجيات الحاسوب</td>
                     <td>سوفت وير</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="80" onclick="window.SaveSystem.save('b2', 'vocab', 80)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="80" onclick="window.SaveSystem.save('b2', 'vocab', 80)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Troubleshooting</strong></td>
                     <td>استكشاف الأخطاء</td>
                     <td>ترابل شوتينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="81" onclick="window.SaveSystem.save('b2', 'vocab', 81)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="81" onclick="window.SaveSystem.save('b2', 'vocab', 81)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- Academic & Professional Terms -->
@@ -872,120 +1088,160 @@ body {
                     <td>ملخص بحثي</td>
                     <td>أبستراكت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="82" onclick="window.SaveSystem.save('b2', 'vocab', 82)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="82" onclick="window.SaveSystem.save('b2', 'vocab', 82)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Bibliography</strong></td>
                     <td>قائمة المراجع</td>
                     <td>بيبليوغرافي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="83" onclick="window.SaveSystem.save('b2', 'vocab', 83)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="83" onclick="window.SaveSystem.save('b2', 'vocab', 83)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Curriculum</strong></td>
                     <td>منهج دراسي</td>
                     <td>كوريكيولم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="84" onclick="window.SaveSystem.save('b2', 'vocab', 84)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="84" onclick="window.SaveSystem.save('b2', 'vocab', 84)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Dissertation</strong></td>
                     <td>أطروحة دكتوراه</td>
                     <td>ديسرتيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="85" onclick="window.SaveSystem.save('b2', 'vocab', 85)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="85" onclick="window.SaveSystem.save('b2', 'vocab', 85)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Empirical</strong></td>
                     <td>تجريبي، قائم على التجربة</td>
                     <td>إمبيريكال</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="86" onclick="window.SaveSystem.save('b2', 'vocab', 86)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="86" onclick="window.SaveSystem.save('b2', 'vocab', 86)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Faculty</strong></td>
                     <td>هيئة التدريس</td>
                     <td>فاكالتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="87" onclick="window.SaveSystem.save('b2', 'vocab', 87)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="87" onclick="window.SaveSystem.save('b2', 'vocab', 87)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Graduate</strong></td>
                     <td>خريج جامعي</td>
                     <td>غراديويت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="88" onclick="window.SaveSystem.save('b2', 'vocab', 88)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="88" onclick="window.SaveSystem.save('b2', 'vocab', 88)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hypothesis</strong></td>
                     <td>فرضية علمية</td>
                     <td>هايبوثيسيس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="89" onclick="window.SaveSystem.save('b2', 'vocab', 89)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="89" onclick="window.SaveSystem.save('b2', 'vocab', 89)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Interdisciplinary</strong></td>
                     <td>متعدد التخصصات</td>
                     <td>إنتر ديسيبليناري</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="90" onclick="window.SaveSystem.save('b2', 'vocab', 90)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="90" onclick="window.SaveSystem.save('b2', 'vocab', 90)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Journal</strong></td>
                     <td>مجلة علمية</td>
                     <td>جورنال</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="91" onclick="window.SaveSystem.save('b2', 'vocab', 91)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="91" onclick="window.SaveSystem.save('b2', 'vocab', 91)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Knowledge</strong></td>
                     <td>معرفة، علم</td>
                     <td>نولدج</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="92" onclick="window.SaveSystem.save('b2', 'vocab', 92)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="92" onclick="window.SaveSystem.save('b2', 'vocab', 92)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Laboratory</strong></td>
                     <td>مختبر علمي</td>
                     <td>لابوراتوري</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="93" onclick="window.SaveSystem.save('b2', 'vocab', 93)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="93" onclick="window.SaveSystem.save('b2', 'vocab', 93)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Methodology</strong></td>
                     <td>منهجية البحث</td>
                     <td>ميثودولوجي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="94" onclick="window.SaveSystem.save('b2', 'vocab', 94)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="94" onclick="window.SaveSystem.save('b2', 'vocab', 94)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Nomenclature</strong></td>
                     <td>نظام التسمية</td>
                     <td>نومنكليتشر</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="95" onclick="window.SaveSystem.save('b2', 'vocab', 95)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="95" onclick="window.SaveSystem.save('b2', 'vocab', 95)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Objective</strong></td>
                     <td>هدف، موضوعي</td>
                     <td>أوبجيكتيف</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="96" onclick="window.SaveSystem.save('b2', 'vocab', 96)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="96" onclick="window.SaveSystem.save('b2', 'vocab', 96)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Peer Review</strong></td>
                     <td>مراجعة الأقران</td>
                     <td>بير ريفيو</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="97" onclick="window.SaveSystem.save('b2', 'vocab', 97)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="97" onclick="window.SaveSystem.save('b2', 'vocab', 97)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Qualitative</strong></td>
                     <td>نوعي، وصفي</td>
                     <td>كواليتيتيف</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="98" onclick="window.SaveSystem.save('b2', 'vocab', 98)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="98" onclick="window.SaveSystem.save('b2', 'vocab', 98)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Research</strong></td>
                     <td>بحث علمي</td>
                     <td>ريسيرش</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="99" onclick="window.SaveSystem.save('b2', 'vocab', 99)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="99" onclick="window.SaveSystem.save('b2', 'vocab', 99)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Symposium</strong></td>
                     <td>ندوة علمية</td>
                     <td>سيمبوزيوم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="100" onclick="window.SaveSystem.save('b2', 'vocab', 100)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="100" onclick="window.SaveSystem.save('b2', 'vocab', 100)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Thesis</strong></td>
                     <td>أطروحة، رسالة</td>
                     <td>ثيسيس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="101" onclick="window.SaveSystem.save('b2', 'vocab', 101)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="101" onclick="window.SaveSystem.save('b2', 'vocab', 101)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- Legal & Regulatory Terms -->
@@ -997,120 +1253,160 @@ body {
                     <td>تحكيم قانوني</td>
                     <td>أربيتريشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="102" onclick="window.SaveSystem.save('b2', 'vocab', 102)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="102" onclick="window.SaveSystem.save('b2', 'vocab', 102)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Breach</strong></td>
                     <td>خرق، انتهاك</td>
                     <td>بريتش</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="103" onclick="window.SaveSystem.save('b2', 'vocab', 103)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="103" onclick="window.SaveSystem.save('b2', 'vocab', 103)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Compliance</strong></td>
                     <td>امتثال للقوانين</td>
                     <td>كومبلاينس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="104" onclick="window.SaveSystem.save('b2', 'vocab', 104)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="104" onclick="window.SaveSystem.save('b2', 'vocab', 104)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Defendant</strong></td>
                     <td>المدعى عليه</td>
                     <td>ديفندنت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="105" onclick="window.SaveSystem.save('b2', 'vocab', 105)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="105" onclick="window.SaveSystem.save('b2', 'vocab', 105)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Evidence</strong></td>
                     <td>دليل قانوني</td>
                     <td>إيفيدنس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="106" onclick="window.SaveSystem.save('b2', 'vocab', 106)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="106" onclick="window.SaveSystem.save('b2', 'vocab', 106)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Fraud</strong></td>
                     <td>احتيال، نصب</td>
                     <td>فراود</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="107" onclick="window.SaveSystem.save('b2', 'vocab', 107)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="107" onclick="window.SaveSystem.save('b2', 'vocab', 107)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Guarantee</strong></td>
                     <td>ضمان، كفالة</td>
                     <td>غارانتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="108" onclick="window.SaveSystem.save('b2', 'vocab', 108)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="108" onclick="window.SaveSystem.save('b2', 'vocab', 108)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hearing</strong></td>
                     <td>جلسة استماع</td>
                     <td>هيرينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="109" onclick="window.SaveSystem.save('b2', 'vocab', 109)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="109" onclick="window.SaveSystem.save('b2', 'vocab', 109)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Injunction</strong></td>
                     <td>أمر قضائي</td>
                     <td>إنجانكشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="110" onclick="window.SaveSystem.save('b2', 'vocab', 110)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="110" onclick="window.SaveSystem.save('b2', 'vocab', 110)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Judgment</strong></td>
                     <td>حكم قضائي</td>
                     <td>جادجمنت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="111" onclick="window.SaveSystem.save('b2', 'vocab', 111)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="111" onclick="window.SaveSystem.save('b2', 'vocab', 111)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Kidnapping</strong></td>
                     <td>اختطاف</td>
                     <td>كيدنابينغ</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="112" onclick="window.SaveSystem.save('b2', 'vocab', 112)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="112" onclick="window.SaveSystem.save('b2', 'vocab', 112)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Liability</strong></td>
                     <td>مسؤولية قانونية</td>
                     <td>لايابيليتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="113" onclick="window.SaveSystem.save('b2', 'vocab', 113)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="113" onclick="window.SaveSystem.save('b2', 'vocab', 113)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Misdemeanor</strong></td>
                     <td>جنحة</td>
                     <td>ميسديمينر</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="114" onclick="window.SaveSystem.save('b2', 'vocab', 114)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="114" onclick="window.SaveSystem.save('b2', 'vocab', 114)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Negligence</strong></td>
                     <td>إهمال قانوني</td>
                     <td>نيغليجنس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="115" onclick="window.SaveSystem.save('b2', 'vocab', 115)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="115" onclick="window.SaveSystem.save('b2', 'vocab', 115)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Ordinance</strong></td>
                     <td>مرسوم، قانون محلي</td>
                     <td>أوردينانس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="116" onclick="window.SaveSystem.save('b2', 'vocab', 116)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="116" onclick="window.SaveSystem.save('b2', 'vocab', 116)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Plaintiff</strong></td>
                     <td>المدعي</td>
                     <td>بلينتيف</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="117" onclick="window.SaveSystem.save('b2', 'vocab', 117)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="117" onclick="window.SaveSystem.save('b2', 'vocab', 117)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Quorum</strong></td>
                     <td>النصاب القانوني</td>
                     <td>كوورم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="118" onclick="window.SaveSystem.save('b2', 'vocab', 118)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="118" onclick="window.SaveSystem.save('b2', 'vocab', 118)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Regulation</strong></td>
                     <td>لائحة تنظيمية</td>
                     <td>ريغيوليشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="119" onclick="window.SaveSystem.save('b2', 'vocab', 119)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="119" onclick="window.SaveSystem.save('b2', 'vocab', 119)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Statute</strong></td>
                     <td>قانون مكتوب</td>
                     <td>ستاتيوت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="120" onclick="window.SaveSystem.save('b2', 'vocab', 120)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="120" onclick="window.SaveSystem.save('b2', 'vocab', 120)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Testimony</strong></td>
                     <td>شهادة قانونية</td>
                     <td>تيستيموني</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="121" onclick="window.SaveSystem.save('b2', 'vocab', 121)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="121" onclick="window.SaveSystem.save('b2', 'vocab', 121)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- Environmental & Sustainability Terms -->
@@ -1122,120 +1418,160 @@ body {
                     <td>التنوع البيولوجي</td>
                     <td>بايو دايفرسيتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="122" onclick="window.SaveSystem.save('b2', 'vocab', 122)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="122" onclick="window.SaveSystem.save('b2', 'vocab', 122)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Carbon Footprint</strong></td>
                     <td>البصمة الكربونية</td>
                     <td>كاربن فوت برينت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="123" onclick="window.SaveSystem.save('b2', 'vocab', 123)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="123" onclick="window.SaveSystem.save('b2', 'vocab', 123)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Deforestation</strong></td>
                     <td>إزالة الغابات</td>
                     <td>ديفوريستيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="124" onclick="window.SaveSystem.save('b2', 'vocab', 124)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="124" onclick="window.SaveSystem.save('b2', 'vocab', 124)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Ecosystem</strong></td>
                     <td>النظام البيئي</td>
                     <td>إيكو سيستم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="125" onclick="window.SaveSystem.save('b2', 'vocab', 125)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="125" onclick="window.SaveSystem.save('b2', 'vocab', 125)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Fossil Fuels</strong></td>
                     <td>الوقود الأحفوري</td>
                     <td>فوسيل فيولز</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="126" onclick="window.SaveSystem.save('b2', 'vocab', 126)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="126" onclick="window.SaveSystem.save('b2', 'vocab', 126)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Greenhouse Effect</strong></td>
                     <td>الاحتباس الحراري</td>
                     <td>غرين هاوس إيفيكت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="127" onclick="window.SaveSystem.save('b2', 'vocab', 127)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="127" onclick="window.SaveSystem.save('b2', 'vocab', 127)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Habitat</strong></td>
                     <td>الموطن الطبيعي</td>
                     <td>هابيتات</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="128" onclick="window.SaveSystem.save('b2', 'vocab', 128)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="128" onclick="window.SaveSystem.save('b2', 'vocab', 128)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Irrigation</strong></td>
                     <td>الري الزراعي</td>
                     <td>إيريغيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="129" onclick="window.SaveSystem.save('b2', 'vocab', 129)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="129" onclick="window.SaveSystem.save('b2', 'vocab', 129)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Jeopardize</strong></td>
                     <td>يعرض للخطر</td>
                     <td>جيوباردايز</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="130" onclick="window.SaveSystem.save('b2', 'vocab', 130)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="130" onclick="window.SaveSystem.save('b2', 'vocab', 130)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Kyoto Protocol</strong></td>
                     <td>بروتوكول كيوتو</td>
                     <td>كيوتو بروتوكول</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="131" onclick="window.SaveSystem.save('b2', 'vocab', 131)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="131" onclick="window.SaveSystem.save('b2', 'vocab', 131)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Landfill</strong></td>
                     <td>مكب النفايات</td>
                     <td>لاند فيل</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="132" onclick="window.SaveSystem.save('b2', 'vocab', 132)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="132" onclick="window.SaveSystem.save('b2', 'vocab', 132)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Mitigation</strong></td>
                     <td>تخفيف الأثر</td>
                     <td>ميتيغيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="133" onclick="window.SaveSystem.save('b2', 'vocab', 133)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="133" onclick="window.SaveSystem.save('b2', 'vocab', 133)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Natural Resources</strong></td>
                     <td>الموارد الطبيعية</td>
                     <td>ناتشورال ريسورسيز</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="134" onclick="window.SaveSystem.save('b2', 'vocab', 134)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="134" onclick="window.SaveSystem.save('b2', 'vocab', 134)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Ozone Layer</strong></td>
                     <td>طبقة الأوزون</td>
                     <td>أوزون لاير</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="135" onclick="window.SaveSystem.save('b2', 'vocab', 135)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="135" onclick="window.SaveSystem.save('b2', 'vocab', 135)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Pollution</strong></td>
                     <td>التلوث البيئي</td>
                     <td>بولوشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="136" onclick="window.SaveSystem.save('b2', 'vocab', 136)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="136" onclick="window.SaveSystem.save('b2', 'vocab', 136)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Quarantine</strong></td>
                     <td>الحجر الصحي</td>
                     <td>كوارانتين</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="137" onclick="window.SaveSystem.save('b2', 'vocab', 137)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="137" onclick="window.SaveSystem.save('b2', 'vocab', 137)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Renewable Energy</strong></td>
                     <td>الطاقة المتجددة</td>
                     <td>رينيوابل إنرجي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="138" onclick="window.SaveSystem.save('b2', 'vocab', 138)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="138" onclick="window.SaveSystem.save('b2', 'vocab', 138)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Sustainability</strong></td>
                     <td>الاستدامة البيئية</td>
                     <td>سوستينابيليتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="139" onclick="window.SaveSystem.save('b2', 'vocab', 139)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="139" onclick="window.SaveSystem.save('b2', 'vocab', 139)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Toxic Waste</strong></td>
                     <td>النفايات السامة</td>
                     <td>توكسيك ويست</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="140" onclick="window.SaveSystem.save('b2', 'vocab', 140)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="140" onclick="window.SaveSystem.save('b2', 'vocab', 140)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Urbanization</strong></td>
                     <td>التحضر</td>
                     <td>أوربانايزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="141" onclick="window.SaveSystem.save('b2', 'vocab', 141)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="141" onclick="window.SaveSystem.save('b2', 'vocab', 141)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- Healthcare & Medical Terms -->
@@ -1247,120 +1583,160 @@ body {
                     <td>متنقل، غير مقعد</td>
                     <td>أمبيولاتوري</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="142" onclick="window.SaveSystem.save('b2', 'vocab', 142)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="142" onclick="window.SaveSystem.save('b2', 'vocab', 142)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Biopsy</strong></td>
                     <td>خزعة طبية</td>
                     <td>بايوبسي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="143" onclick="window.SaveSystem.save('b2', 'vocab', 143)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="143" onclick="window.SaveSystem.save('b2', 'vocab', 143)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Chronic</strong></td>
                     <td>مزمن</td>
                     <td>كرونيك</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="144" onclick="window.SaveSystem.save('b2', 'vocab', 144)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="144" onclick="window.SaveSystem.save('b2', 'vocab', 144)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Diagnosis</strong></td>
                     <td>تشخيص طبي</td>
                     <td>دايغنوسيس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="145" onclick="window.SaveSystem.save('b2', 'vocab', 145)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="145" onclick="window.SaveSystem.save('b2', 'vocab', 145)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Epidemic</strong></td>
                     <td>وباء</td>
                     <td>إيبيديميك</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="146" onclick="window.SaveSystem.save('b2', 'vocab', 146)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="146" onclick="window.SaveSystem.save('b2', 'vocab', 146)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Fracture</strong></td>
                     <td>كسر في العظم</td>
                     <td>فراكتشر</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="147" onclick="window.SaveSystem.save('b2', 'vocab', 147)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="147" onclick="window.SaveSystem.save('b2', 'vocab', 147)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Genetics</strong></td>
                     <td>علم الوراثة</td>
                     <td>جينيتيكس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="148" onclick="window.SaveSystem.save('b2', 'vocab', 148)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="148" onclick="window.SaveSystem.save('b2', 'vocab', 148)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hypertension</strong></td>
                     <td>ارتفاع ضغط الدم</td>
                     <td>هايبرتنشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="149" onclick="window.SaveSystem.save('b2', 'vocab', 149)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="149" onclick="window.SaveSystem.save('b2', 'vocab', 149)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Immunization</strong></td>
                     <td>التحصين</td>
                     <td>إيميونايزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="150" onclick="window.SaveSystem.save('b2', 'vocab', 150)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="150" onclick="window.SaveSystem.save('b2', 'vocab', 150)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Jaundice</strong></td>
                     <td>اليرقان</td>
                     <td>جونديس</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="151" onclick="window.SaveSystem.save('b2', 'vocab', 151)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="151" onclick="window.SaveSystem.save('b2', 'vocab', 151)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Kidney</strong></td>
                     <td>الكلية</td>
                     <td>كيدني</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="152" onclick="window.SaveSystem.save('b2', 'vocab', 152)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="152" onclick="window.SaveSystem.save('b2', 'vocab', 152)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Lymphatic</strong></td>
                     <td>لمفاوي</td>
                     <td>ليمفاتيك</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="153" onclick="window.SaveSystem.save('b2', 'vocab', 153)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="153" onclick="window.SaveSystem.save('b2', 'vocab', 153)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Metabolism</strong></td>
                     <td>عملية الأيض</td>
                     <td>ميتابوليزم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="154" onclick="window.SaveSystem.save('b2', 'vocab', 154)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="154" onclick="window.SaveSystem.save('b2', 'vocab', 154)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Neurological</strong></td>
                     <td>عصبي</td>
                     <td>نيورولوجيكال</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="155" onclick="window.SaveSystem.save('b2', 'vocab', 155)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="155" onclick="window.SaveSystem.save('b2', 'vocab', 155)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Orthopedic</strong></td>
                     <td>تقويم العظام</td>
                     <td>أورثوبيديك</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="156" onclick="window.SaveSystem.save('b2', 'vocab', 156)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="156" onclick="window.SaveSystem.save('b2', 'vocab', 156)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Pandemic</strong></td>
                     <td>جائحة</td>
                     <td>بانديميك</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="157" onclick="window.SaveSystem.save('b2', 'vocab', 157)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="157" onclick="window.SaveSystem.save('b2', 'vocab', 157)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Quarantine</strong></td>
                     <td>الحجر الصحي</td>
                     <td>كوارانتين</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="158" onclick="window.SaveSystem.save('b2', 'vocab', 158)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="158" onclick="window.SaveSystem.save('b2', 'vocab', 158)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Rehabilitation</strong></td>
                     <td>إعادة التأهيل</td>
                     <td>ريهابيليتيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="159" onclick="window.SaveSystem.save('b2', 'vocab', 159)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="159" onclick="window.SaveSystem.save('b2', 'vocab', 159)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Surgery</strong></td>
                     <td>جراحة طبية</td>
                     <td>سرجري</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="160" onclick="window.SaveSystem.save('b2', 'vocab', 160)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="160" onclick="window.SaveSystem.save('b2', 'vocab', 160)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Transplant</strong></td>
                     <td>زراعة عضو</td>
                     <td>ترانسبلانت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="161" onclick="window.SaveSystem.save('b2', 'vocab', 161)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="161" onclick="window.SaveSystem.save('b2', 'vocab', 161)">⭕ حفظ</button></td>
                 </tr>
 
                 <!-- International Relations & Politics -->
@@ -1372,120 +1748,160 @@ body {
                     <td>سفير</td>
                     <td>أمباسادور</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="162" onclick="window.SaveSystem.save('b2', 'vocab', 162)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="162" onclick="window.SaveSystem.save('b2', 'vocab', 162)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Bilateral</strong></td>
                     <td>ثنائي الأطراف</td>
                     <td>بايلاترال</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="163" onclick="window.SaveSystem.save('b2', 'vocab', 163)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="163" onclick="window.SaveSystem.save('b2', 'vocab', 163)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Coalition</strong></td>
                     <td>تحالف سياسي</td>
                     <td>كواليشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="164" onclick="window.SaveSystem.save('b2', 'vocab', 164)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="164" onclick="window.SaveSystem.save('b2', 'vocab', 164)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Diplomacy</strong></td>
                     <td>الدبلوماسية</td>
                     <td>ديبلوماسي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="165" onclick="window.SaveSystem.save('b2', 'vocab', 165)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="165" onclick="window.SaveSystem.save('b2', 'vocab', 165)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Embassy</strong></td>
                     <td>سفارة</td>
                     <td>إمباسي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="166" onclick="window.SaveSystem.save('b2', 'vocab', 166)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="166" onclick="window.SaveSystem.save('b2', 'vocab', 166)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Federation</strong></td>
                     <td>اتحاد فيدرالي</td>
                     <td>فيديريشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="167" onclick="window.SaveSystem.save('b2', 'vocab', 167)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="167" onclick="window.SaveSystem.save('b2', 'vocab', 167)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Globalization</strong></td>
                     <td>العولمة</td>
                     <td>غلوبالايزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="168" onclick="window.SaveSystem.save('b2', 'vocab', 168)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="168" onclick="window.SaveSystem.save('b2', 'vocab', 168)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Hegemony</strong></td>
                     <td>الهيمنة</td>
                     <td>هيجيموني</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="169" onclick="window.SaveSystem.save('b2', 'vocab', 169)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="169" onclick="window.SaveSystem.save('b2', 'vocab', 169)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Ideology</strong></td>
                     <td>أيديولوجية</td>
                     <td>آيديولوجي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="170" onclick="window.SaveSystem.save('b2', 'vocab', 170)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="170" onclick="window.SaveSystem.save('b2', 'vocab', 170)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Jurisdiction</strong></td>
                     <td>الاختصاص القضائي</td>
                     <td>جوريسديكشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="171" onclick="window.SaveSystem.save('b2', 'vocab', 171)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="171" onclick="window.SaveSystem.save('b2', 'vocab', 171)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Keynote</strong></td>
                     <td>كلمة رئيسية</td>
                     <td>كي نوت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="172" onclick="window.SaveSystem.save('b2', 'vocab', 172)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="172" onclick="window.SaveSystem.save('b2', 'vocab', 172)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Legislature</strong></td>
                     <td>السلطة التشريعية</td>
                     <td>ليجيسليتشر</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="173" onclick="window.SaveSystem.save('b2', 'vocab', 173)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="173" onclick="window.SaveSystem.save('b2', 'vocab', 173)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Multilateral</strong></td>
                     <td>متعدد الأطراف</td>
                     <td>مالتيلاترال</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="174" onclick="window.SaveSystem.save('b2', 'vocab', 174)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="174" onclick="window.SaveSystem.save('b2', 'vocab', 174)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Neutrality</strong></td>
                     <td>الحياد السياسي</td>
                     <td>نيوتراليتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="175" onclick="window.SaveSystem.save('b2', 'vocab', 175)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="175" onclick="window.SaveSystem.save('b2', 'vocab', 175)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Opposition</strong></td>
                     <td>المعارضة السياسية</td>
                     <td>أوبوزيشن</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="176" onclick="window.SaveSystem.save('b2', 'vocab', 176)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="176" onclick="window.SaveSystem.save('b2', 'vocab', 176)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Parliament</strong></td>
                     <td>البرلمان</td>
                     <td>بارليامنت</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="177" onclick="window.SaveSystem.save('b2', 'vocab', 177)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="177" onclick="window.SaveSystem.save('b2', 'vocab', 177)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Quota</strong></td>
                     <td>حصة، نسبة</td>
                     <td>كوتا</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="178" onclick="window.SaveSystem.save('b2', 'vocab', 178)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="178" onclick="window.SaveSystem.save('b2', 'vocab', 178)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Referendum</strong></td>
                     <td>استفتاء شعبي</td>
                     <td>ريفيريندوم</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="179" onclick="window.SaveSystem.save('b2', 'vocab', 179)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="179" onclick="window.SaveSystem.save('b2', 'vocab', 179)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Sovereignty</strong></td>
                     <td>السيادة الوطنية</td>
                     <td>سوفرينتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="180" onclick="window.SaveSystem.save('b2', 'vocab', 180)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="180" onclick="window.SaveSystem.save('b2', 'vocab', 180)">⭕ حفظ</button></td>
                 </tr>
                 <tr>
                     <td><strong>Treaty</strong></td>
                     <td>معاهدة دولية</td>
                     <td>تريتي</td>
                     
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="181" onclick="window.SaveSystem.save('b2', 'vocab', 181)">⭕ حفظ</button></td>
+                    <td><button class="save-btn" data-level="b2" data-type="vocab" data-index="181" onclick="window.SaveSystem.save('b2', 'vocab', 181)">⭕ حفظ</button></td>
                 </tr>
             </tbody>
         </table></div>
