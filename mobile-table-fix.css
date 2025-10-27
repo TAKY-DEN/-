@@ -70,6 +70,7 @@
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(1) {
         font-size: 1.2rem !important;
         font-weight: 600;
+        white-space: nowrap; /* منع التفاف النص */
     }
     
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(2)::before {
@@ -84,6 +85,7 @@
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(2) {
         font-size: 1.2rem !important;
         font-weight: 600;
+        white-space: nowrap; /* منع التفاف النص */
     }
     
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(3)::before {
@@ -98,6 +100,7 @@
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(3) {
         font-size: 0.95rem !important; /* خط أصغر للنطق */
         color: #666;
+        white-space: nowrap; /* منع التفاف النص */
     }
     
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(4) {
@@ -153,16 +156,7 @@
         transition: all 0.3s ease;
     }
     
-    /* إخفاء نص "حفظ" والإبقاء على الأيقونة فقط */
-    .save-btn::before {
-        content: "⭕";
-        font-size: 1.3rem;
-    }
-    
-    .save-btn.saved::before {
-        content: "✅";
-        font-size: 1.3rem;
-    }
+    /* تم حذف ::before - الزر الأساسي يعمل بدون أيقونة إضافية */
     
     .save-btn:hover {
         transform: translateY(-2px);
@@ -208,7 +202,5 @@
         padding: 0.8rem 0.9rem !important;
     }
     
-    .save-btn::before {
-        font-size: 1.2rem !important; /* حجم الأيقونة للشاشات الصغيرة */
-    }
+    /* تم حذف ::before للشاشات الصغيرة */
 }
