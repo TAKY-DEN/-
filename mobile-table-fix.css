@@ -1,0 +1,90 @@
+/* تحسين عرض الجداول على الموبايل */
+@media (max-width: 768px) {
+    /* جعل الجدول قابل للتمرير أفقياً */
+    .vocabulary-container {
+        margin: 80px 10px 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* تصغير حجم الخط والحشو */
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+    
+    /* تقليل عرض الأعمدة */
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        min-width: 80px; /* الكلمة الإنجليزية */
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        min-width: 80px; /* الترجمة */
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        min-width: 70px; /* النطق */
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        min-width: 60px; /* زر الحفظ */
+        text-align: center;
+    }
+    
+    /* تصغير حجم الأزرار */
+    .vocabulary-table button {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    /* إضافة مؤشر للتمرير */
+    .vocabulary-container::after {
+        content: "← مرر لليسار لرؤية المزيد";
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background: #f8f9fa;
+        font-size: 0.8rem;
+        color: #666;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.2rem;
+        font-size: 0.75rem;
+    }
+    
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        min-width: 70px;
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        min-width: 70px;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        min-width: 60px;
+    }
+    
+    .vocabulary-table th:nth-child(4),
+    .vocabulary-table td:nth-child(4) {
+        min-width: 50px;
+    }
+    
+    .vocabulary-table button {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.7rem;
+    }
+}
