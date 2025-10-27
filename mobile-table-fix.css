@@ -143,7 +143,7 @@
     .save-btn {
         width: 100%;
         padding: 0.9rem 1rem !important;
-        font-size: 1.1rem !important;
+        font-size: 0 !important; /* إخفاء النص الأصلي */
         border-radius: 12px;
         background: linear-gradient(45deg, #667eea, #764ba2);
         color: white;
@@ -204,7 +204,11 @@
     }
     
     .save-btn {
-        font-size: 1rem !important;
+        font-size: 0 !important; /* إخفاء النص الأصلي */
         padding: 0.8rem 0.9rem !important;
+    }
+    
+    .save-btn::before {
+        font-size: 1.2rem !important; /* حجم الأيقونة للشاشات الصغيرة */
     }
 }
