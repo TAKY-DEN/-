@@ -172,6 +172,168 @@ body {
     padding-top: 100px !important;
 }
 
+
+
+    
+    .vocabulary-table,
+    .sentences-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* للمفردات - 3 أعمدة */
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* للجمل - 2 أعمدة */
+    .sentences-table th:nth-child(1),
+    .sentences-table td:nth-child(1) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th:nth-child(2),
+    .sentences-table td:nth-child(2) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th,
+    .sentences-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .vocabulary-table th,
+    .vocabulary-table td,
+    .sentences-table th,
+    .sentences-table td {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.15rem !important;
+    }
+}
+
+
+/* تحسين الجداول على الموبايل - إصلاح نهائي */
+@media (max-width: 768px) {
+    .vocabulary-container,
+    .sentences-container {
+        margin: 80px 0 20px !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+    
+    .table-wrapper {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    .vocabulary-table,
+    .sentences-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* للمفردات - 3 أعمدة */
+    .vocabulary-table th:nth-child(1),
+    .vocabulary-table td:nth-child(1) {
+        width: 30% !important;
+        max-width: 30% !important;
+    }
+    
+    .vocabulary-table th:nth-child(2),
+    .vocabulary-table td:nth-child(2) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th:nth-child(3),
+    .vocabulary-table td:nth-child(3) {
+        width: 35% !important;
+        max-width: 35% !important;
+    }
+    
+    .vocabulary-table th,
+    .vocabulary-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* للجمل - 2 أعمدة */
+    .sentences-table th:nth-child(1),
+    .sentences-table td:nth-child(1) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th:nth-child(2),
+    .sentences-table td:nth-child(2) {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .sentences-table th,
+    .sentences-table td {
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .vocabulary-table th,
+    .vocabulary-table td,
+    .sentences-table th,
+    .sentences-table td {
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.15rem !important;
+    }
+}
+
 </style>
 </head>
 <body data-level="c2" data-type="vocab">

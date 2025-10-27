@@ -5,36 +5,66 @@
     clickSound.volume = 0.3;
     
     // دالة لتشغيل الصوت
-    function playClickSound() {
+    function playClickSound(e) {
         clickSound.currentTime = 0;
         clickSound.play().catch(err => {
-            console.log('Click sound blocked:', err);
+            // تجاهل الأخطاء
         });
     }
     
-    // إضافة الصوت لجميع الأزرار والروابط عند تحميل الصفحة
-    document.addEventListener('DOMContentLoaded', function() {
-        // اختيار جميع الأزرار والروابط
-        const clickableElements = document.querySelectorAll('button, a, .card, .level-card');
+    // دالة لفحص إذا كان العنصر زر صوت
+    function isAudioButton(element) {
+        const text = element.textContent || '';
+        const onclick = element.onclick ? element.onclick.toString() : '';
+        const className = element.className || '';
         
-        clickableElements.forEach(element => {
-            // استثناء أزرار الصوت فقط
-            const text = element.textContent || '';
-            const onclick = element.onclick ? element.onclick.toString() : '';
-            
-            const isAudioButton = element.classList.contains('audio-button') || 
-                                 onclick.includes('playAudio') ||
-                                 onclick.includes('playLetterName') ||
-                                 onclick.includes('playLetterSound') ||
-                                 text.includes('🔊') ||
-                                 text.includes('🎵') ||
-                                 text.includes('استمع') ||
-                                 text.includes('اسم الحرف') ||
-                                 text.includes('صوت الحرف');
-            
-            if (!isAudioButton) {
-                element.addEventListener('click', playClickSound);
-            }
+        return element.classList.contains('audio-button') || 
+               onclick.includes('playAudio') ||
+               onclick.includes('playLetterName') ||
+               onclick.includes('playLetterSound') ||
+               onclick.includes('speakText') ||
+               text.includes('🔊') ||
+               text.includes('🎵') ||
+               text.includes('استمع') ||
+               text.includes('اسم الحرف') ||
+               text.includes('صوت الحرف');
+    }
+    
+    // دالة لإضافة الصوت لعنصر
+    function addClickSound(element) {
+        if (!isAudioButton(element)) {
+            element.addEventListener('click', playClickSound);
+        }
+    }
+    
+    // إضافة الصوت عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', function() {
+        // جميع الأزرار والروابط
+        const elements = document.querySelectorAll('button, a, .card, .level-card, .back-button, .nav-button');
+        elements.forEach(addClickSound);
+        
+        // مراقبة الأزرار الجديدة (للمحتوى الديناميكي)
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1) { // Element node
+                        if (node.matches && node.matches('button, a, .card, .level-card')) {
+                            addClickSound(node);
+                        }
+                        // البحث عن أزرار داخل العنصر المضاف
+                        if (node.querySelectorAll) {
+                            const innerElements = node.querySelectorAll('button, a, .card, .level-card');
+                            innerElements.forEach(addClickSound);
+                        }
+                    }
+                });
+            });
+        });
+        
+        // بدء المراقبة
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
         });
     });
 })();
