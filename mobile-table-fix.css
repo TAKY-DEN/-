@@ -1,90 +1,84 @@
-/* تحسين عرض الجداول على الموبايل */
 @media (max-width: 768px) {
-    /* جعل الجدول قابل للتمرير أفقياً */
     .vocabulary-container {
-        margin: 80px 10px 20px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        margin: 80px 5px 20px;
+        overflow-x: visible !important;
     }
     
-    /* تصغير حجم الخط والحشو */
+    .vocabulary-table {
+        width: 100% !important;
+        display: table !important;
+        table-layout: fixed !important;
+    }
+    
     .vocabulary-table th,
     .vocabulary-table td {
-        padding: 0.5rem 0.3rem;
-        font-size: 0.85rem;
-        white-space: nowrap;
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
     }
     
-    /* تقليل عرض الأعمدة */
     .vocabulary-table th:nth-child(1),
     .vocabulary-table td:nth-child(1) {
-        min-width: 80px; /* الكلمة الإنجليزية */
+        width: 28% !important;
     }
     
     .vocabulary-table th:nth-child(2),
     .vocabulary-table td:nth-child(2) {
-        min-width: 80px; /* الترجمة */
+        width: 30% !important;
     }
     
     .vocabulary-table th:nth-child(3),
     .vocabulary-table td:nth-child(3) {
-        min-width: 70px; /* النطق */
+        width: 24% !important;
+        font-size: 0.7rem !important;
     }
     
     .vocabulary-table th:nth-child(4),
     .vocabulary-table td:nth-child(4) {
-        min-width: 60px; /* زر الحفظ */
-        text-align: center;
+        width: 18% !important;
+        text-align: center !important;
+        padding: 0.2rem !important;
     }
     
-    /* تصغير حجم الأزرار */
     .vocabulary-table button {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.75rem;
-    }
-    
-    /* إضافة مؤشر للتمرير */
-    .vocabulary-container::after {
-        content: "← مرر لليسار لرؤية المزيد";
-        display: block;
-        text-align: center;
-        padding: 10px;
-        background: #f8f9fa;
-        font-size: 0.8rem;
-        color: #666;
+        padding: 0.25rem 0.35rem !important;
+        font-size: 0.65rem !important;
+        white-space: nowrap !important;
     }
 }
 
-/* للشاشات الصغيرة جداً */
 @media (max-width: 480px) {
     .vocabulary-table th,
     .vocabulary-table td {
-        padding: 0.4rem 0.2rem;
-        font-size: 0.75rem;
+        padding: 0.3rem 0.15rem !important;
+        font-size: 0.7rem !important;
     }
     
     .vocabulary-table th:nth-child(1),
     .vocabulary-table td:nth-child(1) {
-        min-width: 70px;
+        width: 26% !important;
     }
     
     .vocabulary-table th:nth-child(2),
     .vocabulary-table td:nth-child(2) {
-        min-width: 70px;
+        width: 28% !important;
     }
     
     .vocabulary-table th:nth-child(3),
     .vocabulary-table td:nth-child(3) {
-        min-width: 60px;
+        width: 26% !important;
+        font-size: 0.65rem !important;
     }
     
     .vocabulary-table th:nth-child(4),
     .vocabulary-table td:nth-child(4) {
-        min-width: 50px;
+        width: 20% !important;
     }
     
     .vocabulary-table button {
-        padding: 0.25rem 0.4rem;
-        font-size: 0.7rem;
+        padding: 0.2rem 0.3rem !important;
+        font-size: 0.6rem !important;
     }
 }

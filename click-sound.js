@@ -1,38 +1,65 @@
-// ملف JavaScript لإضافة صوت نقر خفيف لجميع الأزرار
+// ملف JavaScript لإضافة أصوات تفاعلية
 (function() {
-    // إنشاء عنصر الصوت
-    const clickSound = new Audio('audio/ui/click.mp3');
-    clickSound.volume = 0.3; // صوت خفيف
+    // إنشاء عناصر الصوت
+    const saveSound = new Audio('audio/ui/click.mp3'); // صوت الحفظ
+    saveSound.volume = 0.3;
     
-    // دالة لتشغيل الصوت
-    function playClickSound() {
-        clickSound.currentTime = 0; // إعادة تشغيل من البداية
-        clickSound.play().catch(err => {
-            // تجاهل الأخطاء (مثل عدم السماح بالتشغيل التلقائي)
-            console.log('Click sound blocked:', err);
+    const pageFlipSound = new Audio('audio/ui/page-flip.mp3'); // صوت تقليب الورق
+    pageFlipSound.volume = 0.25;
+    
+    // دالة لتشغيل صوت الحفظ
+    function playSaveSound() {
+        saveSound.currentTime = 0;
+        saveSound.play().catch(err => {
+            console.log('Save sound blocked:', err);
         });
     }
     
-    // إضافة الصوت لجميع الأزرار والروابط عند تحميل الصفحة
+    // دالة لتشغيل صوت تقليب الورق
+    function playPageFlipSound() {
+        pageFlipSound.currentTime = 0;
+        pageFlipSound.play().catch(err => {
+            console.log('Page flip sound blocked:', err);
+        });
+    }
+    
+    // إضافة الأصوات عند تحميل الصفحة
     document.addEventListener('DOMContentLoaded', function() {
-        // اختيار جميع الأزرار والروابط
-        const clickableElements = document.querySelectorAll('button, a, .card, .level-card');
+        // اختيار جميع العناصر القابلة للنقر
+        const allElements = document.querySelectorAll('button, a, .card, .level-card');
         
-        clickableElements.forEach(element => {
-            // استثناء أزرار الصوت
-            const isAudioButton = element.classList.contains('audio-button') || 
-                                 element.onclick && element.onclick.toString().includes('playAudio') ||
-                                 element.onclick && element.onclick.toString().includes('playLetterName') ||
-                                 element.onclick && element.onclick.toString().includes('playLetterSound') ||
-                                 element.textContent.includes('🔊') ||
-                                 element.textContent.includes('🎵') ||
-                                 element.textContent.includes('استمع') ||
-                                 element.textContent.includes('اسم الحرف') ||
-                                 element.textContent.includes('صوت الحرف');
+        allElements.forEach(element => {
+            // تحديد نوع العنصر
+            const text = element.textContent || '';
+            const onclick = element.onclick ? element.onclick.toString() : '';
             
-            if (!isAudioButton) {
-                element.addEventListener('click', playClickSound);
+            // استثناء أزرار الصوت (بدون صوت)
+            const isAudioButton = element.classList.contains('audio-button') || 
+                                 onclick.includes('playAudio') ||
+                                 onclick.includes('playLetterName') ||
+                                 onclick.includes('playLetterSound') ||
+                                 text.includes('🔊') ||
+                                 text.includes('🎵') ||
+                                 text.includes('استمع') ||
+                                 text.includes('اسم الحرف') ||
+                                 text.includes('صوت الحرف');
+            
+            if (isAudioButton) {
+                return; // لا صوت لأزرار الصوت
             }
+            
+            // أزرار الحفظ - صوت النقر
+            const isSaveButton = text.includes('حفظ') || 
+                                text.includes('Save') ||
+                                onclick.includes('toggleSave');
+            
+            if (isSaveButton) {
+                element.addEventListener('click', playSaveSound);
+                return;
+            }
+            
+            // باقي الأزرار - صوت تقليب الورق
+            element.addEventListener('click', playPageFlipSound);
         });
     });
 })();
