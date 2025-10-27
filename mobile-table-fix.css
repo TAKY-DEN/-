@@ -1,84 +1,147 @@
+/* تحسين عرض الجداول على الموبايل - بدون تمرير */
+
 @media (max-width: 768px) {
+    /* إزالة التمرير الأفقي */
     .vocabulary-container {
-        margin: 80px 5px 20px;
-        overflow-x: visible !important;
+        margin: 80px 2px 20px;
+        padding: 0 2px;
+        overflow-x: hidden !important;
     }
     
+    /* جعل الجدول يأخذ عرض الشاشة بالكامل */
     .vocabulary-table {
         width: 100% !important;
+        max-width: 100% !important;
         display: table !important;
         table-layout: fixed !important;
+        border-collapse: collapse !important;
     }
     
+    /* تصغير حجم الخط والحشو */
     .vocabulary-table th,
     .vocabulary-table td {
-        padding: 0.4rem 0.2rem !important;
-        font-size: 0.75rem !important;
+        padding: 0.3rem 0.1rem !important;
+        font-size: 0.7rem !important;
         word-wrap: break-word !important;
         white-space: normal !important;
-        line-height: 1.3 !important;
+        line-height: 1.2 !important;
+        overflow: hidden !important;
     }
     
+    /* توزيع عرض الأعمدة - النسب الجديدة */
     .vocabulary-table th:nth-child(1),
     .vocabulary-table td:nth-child(1) {
-        width: 28% !important;
+        width: 25% !important;
     }
     
     .vocabulary-table th:nth-child(2),
     .vocabulary-table td:nth-child(2) {
-        width: 30% !important;
+        width: 25% !important;
     }
     
     .vocabulary-table th:nth-child(3),
     .vocabulary-table td:nth-child(3) {
-        width: 24% !important;
-        font-size: 0.7rem !important;
+        width: 25% !important;
+        font-size: 0.65rem !important;
     }
     
     .vocabulary-table th:nth-child(4),
     .vocabulary-table td:nth-child(4) {
-        width: 18% !important;
+        width: 10% !important;
         text-align: center !important;
-        padding: 0.2rem !important;
+        padding: 0.1rem !important;
     }
     
+    /* تصغير حجم الأزرار */
     .vocabulary-table button {
-        padding: 0.25rem 0.35rem !important;
-        font-size: 0.65rem !important;
+        padding: 0.2rem 0.25rem !important;
+        font-size: 0.6rem !important;
         white-space: nowrap !important;
     }
 }
 
+/* للشاشات الصغيرة جداً */
 @media (max-width: 480px) {
+    .vocabulary-container {
+        margin: 80px 1px 20px;
+        padding: 0 1px;
+    }
+    
     .vocabulary-table th,
     .vocabulary-table td {
-        padding: 0.3rem 0.15rem !important;
-        font-size: 0.7rem !important;
+        padding: 0.25rem 0.05rem !important;
+        font-size: 0.65rem !important;
     }
     
     .vocabulary-table th:nth-child(1),
     .vocabulary-table td:nth-child(1) {
-        width: 26% !important;
+        width: 25% !important;
     }
     
     .vocabulary-table th:nth-child(2),
     .vocabulary-table td:nth-child(2) {
-        width: 28% !important;
+        width: 25% !important;
     }
     
     .vocabulary-table th:nth-child(3),
     .vocabulary-table td:nth-child(3) {
-        width: 26% !important;
-        font-size: 0.65rem !important;
+        width: 25% !important;
+        font-size: 0.6rem !important;
     }
     
     .vocabulary-table th:nth-child(4),
     .vocabulary-table td:nth-child(4) {
-        width: 20% !important;
+        width: 10% !important;
     }
     
     .vocabulary-table button {
-        padding: 0.2rem 0.3rem !important;
+        padding: 0.15rem 0.2rem !important;
+        font-size: 0.55rem !important;
+    }
+}
+
+/* تحسين عرض الجداول في صفحات الجمل */
+@media (max-width: 768px) {
+    .sentences-container {
+        margin: 80px 2px 20px;
+        padding: 0 2px;
+        overflow-x: hidden !important;
+    }
+    
+    .sentences-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: table !important;
+        table-layout: fixed !important;
+    }
+    
+    .sentences-table th,
+    .sentences-table td {
+        padding: 0.3rem 0.1rem !important;
+        font-size: 0.7rem !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+    }
+    
+    .sentences-table th:nth-child(1),
+    .sentences-table td:nth-child(1) {
+        width: 45% !important;
+    }
+    
+    .sentences-table th:nth-child(2),
+    .sentences-table td:nth-child(2) {
+        width: 40% !important;
+    }
+    
+    .sentences-table th:nth-child(3),
+    .sentences-table td:nth-child(3) {
+        width: 15% !important;
+        text-align: center !important;
+    }
+    
+    .sentences-table button {
+        padding: 0.2rem 0.25rem !important;
         font-size: 0.6rem !important;
     }
 }
