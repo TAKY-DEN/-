@@ -19,7 +19,7 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     
-    /* إخفاء صفوف category-header */
+    /* صفوف category-header */
     .vocabulary-table tbody tr.category-header,
     .sentences-table tbody tr.category-header {
         display: block;
@@ -45,10 +45,11 @@
     .sentences-table tbody tr:not(.category-header) td {
         display: block;
         text-align: right;
-        padding: 0.8rem 0;
+        padding: 0.6rem 0;
         border: none;
         border-bottom: 1px solid #f0f0f0;
-        font-size: 1rem !important; /* تكبير الخط */
+        font-size: 1.1rem !important; /* تكبير الخط */
+        line-height: 1.8;
     }
     
     .vocabulary-table tbody tr:not(.category-header) td:last-child,
@@ -56,29 +57,47 @@
         border-bottom: none;
     }
     
-    /* إضافة labels قبل كل خلية */
+    /* إضافة labels قبل كل خلية - بجانب الكلمة */
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(1)::before {
         content: "🔤 الكلمة الإنجليزية: ";
         font-weight: bold;
         color: #667eea;
-        display: inline-block;
+        display: inline;
         margin-left: 0.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(1) {
+        font-size: 1.2rem !important;
+        font-weight: 600;
     }
     
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(2)::before {
         content: "🇸🇦 الترجمة العربية: ";
         font-weight: bold;
         color: #27ae60;
-        display: inline-block;
+        display: inline;
         margin-left: 0.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(2) {
+        font-size: 1.2rem !important;
+        font-weight: 600;
     }
     
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(3)::before {
         content: "🗣 طريقة النطق: ";
         font-weight: bold;
         color: #e74c3c;
-        display: inline-block;
+        display: inline;
         margin-left: 0.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(3) {
+        font-size: 0.95rem !important; /* خط أصغر للنطق */
+        color: #666;
     }
     
     .vocabulary-table tbody tr:not(.category-header) td:nth-child(4) {
@@ -96,23 +115,35 @@
         content: "🇬🇧 الجملة الإنجليزية: ";
         font-weight: bold;
         color: #667eea;
-        display: inline-block;
+        display: inline;
         margin-left: 0.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .sentences-table tbody tr:not(.category-header) td:nth-child(1) {
+        font-size: 1.1rem !important;
+        font-weight: 600;
     }
     
     .sentences-table tbody tr:not(.category-header) td:nth-child(2)::before {
         content: "🇸🇦 الترجمة العربية: ";
         font-weight: bold;
         color: #27ae60;
-        display: inline-block;
+        display: inline;
         margin-left: 0.5rem;
+        font-size: 0.95rem;
     }
     
-    /* تنسيق أزرار الحفظ */
+    .sentences-table tbody tr:not(.category-header) td:nth-child(2) {
+        font-size: 1.1rem !important;
+        font-weight: 600;
+    }
+    
+    /* تنسيق أزرار الحفظ - بدون نص "حفظ" */
     .save-btn {
         width: 100%;
-        padding: 0.8rem 1rem !important;
-        font-size: 1rem !important;
+        padding: 0.9rem 1rem !important;
+        font-size: 1.1rem !important;
         border-radius: 12px;
         background: linear-gradient(45deg, #667eea, #764ba2);
         color: white;
@@ -120,6 +151,17 @@
         cursor: pointer;
         font-weight: bold;
         transition: all 0.3s ease;
+    }
+    
+    /* إخفاء نص "حفظ" والإبقاء على الأيقونة فقط */
+    .save-btn::before {
+        content: "⭕";
+        font-size: 1.3rem;
+    }
+    
+    .save-btn.saved::before {
+        content: "✅";
+        font-size: 1.3rem;
     }
     
     .save-btn:hover {
@@ -152,13 +194,17 @@
 
 /* للشاشات الصغيرة جداً */
 @media (max-width: 480px) {
-    .vocabulary-table tbody tr:not(.category-header) td,
-    .sentences-table tbody tr:not(.category-header) td {
-        font-size: 0.95rem !important;
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(1),
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(2) {
+        font-size: 1.1rem !important;
+    }
+    
+    .vocabulary-table tbody tr:not(.category-header) td:nth-child(3) {
+        font-size: 0.9rem !important;
     }
     
     .save-btn {
-        font-size: 0.95rem !important;
-        padding: 0.7rem 0.9rem !important;
+        font-size: 1rem !important;
+        padding: 0.8rem 0.9rem !important;
     }
 }
